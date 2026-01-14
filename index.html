@@ -1044,11 +1044,13 @@
       const SUPABASE_URL = "https://wptqbkzsscwwykxanahn.supabase.co";
       const SUPABASE_KEY =
         "sb_publishable_nD4HRhZ_DF0YeabPeSEL8g_kQtS4v0O"; // Provided Key
-      const supabase =  window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
+
+      
+      let supabaseClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
 
       // Ensure supabase is loaded
-      if (typeof supabase === 'undefined' && window.supabase) {
-           const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+      if (!supabaseClient && window.supabase) {
+           supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       }
       
       const form = document.getElementById("lead-form");
@@ -1101,8 +1103,10 @@
 
           } catch (err) {
             console.error("Form Error:", err);
-            messageEl.innerText = "Chyba pri odosielaní. Skúste to prosím neskôr.";
+            // Show specific error to user for debugging
+            messageEl.innerText = "Chyba: " + (err.message || JSON.stringify(err));
             messageEl.className = "text-center text-xs text-red-600 mt-2 font-bold";
+            alert("Chyba pri odosielaní:\n" + (err.message || JSON.stringify(err)));
             submitBtn.innerText = "Skúsiť znova";
             submitBtn.disabled = false;
           }
