@@ -88,7 +88,7 @@
         justify-content: center;
         left: 50%; /* linked to slider value */
         transform: translateX(-50%);
-        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       }
       .handle-circle {
         width: 48px;
@@ -100,7 +100,7 @@
         justify-content: center;
         color: white;
         border: 4px solid white;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
       }
     </style>
   </head>
@@ -137,7 +137,7 @@
         </nav>
         <!-- CTA Button -->
         <a
-          class="hidden md:inline-block bg-brand-orange hover:bg-orange-600 text-white font-bold py-2 px-6 rounded text-sm transition transform hover:scale-105"
+          class="hidden md:inline-block bg-gradient-to-r from-brand-orange to-orange-400 hover:to-brand-orange text-white font-bold py-2 px-6 rounded text-sm transition transform hover:scale-105 shadow-lg shadow-brand-orange/50 hover:shadow-brand-orange/80"
           href="#eshop"
         >
           E-SHOP
@@ -490,8 +490,9 @@
         </div>
         <!-- Comparison Slider Placeholder -->
         <!-- Interactive Comparison Slider -->
-        <div class="relative w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-2xl bg-gray-100 comparison-container h-[400px] md:h-[500px]">
-          
+        <div
+          class="relative w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-2xl bg-gray-100 comparison-container h-[400px] md:h-[500px]"
+        >
           <!-- Background Image (AFTER state - Wood) -->
           <img
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMR0wVTNGzEIg0Zri34YQOMJF9cE827paSlU9KIJbtYN_rN8SGP_QkrIJ2wV7rexppfR9gTrWKZMR4ta-yWd5gyLfIEst2-npFYGr05e3-0BntUJm-Ysqm5fXV2LqdaktO38U48iLwHrV9x_lydRt6flhMHmm3alBz0hPbNEUcVJDwl1FNkmXSsIUMsdoYnPMBcho3-_beRHjuue37a657Fr6m9oSzFN65W1vYBjwfamy8EMQMrNy5WPjFUHFJDQOgxme_3i5-wLE"
@@ -502,13 +503,13 @@
           <!-- Foreground Image Container (BEFORE state - Plain Wall) linked to slider -->
           <div id="compare-overlay" class="comparison-overlay">
             <img
-               src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-               alt="Before - Plain Wall"
-               class="absolute top-0 left-0 max-w-none h-full object-cover select-none"
-               style="width: 100%; height: 100%;" 
-               id="compare-before-img"
+              src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Before - Plain Wall"
+              class="absolute top-0 left-0 max-w-none h-full object-cover select-none"
+              style="width: 100%; height: 100%"
+              id="compare-before-img"
             />
-             <!-- Note: max-w-none and explicit width is crticial so image doesn't squash -->
+            <!-- Note: max-w-none and explicit width is crticial so image doesn't squash -->
           </div>
 
           <!-- Slider Input -->
@@ -541,21 +542,20 @@
               </svg>
             </div>
           </div>
-
         </div>
 
         <script>
           // Script to handle slider movement
           function moveSlider(val) {
             // Update the width of the overlay container
-            const overlay = document.getElementById('compare-overlay');
-            const handle = document.getElementById('slider-handle');
-            const beforeImg = document.getElementById('compare-before-img');
+            const overlay = document.getElementById("compare-overlay");
+            const handle = document.getElementById("slider-handle");
+            const beforeImg = document.getElementById("compare-before-img");
             const container = overlay.parentElement;
-            
+
             overlay.style.width = val + "%";
             handle.style.left = val + "%";
-            
+
             // To keep the 'before' image static (revealing effect) rather than squashing it:
             // We need to set the image width to the full container width.
             // Since CSS object-fit cover is used on full height, we just need to ensure the img element
@@ -563,19 +563,19 @@
             // I've set the img width to the container's width in the HTML style attribute dynamically or via fixed CSS.
             // Actually, simply setting width: 100% on the img relative to the OVERLAY would squash it.
             // So we set width to the width of the parent container.
-            
-            if(container) {
-                 beforeImg.style.width = container.offsetWidth + 'px';
+
+            if (container) {
+              beforeImg.style.width = container.offsetWidth + "px";
             }
           }
-          
+
           // Initial setup on load to ensure correct sizing
-          window.addEventListener('load', () => {
-             moveSlider(50);
-             // Also update on resize to keep the before image width correct
-             window.addEventListener('resize', () => {
-                 moveSlider(document.getElementById('slider-range').value);
-             });
+          window.addEventListener("load", () => {
+            moveSlider(50);
+            // Also update on resize to keep the before image width correct
+            window.addEventListener("resize", () => {
+              moveSlider(document.getElementById("slider-range").value);
+            });
           });
         </script>
       </div>
@@ -729,7 +729,10 @@
               class="w-full h-full object-cover aspect-[4/5] rounded-lg shadow-lg"
               poster="https://lh3.googleusercontent.com/aida-public/AB6AXuBwHPC2X0HzjX0JUnru2Z54lI0S950WYO3lX6GEQymH7NzkWuUYPiWTEsOFz_EKmLeBUmJIa9UaBafq9GH-rhny-Q_p_M3DcqSw5VJja3h1EvQymeEenwa3CYT8uDnCUqPo61ax1Jkct8pGn8vFiBTBLXR9VB2eMBmPh_32rEJoCMUENzczOSkvtnudPHZ6DYfg7rGECUVwQbAFU5GM3x7brwzHFXQ-bpKyWo_c312gkC0Ue5i8XcTZzpIChHUP519WFPyOZ-2so18"
             >
-              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+              <source
+                src="https://www.w3schools.com/html/mov_bbb.mp4"
+                type="video/mp4"
+              />
               Váš prehliadač nepodporuje video tag.
             </video>
             <p class="mt-2 text-sm text-gray-400">
@@ -743,7 +746,10 @@
               class="w-full h-full object-cover aspect-[4/5] rounded-lg shadow-lg"
               poster="https://lh3.googleusercontent.com/aida-public/AB6AXuAH_c9ZcnKW3LNbMeIvXeSvLl7Q0TQBxWE12e66b3ByJZ-_FsulHUwDy0m_Xau1iVJnsPVLyMqK7_sJ22JXpaPyGKGSpMXZNyLZsVutxSs75idMnuhkzxPuRmgLtN6zLL01j1AO2hSY529p56T1gvU4Rbc8ggu4XJKziyu79pPOjph_3V-duVpx15Wb4e8gOrGucrwgL6Y9aeyWIdJ2RM6UH4aNO-MujlG2D8-rV11Y0uPcz7ZvevYmWAy-R0sbVstKXGP_iCEYZRg"
             >
-              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+              <source
+                src="https://www.w3schools.com/html/mov_bbb.mp4"
+                type="video/mp4"
+              />
               Váš prehliadač nepodporuje video tag.
             </video>
             <p class="mt-2 text-sm text-gray-400">
@@ -757,7 +763,10 @@
               class="w-full h-full object-cover aspect-[4/5] rounded-lg shadow-lg"
               poster="https://lh3.googleusercontent.com/aida-public/AB6AXuDJhHpY63JbbTcnu5PyeYKuPamOULPjPn1ZUMlNmjkD6P81aT2cDEz80T5Qvy5j8Xs31KL6WzmLG4hHhyq8h3blCwAoNk6PWs8xxEHN2GkdmG2idIiB90gpHOrOIPcAhydrP4O6p0cf3Io-VFcF22ch4VuW9qp6oNL3lmFgFb2s1CRX37XotHQ9gFi1tNEWKRhUOmxMjv5uIBocrJubq5bE0YEKuSZXhsN31C9qgP1Uk-Y7oH-G35-9BIumeCU_R4i0CBjijUiDACU"
             >
-              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+              <source
+                src="https://www.w3schools.com/html/mov_bbb.mp4"
+                type="video/mp4"
+              />
               Váš prehliadač nepodporuje video tag.
             </video>
             <p class="mt-2 text-sm text-gray-400">
