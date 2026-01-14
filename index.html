@@ -879,50 +879,30 @@
           <!-- Text Content -->
           <div class="p-10 md:w-1/2 flex flex-col justify-center">
             <h2
-              class="text-3xl md:text-4xl font-extrabold uppercase text-gray-900 mb-4 leading-none"
+              class="text-3xl md:text-3xl font-extrabold uppercase text-gray-900 mb-4 leading-tight"
             >
-              Získajte <br />
-              <span class="text-brand-orange">Vzorky Zdarma</span>
+              Prihláste sa a <br />
+              <span class="text-brand-orange">my sa s vami skontaktujeme</span>
             </h2>
             <p class="text-gray-600 mb-8">
-              Chcete vidieť panely naživo? Pošleme vám vzorkovník priamo k vám
-              domov. Presvedčte sa o kvalite.
+              Máte záujem o naše panely alebo potrebujete poradiť s výberom? Vyplňte formulár a my sa vám ozveme čo najskôr.
             </p>
-            <ul class="space-y-3">
-              <li class="flex items-center gap-3">
-                <div
-                  class="w-6 h-6 bg-brand-orange rounded-full flex items-center justify-center text-white text-xs"
-                >
-                  ✓
-                </div>
-                <span class="font-medium text-gray-700"
-                  >Všetky dekory v jednom balení</span
-                >
-              </li>
-              <li class="flex items-center gap-3">
-                <div
-                  class="w-6 h-6 bg-brand-orange rounded-full flex items-center justify-center text-white text-xs"
-                >
-                  ✓
-                </div>
-                <span class="font-medium text-gray-700"
-                  >Doručenie do 48 hodín</span
-                >
-              </li>
-            </ul>
           </div>
           <!-- Form -->
+          <!-- Form -->
           <div class="p-10 md:w-1/2 bg-white/50 backdrop-blur-sm">
-            <form class="space-y-4">
+            <form id="lead-form" class="space-y-4">
               <div>
                 <label
                   class="block text-xs font-bold text-gray-400 uppercase mb-1"
                   >Meno a Priezvisko</label
                 >
                 <input
+                  name="name"
                   class="w-full border border-gray-300 rounded-md bg-white focus:border-brand-orange focus:ring-brand-orange py-3 px-4 shadow-sm"
                   placeholder="Ján Novák"
                   type="text"
+                  required
                 />
               </div>
               <div>
@@ -931,9 +911,11 @@
                   >E-mailová adresa</label
                 >
                 <input
+                  name="email"
                   class="w-full border border-gray-300 rounded-md bg-white focus:border-brand-orange focus:ring-brand-orange py-3 px-4 shadow-sm"
                   placeholder="jan@priklad.sk"
                   type="email"
+                  required
                 />
               </div>
               <div>
@@ -942,18 +924,33 @@
                   >Telefónne číslo</label
                 >
                 <input
+                  name="phone"
                   class="w-full border border-gray-300 rounded-md bg-white focus:border-brand-orange focus:ring-brand-orange py-3 px-4 shadow-sm"
                   placeholder="+421 900 000 000"
                   type="tel"
+                  required
                 />
               </div>
+              <div>
+                <label
+                  class="block text-xs font-bold text-gray-400 uppercase mb-1"
+                  >Vaša správa</label
+                >
+                <textarea
+                  name="message"
+                  class="w-full border border-gray-300 rounded-md bg-white focus:border-brand-orange focus:ring-brand-orange py-3 px-4 shadow-sm h-32"
+                  placeholder="Napíšte nám, o čo máte záujem..."
+                  required
+                ></textarea>
+              </div>
               <button
-                class="w-full bg-brand-orange hover:bg-orange-600 text-white font-bold py-3 px-4 rounded shadow-lg transition uppercase tracking-wide mt-4"
+                class="w-full bg-brand-orange hover:bg-orange-600 text-white font-bold py-3 px-4 rounded shadow-lg transition uppercase tracking-wide mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
                 type="submit"
+                id="submit-btn"
               >
                 Odoslať žiadosť
               </button>
-              <p class="text-center text-xs text-gray-400 mt-2">
+              <p id="form-message" class="text-center text-xs text-gray-400 mt-2">
                 Dostanete vzorku do 48 hodín
               </p>
             </form>
@@ -1040,5 +1037,77 @@
       </div>
     </footer>
     <!-- END: Footer -->
+    <!-- Supabase Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+      // Initialize Supabase Client
+      const SUPABASE_URL = "https://wptqbkzsscwwykxanahn.supabase.co";
+      const SUPABASE_KEY =
+        "sb_publishable_nD4HRhZ_DF0YeabPeSEL8g_kQtS4v0O"; // Provided Key
+      const supabase =  window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
+
+      // Ensure supabase is loaded
+      if (typeof supabase === 'undefined' && window.supabase) {
+           const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+      }
+      
+      const form = document.getElementById("lead-form");
+      const messageEl = document.getElementById("form-message");
+      const submitBtn = document.getElementById("submit-btn");
+
+      if (form) {
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          
+          if (!window.supabase) {
+             alert("Chyba: Supabase knižnica sa nenačítala.");
+             return;
+          }
+          
+           // Re-init just to be safe if variable scope issue
+          const _supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+          // Get form data
+          const formData = new FormData(form);
+          const name = formData.get("name");
+          const email = formData.get("email");
+          const phone = formData.get("phone");
+          const message = formData.get("message");
+
+          // Disable button
+          submitBtn.disabled = true;
+          submitBtn.innerText = "Odosielam...";
+
+          try {
+            // Insert into Supabase
+            const { data, error } = await _supabase
+              .from("leads")
+              .insert([{ name, email, phone, message }]);
+
+            if (error) {
+              console.error("Supabase Error:", error);
+              throw error;
+            }
+
+            // Success feedback
+            messageEl.innerText = "Ďakujeme! Vaša žiadosť bola úspešne odoslaná.";
+            messageEl.className = "text-center text-xs text-green-600 mt-2 font-bold";
+            form.reset();
+            
+            setTimeout(() => {
+                 submitBtn.innerText = "Odoslať žiadosť";
+                 submitBtn.disabled = false;
+            }, 3000);
+
+          } catch (err) {
+            console.error("Form Error:", err);
+            messageEl.innerText = "Chyba pri odosielaní. Skúste to prosím neskôr.";
+            messageEl.className = "text-center text-xs text-red-600 mt-2 font-bold";
+            submitBtn.innerText = "Skúsiť znova";
+            submitBtn.disabled = false;
+          }
+        });
+      }
+    </script>
   </body>
 </html>
