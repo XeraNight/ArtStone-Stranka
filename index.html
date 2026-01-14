@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+
+<html lang="sk">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Dekoratívne Panely - Redefinujte Priestor</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Roboto:wght@400;500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS v3 with Plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Configuration for Custom Colors/Fonts -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Montserrat", "sans-serif"],
+              body: ["Roboto", "sans-serif"],
+            },
+            colors: {
+              brand: {
+                orange: "#FF6600", // Updated to #FF6600
+                dark: "#1A1A1A",
+                darker: "#111111",
+                light: "#F9F9F9",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Custom Styles for Specific Layout Needs -->
+    <style data-purpose="layout-and-utilities">
+      /* Smooth scrolling for anchor links */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Custom utility to darken background images */
+      .bg-overlay {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+      }
+
+      /* Comparison Slider Styles */
+      .comparison-container {
+        position: relative;
+        overflow: hidden;
+      }
+      .comparison-image-container {
+        pointer-events: none;
+      }
+      .comparison-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 50%; /* Initial width */
+        overflow: hidden;
+        border-right: 2px solid white; /* divider line */
+      }
+      .comparison-slider-input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: ew-resize;
+        margin: 0;
+        z-index: 20;
+      }
+      .comparison-handle-btn {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: #ff6600;
+        pointer-events: none;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 50%; /* linked to slider value */
+        transform: translateX(-50%);
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      }
+      .handle-circle {
+        width: 48px;
+        height: 48px;
+        background: #ff6600;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        border: 4px solid white;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      }
+    </style>
+  </head>
+  <body class="font-sans text-gray-800 antialiased overflow-x-hidden">
+    <!-- BEGIN: Header/Navbar -->
+    <!-- Sticky header with logo and navigation -->
+    <header
+      class="bg-brand-darker text-white py-4 fixed w-full top-0 z-50 border-b border-gray-800"
+    >
+      <div class="container mx-auto px-4 flex justify-between items-center">
+        <!-- Logo -->
+        <a
+          class="text-xl md:text-2xl font-extrabold uppercase tracking-wide"
+          href="#"
+        >
+          DEKORATÍVNE<span class="text-brand-orange">PANELY</span>
+        </a>
+        <!-- Desktop Navigation -->
+        <nav
+          class="hidden md:flex space-x-8 text-sm font-semibold tracking-wider"
+        >
+          <a class="hover:text-brand-orange transition" href="#produkty"
+            >PRODUKTY</a
+          >
+          <a class="hover:text-brand-orange transition" href="#realizacie"
+            >REALIZÁCIE</a
+          >
+          <a class="hover:text-brand-orange transition" href="#vyhody"
+            >VÝHODY</a
+          >
+          <a class="hover:text-brand-orange transition" href="#kontakt"
+            >KONTAKT</a
+          >
+        </nav>
+        <!-- CTA Button -->
+        <a
+          class="hidden md:inline-block bg-brand-orange hover:bg-orange-600 text-white font-bold py-2 px-6 rounded text-sm transition transform hover:scale-105"
+          href="#eshop"
+        >
+          E-SHOP
+        </a>
+        <!-- Mobile Menu Icon (Placeholder) -->
+        <button class="md:hidden text-white focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewbox="0 0 24 24"
+          >
+            <path
+              d="M4 6h16M4 12h16M4 18h16"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <!-- END: Header/Navbar -->
+    <!-- BEGIN: Hero Section -->
+    <!-- Full screen hero with background image and main value proposition -->
+    <section
+      class="relative h-screen min-h-[700px] flex items-center justify-center bg-gray-900 text-white mt-16 md:mt-0"
+    >
+      <!-- Background Image with Overlay -->
+      <div class="absolute inset-0 z-0">
+        <img
+          alt="Wood Panel Background"
+          class="w-full h-full object-cover opacity-60"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuALWtcoieuR5ikcxwUQO_t-GbEV6ya1bZdI32GDTWdrCn_2Z0Kt7Awq_bkTJ65iEXE1EEPrz8jAY5D8gvkMM65e1o2JMqLMenDicr6Tr4Z55uuCA19CxEyWkyiHYCmXzSxcFNd9qKqP-Z08iZOYtrK6c6CCTZCNwPJLx-0G6BPCv6Zo1bgPn7FBLlrs8aBCKFd7VyHoNyTWZ5N5U5ogsB_uFbVMrMa27wU3r3LgKhhJGkNlPQO06CB7yuesAS0NWsgSY8YGjjVJzPQ"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/80"
+        ></div>
+      </div>
+      <!-- Hero Content -->
+      <div
+        class="relative z-10 container mx-auto px-4 text-center flex flex-col items-center"
+      >
+        <p
+          class="text-brand-orange font-bold tracking-widest uppercase mb-4 text-sm md:text-base"
+        >
+          Prémiová Architektúra
+        </p>
+        <h1
+          class="text-6xl md:text-8xl font-extrabold uppercase leading-tight mb-6 max-w-5xl drop-shadow-xl"
+        >
+          Redefinujte <br />
+          <span class="text-white">Priestor</span>
+        </h1>
+        <p class="text-gray-300 text-lg md:text-xl max-w-2xl mb-10 font-body">
+          Akustické a dekoratívne panely navrhnuté pre modernú architektúru.
+          Dokonalá symbióza dreva a technológie.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 mb-16">
+          <a
+            class="bg-brand-orange hover:bg-orange-600 text-white font-bold py-4 px-10 rounded shadow-lg text-center transition transform hover:-translate-y-1"
+            href="#ponuka"
+          >
+            ZÍSKAŤ PONUKU
+          </a>
+          <a
+            class="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white font-bold py-4 px-10 rounded shadow-lg text-center transition"
+            href="#realizacie"
+          >
+            REALIZÁCIE
+          </a>
+        </div>
+        <!-- Feature Badges -->
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-6 text-xs md:text-sm font-medium text-gray-400 mt-8 border-t border-gray-700 pt-8 w-full max-w-4xl"
+        >
+          <div class="flex items-center justify-center gap-2">
+            <svg
+              class="w-5 h-5 text-brand-orange"
+              fill="currentColor"
+              viewbox="0 0 20 20"
+            >
+              <path
+                d="M18 3a1 1 0 00-1.447-.894L8.763 6H5a3 3 0 000 6h.28l1.771 5.316A1 1 0 008 18h1a1 1 0 001-1v-4.382l6.553 3.276A1 1 0 0018 15V3z"
+              ></path>
+            </svg>
+            <span>Akustika trieda A</span>
+          </div>
+          <div class="flex items-center justify-center gap-2">
+            <svg
+              class="w-5 h-5 text-brand-orange"
+              fill="currentColor"
+              viewbox="0 0 20 20"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+            <span>Ekológia</span>
+          </div>
+          <div class="flex items-center justify-center gap-2">
+            <svg
+              class="w-5 h-5 text-brand-orange"
+              fill="currentColor"
+              viewbox="0 0 20 20"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+            <span>Premium Finish</span>
+          </div>
+          <div class="flex items-center justify-center gap-2">
+            <svg
+              class="w-5 h-5 text-brand-orange"
+              fill="currentColor"
+              viewbox="0 0 20 20"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+            <span>Vyrobené v EÚ</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: Hero Section -->
+    <!-- BEGIN: Realizations Section -->
+    <section class="bg-white py-32" id="realizacie">
+      <div class="container mx-auto px-4">
+        <!-- Section Header -->
+        <div class="flex justify-between items-end mb-12">
+          <div class="border-b-4 border-brand-orange pb-2">
+            <h2
+              class="text-3xl md:text-4xl font-extrabold uppercase text-gray-900"
+            >
+              Naše Realizácie
+            </h2>
+          </div>
+          <!-- Slider Controls (Visual) -->
+          <div class="flex gap-2">
+            <button
+              class="w-10 h-10 border border-gray-300 flex items-center justify-center hover:bg-gray-100"
+            >
+              <span class="text-xl">←</span>
+            </button>
+            <button
+              class="w-10 h-10 border border-gray-300 flex items-center justify-center hover:bg-gray-100"
+            >
+              <span class="text-xl">→</span>
+            </button>
+          </div>
+        </div>
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Project 1 -->
+          <div
+            class="group relative h-80 overflow-hidden rounded-md cursor-pointer"
+          >
+            <img
+              alt="Rezidencia Staré Mesto"
+              class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+              src="images/realization1.png"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6"
+            >
+              <span class="text-brand-orange text-xs font-bold uppercase mb-1"
+                >Bratislava</span
+              >
+              <h3 class="text-white text-xl font-bold uppercase">
+                Rezidencia Staré Mesto
+              </h3>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div
+            class="group relative h-80 overflow-hidden rounded-md cursor-pointer"
+          >
+            <img
+              alt="IT Hub Central"
+              class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+              src="images/realization2.jpg"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6"
+            >
+              <span class="text-brand-orange text-xs font-bold uppercase mb-1"
+                >Košice</span
+              >
+              <h3 class="text-white text-xl font-bold uppercase">
+                IT Hub Central
+              </h3>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div
+            class="group relative h-80 overflow-hidden rounded-md cursor-pointer"
+          >
+            <img
+              alt="Penthouse View"
+              class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+              src="images/realization3.png"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6"
+            >
+              <span class="text-brand-orange text-xs font-bold uppercase mb-1"
+                >Žilina</span
+              >
+              <h3 class="text-white text-xl font-bold uppercase">
+                Penthouse Sky
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: Realizations Section -->
+    <!-- BEGIN: Why Choose Us -->
+    <section class="bg-brand-light py-32" id="vyhody">
+      <div class="container mx-auto px-4 text-center">
+        <h2
+          class="text-3xl md:text-4xl font-extrabold uppercase text-gray-900 mb-16"
+        >
+          Prečo si vybrať <br />
+          <span class="text-brand-orange">Naše Panely?</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <!-- Feature 1 -->
+          <div class="flex flex-col items-center">
+            <div class="w-16 h-16 mb-4 text-brand-orange w-14 h-14">
+              <!-- Lightning Icon -->
+              <svg
+                class="w-full h-full"
+                fill="none"
+                stroke="currentColor"
+                viewbox="0 0 24 24"
+              >
+                <path
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold uppercase mb-2">Rýchla Montáž</h3>
+            <p class="text-gray-600 text-sm leading-relaxed px-4">
+              Systém navrhnutý pre inštaláciu bez potreby špeciálneho náradia.
+              Hotové za pár hodín.
+            </p>
+          </div>
+          <!-- Feature 2 -->
+          <div class="flex flex-col items-center">
+            <div class="w-16 h-16 mb-4 text-brand-orange w-14 h-14">
+              <!-- Shield Icon -->
+              <svg
+                class="w-full h-full"
+                fill="none"
+                stroke="currentColor"
+                viewbox="0 0 24 24"
+              >
+                <path
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold uppercase mb-2">Odolný Materiál</h3>
+            <p class="text-gray-600 text-sm leading-relaxed px-4">
+              Vysokokvalitná MDF a certifikované drevo s trvalo udržateľných
+              zdrojov.
+            </p>
+          </div>
+          <!-- Feature 3 -->
+          <div class="flex flex-col items-center">
+            <div class="w-16 h-16 mb-4 text-brand-orange w-14 h-14">
+              <!-- Diamond Icon -->
+              <svg
+                class="w-full h-full"
+                fill="none"
+                stroke="currentColor"
+                viewbox="0 0 24 24"
+              >
+                <path
+                  d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold uppercase mb-2">Moderný Dizajn</h3>
+            <p class="text-gray-600 text-sm leading-relaxed px-4">
+              Inšpirované svetovým dizajnom. Nadčasový vzhľad pre každý
+              interiér.
+            </p>
+          </div>
+          <!-- Feature 4 -->
+          <div class="flex flex-col items-center">
+            <div class="w-16 h-16 mb-4 text-brand-orange w-14 h-14">
+              <!-- Sound Icon -->
+              <svg
+                class="w-full h-full"
+                fill="none"
+                stroke="currentColor"
+                viewbox="0 0 24 24"
+              >
+                <path
+                  d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold uppercase mb-2">Akustická Pohoda</h3>
+            <p class="text-gray-600 text-sm leading-relaxed px-4">
+              Certifikovaná absorpcia zvuku triedy A. Ideálne pre kancelárie aj
+              domov.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: Why Choose Us -->
+    <!-- BEGIN: Before and After -->
+    <section class="bg-white py-32">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-10">
+          <h2
+            class="text-3xl md:text-4xl font-extrabold uppercase text-gray-900"
+          >
+            Pred a Po
+          </h2>
+          <p class="text-gray-500 mt-2 max-w-2xl mx-auto">
+            Naše riešenie spája estetiku minimalizmu s vysokou efektivitou
+            akustického tlmenia v jednom produkte.
+          </p>
+        </div>
+        <!-- Comparison Slider Placeholder -->
+        <!-- Interactive Comparison Slider -->
+        <div class="relative w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-2xl bg-gray-100 comparison-container h-[400px] md:h-[500px]">
+          
+          <!-- Background Image (AFTER state - Wood) -->
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMR0wVTNGzEIg0Zri34YQOMJF9cE827paSlU9KIJbtYN_rN8SGP_QkrIJ2wV7rexppfR9gTrWKZMR4ta-yWd5gyLfIEst2-npFYGr05e3-0BntUJm-Ysqm5fXV2LqdaktO38U48iLwHrV9x_lydRt6flhMHmm3alBz0hPbNEUcVJDwl1FNkmXSsIUMsdoYnPMBcho3-_beRHjuue37a657Fr6m9oSzFN65W1vYBjwfamy8EMQMrNy5WPjFUHFJDQOgxme_3i5-wLE"
+            alt="After - Wood Paneling"
+            class="absolute top-0 left-0 w-full h-full object-cover select-none"
+          />
+
+          <!-- Foreground Image Container (BEFORE state - Plain Wall) linked to slider -->
+          <div id="compare-overlay" class="comparison-overlay">
+            <img
+               src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+               alt="Before - Plain Wall"
+               class="absolute top-0 left-0 max-w-none h-full object-cover select-none"
+               style="width: 100%; height: 100%;" 
+               id="compare-before-img"
+            />
+             <!-- Note: max-w-none and explicit width is crticial so image doesn't squash -->
+          </div>
+
+          <!-- Slider Input -->
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            class="comparison-slider-input"
+            id="slider-range"
+            oninput="moveSlider(this.value)"
+            aria-label="Porovnanie pred a po"
+          />
+
+          <!-- Visual Handle -->
+          <div class="comparison-handle-btn" id="slider-handle">
+            <div class="handle-circle">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewbox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 9l4-4 4 4m0 6l-4 4-4-4"
+                ></path>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+
+        <script>
+          // Script to handle slider movement
+          function moveSlider(val) {
+            // Update the width of the overlay container
+            const overlay = document.getElementById('compare-overlay');
+            const handle = document.getElementById('slider-handle');
+            const beforeImg = document.getElementById('compare-before-img');
+            const container = overlay.parentElement;
+            
+            overlay.style.width = val + "%";
+            handle.style.left = val + "%";
+            
+            // To keep the 'before' image static (revealing effect) rather than squashing it:
+            // We need to set the image width to the full container width.
+            // Since CSS object-fit cover is used on full height, we just need to ensure the img element
+            // matches the parent container's dimensions, NOT the overlay's current width.
+            // I've set the img width to the container's width in the HTML style attribute dynamically or via fixed CSS.
+            // Actually, simply setting width: 100% on the img relative to the OVERLAY would squash it.
+            // So we set width to the width of the parent container.
+            
+            if(container) {
+                 beforeImg.style.width = container.offsetWidth + 'px';
+            }
+          }
+          
+          // Initial setup on load to ensure correct sizing
+          window.addEventListener('load', () => {
+             moveSlider(50);
+             // Also update on resize to keep the before image width correct
+             window.addEventListener('resize', () => {
+                 moveSlider(document.getElementById('slider-range').value);
+             });
+          });
+        </script>
+      </div>
+    </section>
+    <!-- END: Before and After -->
+    <!-- BEGIN: Tech Specs & Videos Wrapper -->
+    <div class="bg-brand-dark text-white py-32">
+      <!-- BEGIN: Technical Parameters -->
+      <section class="container mx-auto px-4 mb-20 py-32">
+        <h2
+          class="text-3xl md:text-4xl font-extrabold uppercase text-center mb-12 text-brand-orange"
+        >
+          Technické Parametre
+        </h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 max-w-4xl mx-auto bg-[#252525] p-8 rounded-lg"
+        >
+          <!-- Left Column -->
+          <div class="space-y-4">
+            <div class="flex items-center gap-3 border-b border-gray-700 pb-2">
+              <svg
+                class="w-6 h-6 text-brand-orange"
+                fill="currentColor"
+                viewbox="0 0 20 20"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="font-medium">Akustická trieda A</span>
+            </div>
+            <div class="flex items-center gap-3 border-b border-gray-700 pb-2">
+              <svg
+                class="w-6 h-6 text-brand-orange"
+                fill="currentColor"
+                viewbox="0 0 20 20"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="font-medium">Protipožiarna klasifikácia</span>
+            </div>
+            <div class="flex items-center gap-3 border-b border-gray-700 pb-2">
+              <svg
+                class="w-6 h-6 text-brand-orange"
+                fill="currentColor"
+                viewbox="0 0 20 20"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="font-medium">Odolnosť voči vlhkosti</span>
+            </div>
+            <div class="flex items-center gap-3 border-b border-gray-700 pb-2">
+              <svg
+                class="w-6 h-6 text-brand-orange"
+                fill="currentColor"
+                viewbox="0 0 20 20"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="font-medium">Certifikovaná MDF</span>
+            </div>
+          </div>
+          <!-- Right Column (Mirrored for mockup consistency) -->
+          <div class="space-y-4">
+            <div class="flex items-center gap-3 border-b border-gray-700 pb-2">
+              <svg
+                class="w-6 h-6 text-brand-orange"
+                fill="currentColor"
+                viewbox="0 0 20 20"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="font-medium">Nízka hmotnosť panelov</span>
+            </div>
+            <div class="flex items-center gap-3 border-b border-gray-700 pb-2">
+              <svg
+                class="w-6 h-6 text-brand-orange"
+                fill="currentColor"
+                viewbox="0 0 20 20"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="font-medium">Recyklovateľný materiál</span>
+            </div>
+            <div class="flex items-center gap-3 border-b border-gray-700 pb-2">
+              <svg
+                class="w-6 h-6 text-brand-orange"
+                fill="currentColor"
+                viewbox="0 0 20 20"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="font-medium">Antistatická úprava</span>
+            </div>
+            <div class="flex items-center gap-3 border-b border-gray-700 pb-2">
+              <svg
+                class="w-6 h-6 text-brand-orange"
+                fill="currentColor"
+                viewbox="0 0 20 20"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="font-medium">5-ročná záruka</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: Technical Parameters -->
+      <!-- BEGIN: Video Reviews -->
+      <section class="container mx-auto px-4 py-32">
+        <h2
+          class="text-3xl md:text-4xl font-extrabold uppercase text-center mb-12 text-brand-orange"
+        >
+          Video Recenzie
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Video 1 -->
+          <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+            <video
+              controls
+              class="w-full h-full object-cover aspect-[4/5] rounded-lg shadow-lg"
+              poster="https://lh3.googleusercontent.com/aida-public/AB6AXuBwHPC2X0HzjX0JUnru2Z54lI0S950WYO3lX6GEQymH7NzkWuUYPiWTEsOFz_EKmLeBUmJIa9UaBafq9GH-rhny-Q_p_M3DcqSw5VJja3h1EvQymeEenwa3CYT8uDnCUqPo61ax1Jkct8pGn8vFiBTBLXR9VB2eMBmPh_32rEJoCMUENzczOSkvtnudPHZ6DYfg7rGECUVwQbAFU5GM3x7brwzHFXQ-bpKyWo_c312gkC0Ue5i8XcTZzpIChHUP519WFPyOZ-2so18"
+            >
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+              Váš prehliadač nepodporuje video tag.
+            </video>
+            <p class="mt-2 text-sm text-gray-400">
+              Video recenzia: Inštalácia akustických panelov
+            </p>
+          </div>
+          <!-- Video 2 -->
+          <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+            <video
+              controls
+              class="w-full h-full object-cover aspect-[4/5] rounded-lg shadow-lg"
+              poster="https://lh3.googleusercontent.com/aida-public/AB6AXuAH_c9ZcnKW3LNbMeIvXeSvLl7Q0TQBxWE12e66b3ByJZ-_FsulHUwDy0m_Xau1iVJnsPVLyMqK7_sJ22JXpaPyGKGSpMXZNyLZsVutxSs75idMnuhkzxPuRmgLtN6zLL01j1AO2hSY529p56T1gvU4Rbc8ggu4XJKziyu79pPOjph_3V-duVpx15Wb4e8gOrGucrwgL6Y9aeyWIdJ2RM6UH4aNO-MujlG2D8-rV11Y0uPcz7ZvevYmWAy-R0sbVstKXGP_iCEYZRg"
+            >
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+              Váš prehliadač nepodporuje video tag.
+            </video>
+            <p class="mt-2 text-sm text-gray-400">
+              Video: Rozhovor s dekoratívnym dizajnérom
+            </p>
+          </div>
+          <!-- Video 3 -->
+          <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+            <video
+              controls
+              class="w-full h-full object-cover aspect-[4/5] rounded-lg shadow-lg"
+              poster="https://lh3.googleusercontent.com/aida-public/AB6AXuDJhHpY63JbbTcnu5PyeYKuPamOULPjPn1ZUMlNmjkD6P81aT2cDEz80T5Qvy5j8Xs31KL6WzmLG4hHhyq8h3blCwAoNk6PWs8xxEHN2GkdmG2idIiB90gpHOrOIPcAhydrP4O6p0cf3Io-VFcF22ch4VuW9qp6oNL3lmFgFb2s1CRX37XotHQ9gFi1tNEWKRhUOmxMjv5uIBocrJubq5bE0YEKuSZXhsN31C9qgP1Uk-Y7oH-G35-9BIumeCU_R4i0CBjijUiDACU"
+            >
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+              Váš prehliadač nepodporuje video tag.
+            </video>
+            <p class="mt-2 text-sm text-gray-400">
+              Video: Test odolnosti panelov
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- END: Video Reviews -->
+    </div>
+    <!-- END: Tech Specs & Videos Wrapper -->
+    <!-- BEGIN: FAQ -->
+    <section class="bg-white py-32">
+      <div class="container mx-auto px-4 max-w-3xl">
+        <h2
+          class="text-3xl md:text-4xl font-extrabold uppercase text-center mb-12 text-gray-900"
+        >
+          FAQ
+        </h2>
+        <div class="space-y-4">
+          <!-- Item 1 -->
+          <details class="group border-b border-gray-200 py-4 cursor-pointer">
+            <summary
+              class="flex justify-between items-center font-bold text-gray-800 list-none"
+            >
+              <span>Ako prebieha inštalácia?</span>
+              <span class="transition group-open:rotate-180">
+                <svg
+                  class="w-6 h-6 text-brand-orange"
+                  fill="none"
+                  stroke="currentColor"
+                  viewbox="0 0 24 24"
+                >
+                  <path
+                    d="M19 9l-7 7-7-7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  ></path>
+                </svg>
+              </span>
+            </summary>
+            <div class="mt-4 text-gray-600 text-sm">
+              Inštalácia je veľmi jednoduchá. Panely môžete lepiť priamo na
+              stenu pomocou montážneho lepidla alebo priskrutkovať cez plsť.
+            </div>
+          </details>
+          <!-- Item 2 -->
+          <details class="group border-b border-gray-200 py-4 cursor-pointer">
+            <summary
+              class="flex justify-between items-center font-bold text-gray-800 list-none"
+            >
+              <span>Aké sú dodacie lehoty?</span>
+              <span class="transition group-open:rotate-180">
+                <svg
+                  class="w-6 h-6 text-brand-orange"
+                  fill="none"
+                  stroke="currentColor"
+                  viewbox="0 0 24 24"
+                >
+                  <path
+                    d="M19 9l-7 7-7-7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  ></path>
+                </svg>
+              </span>
+            </summary>
+            <div class="mt-4 text-gray-600 text-sm">
+              Väčšinu produktov máme skladom a odosielame do 48 hodín. Pri
+              produktoch na objednávku je doba dodania 2-3 týždne.
+            </div>
+          </details>
+          <!-- Item 3 -->
+          <details class="group border-b border-gray-200 py-4 cursor-pointer">
+            <summary
+              class="flex justify-between items-center font-bold text-gray-800 list-none"
+            >
+              <span>Je možné panely rezať na mieru?</span>
+              <span class="transition group-open:rotate-180">
+                <svg
+                  class="w-6 h-6 text-brand-orange"
+                  fill="none"
+                  stroke="currentColor"
+                  viewbox="0 0 24 24"
+                >
+                  <path
+                    d="M19 9l-7 7-7-7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  ></path>
+                </svg>
+              </span>
+            </summary>
+            <div class="mt-4 text-gray-600 text-sm">
+              Áno, panely sa dajú jednoducho skrátiť pomocou bežnej pílky s
+              jemným zubom.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+    <!-- END: FAQ -->
+    <!-- BEGIN: Lead Generation Form -->
+    <section class="bg-gray-50 py-32">
+      <div class="container mx-auto px-4">
+        <div
+          class="bg-gradient-to-r from-orange-100 to-white rounded-xl shadow-xl overflow-hidden max-w-5xl mx-auto flex flex-col md:flex-row"
+        >
+          <!-- Text Content -->
+          <div class="p-10 md:w-1/2 flex flex-col justify-center">
+            <h2
+              class="text-3xl md:text-4xl font-extrabold uppercase text-gray-900 mb-4 leading-none"
+            >
+              Získajte <br />
+              <span class="text-brand-orange">Vzorky Zdarma</span>
+            </h2>
+            <p class="text-gray-600 mb-8">
+              Chcete vidieť panely naživo? Pošleme vám vzorkovník priamo k vám
+              domov. Presvedčte sa o kvalite.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3">
+                <div
+                  class="w-6 h-6 bg-brand-orange rounded-full flex items-center justify-center text-white text-xs"
+                >
+                  ✓
+                </div>
+                <span class="font-medium text-gray-700"
+                  >Všetky dekory v jednom balení</span
+                >
+              </li>
+              <li class="flex items-center gap-3">
+                <div
+                  class="w-6 h-6 bg-brand-orange rounded-full flex items-center justify-center text-white text-xs"
+                >
+                  ✓
+                </div>
+                <span class="font-medium text-gray-700"
+                  >Doručenie do 48 hodín</span
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Form -->
+          <div class="p-10 md:w-1/2 bg-white/50 backdrop-blur-sm">
+            <form class="space-y-4">
+              <div>
+                <label
+                  class="block text-xs font-bold text-gray-400 uppercase mb-1"
+                  >Meno a Priezvisko</label
+                >
+                <input
+                  class="w-full border border-gray-300 rounded-md bg-white focus:border-brand-orange focus:ring-brand-orange py-3 px-4 shadow-sm"
+                  placeholder="Ján Novák"
+                  type="text"
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-xs font-bold text-gray-400 uppercase mb-1"
+                  >E-mailová adresa</label
+                >
+                <input
+                  class="w-full border border-gray-300 rounded-md bg-white focus:border-brand-orange focus:ring-brand-orange py-3 px-4 shadow-sm"
+                  placeholder="jan@priklad.sk"
+                  type="email"
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-xs font-bold text-gray-400 uppercase mb-1"
+                  >Telefónne číslo</label
+                >
+                <input
+                  class="w-full border border-gray-300 rounded-md bg-white focus:border-brand-orange focus:ring-brand-orange py-3 px-4 shadow-sm"
+                  placeholder="+421 900 000 000"
+                  type="tel"
+                />
+              </div>
+              <button
+                class="w-full bg-brand-orange hover:bg-orange-600 text-white font-bold py-3 px-4 rounded shadow-lg transition uppercase tracking-wide mt-4"
+                type="submit"
+              >
+                Odoslať žiadosť
+              </button>
+              <p class="text-center text-xs text-gray-400 mt-2">
+                Dostanete vzorku do 48 hodín
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: Lead Generation Form -->
+    <!-- BEGIN: Footer -->
+    <footer class="text-gray-400 text-sm py-16 bg-brand-dark">
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-6 mb-8"
+        >
+          <!-- Logo -->
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-lg uppercase tracking-wider"
+              >DEKORATÍVNEPANELY.SK</span
+            >
+          </div>
+          <!-- Social Icons -->
+          <div class="flex space-x-4">
+            <a
+              class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/40 transition"
+              href="https://www.facebook.com/dekorativnepanely/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="sr-only">Facebook</span>
+              <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24">
+                <path
+                  d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/40 transition"
+              href="https://www.instagram.com/artstone_dekorativnepanely/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="sr-only">Instagram</span>
+              <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <!-- Legal Links -->
+          <div class="text-xs space-x-4 opacity-80">
+            <a class="hover:underline" href="#">VOP</a>
+            <a class="hover:underline" href="#">GDPR</a>
+            <a class="hover:underline" href="#">Doprava</a>
+          </div>
+        </div>
+        <!-- Bottom Bar -->
+        <div
+          class="border-t border-white/20 pt-6 flex flex-col md:flex-row justify-between items-center bg-white text-gray-900 rounded-lg p-4"
+        >
+          <div class="flex items-center gap-2 mb-2 md:mb-0">
+            <svg
+              class="w-5 h-5 text-brand-orange"
+              fill="none"
+              stroke="currentColor"
+              viewbox="0 0 24 24"
+            >
+              <path
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              ></path>
+            </svg>
+            <span class="font-bold">Ponuka do 24h</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-sm font-bold uppercase text-gray-500"
+              >Zákaznícka linka:</span
+            >
+            <span class="font-bold">+421 908 000 000</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END: Footer -->
+  </body>
+</html>
