@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Kontakty - Dekoratívne Panely</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Roboto:wght@400;500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS v3 with Plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Montserrat", "sans-serif"],
+              body: ["Roboto", "sans-serif"],
+            },
+            colors: {
+              brand: {
+                orange: "#FF6600",
+                dark: "#1A1A1A",
+                darker: "#111111",
+                light: "#F9F9F9",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>html { scroll-behavior: smooth; }</style>
+  </head>
+  <body class="font-sans text-gray-800 antialiased overflow-x-hidden flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-brand-darker text-white py-4 fixed w-full top-0 z-50 border-b border-gray-800">
+      <div class="container mx-auto px-4 flex justify-between items-center">
+        <a class="text-xl md:text-2xl font-extrabold uppercase tracking-wide" href="index.html">
+          DEKORATÍVNE<span class="text-brand-orange">PANELY</span>
+        </a>
+        <nav class="hidden md:flex space-x-8 text-sm font-semibold tracking-wider">
+          <a class="hover:text-brand-orange transition" href="produkty.html">PRODUKTY</a>
+          <a class="hover:text-brand-orange transition" href="vyhody-artstone.html">VÝHODY ARTSTONE</a>
+          <a class="hover:text-brand-orange transition" href="instalacia-a-udrzba.html">INŠTALÁCIA A ÚDRŽBA</a>
+          <a class="hover:text-brand-orange transition" href="inspiracie.html">INŠPIRÁCIE</a>
+          <a class="hover:text-brand-orange transition" href="kontakty.html">KONTAKTY</a>
+        </nav>
+        <a class="hidden md:inline-block bg-gradient-to-r from-brand-orange to-orange-400 hover:to-brand-orange text-white font-bold py-2 px-6 rounded text-sm transition transform hover:scale-105 shadow-lg shadow-brand-orange/50 hover:shadow-brand-orange/80" href="#eshop">
+          E-SHOP
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-32 pb-20 container mx-auto px-4">
+        <h1 class="text-4xl font-extrabold text-brand-dark uppercase mb-8">KONTAKTY</h1>
+        <p class="text-lg text-gray-600">Obsah pre stránku Kontakty sa pripravuje...</p>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-gray-400 text-sm py-16 bg-brand-dark mt-auto">
+      <div class="container mx-auto px-4 text-center">
+        <p>&copy; 2024 DEKORATÍVNEPANELY.SK</p>
+      </div>
+    </footer>
+  </body>
+</html>
