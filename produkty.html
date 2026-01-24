@@ -1,0 +1,1224 @@
+<!DOCTYPE html> <html class="dark" lang="sk"><head> <meta charset="utf-8"/> <meta content="width=device-width, initial-scale=1.0" name="viewport"/> <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script> <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/> <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/> <script id="tailwind-config">         tailwind.config = {             darkMode: "class",             theme: {                 extend: {                     colors: {                         "primary": "#ff702e",                         "background-light": "#ffffff",                         "background-dark": "#141414",                         "surface": "#1f1f1f",                         "surface-highlight": "#2a2a2a",                         "border-muted": "#333333"                     },                     fontFamily: {                         "display": ["Epilogue", "sans-serif"]                     },                     borderRadius: {                         "DEFAULT": "0.25rem",                         "lg": "0.5rem",                         "xl": "0.75rem",                         "2xl": "1rem",                         "full": "9999px"                     },                 },             },         }     </script> <style>body {     font-family: "Epilogue", sans-serif     } details > summary {     list-style: none     } details > summary::-webkit-details-marker {     display: none     } .texture-overlay {     background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAXbJnE9Q1sLIfzKt8npvgv3sBYfATxSglMYmu8gR_rX8QCrH0Tg7jicecV9vyN_4kPUn5MB9Sd4hu8ktqFmPT16c4dn6R-SBlyrjGqgHK1o3bdIl8yYKLKVA1UmJbS_J5S0j92pR51uIochx7oq1lFq01-DTaxgGSqZzVb5T-96zv3OQ5R-Kjih7AmXT8MoPwf0U-u5WMbASIYXIT6_wgdFoNzFaL0AuE4nZdX8NvyViZfqOVyzrWWqwdiCm8ObnaO_fJuO6AcirA)     }</style> </head> <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased"> <header class="sticky top-0 z-50 w-full border-b border-border-muted bg-background-dark/80 backdrop-blur-md"> <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"> <a href="index.html" class="flex items-center gap-3 group">
+    <img src="logo-white.png?v=3" alt="Artstone Logo" class="h-11 w-auto object-contain transition-transform group-hover:scale-105">
+</a> <nav class="hidden md:flex items-center gap-10">
+    <a class="text-white/70 hover:text-primary text-sm font-medium transition-colors" href="o-nas.html">O nás</a>
+    <a class="text-white/70 hover:text-primary text-sm font-medium transition-colors" href="proces-spoluprace.html">Proces spolupráce</a>
+    <a class="text-white/70 hover:text-primary text-sm font-medium transition-colors" href="produkty.html">Produkty</a>
+    <a class="text-white/70 hover:text-primary text-sm font-medium transition-colors" href="montaz.html">Montáž</a>
+    <a class="text-white/70 hover:text-primary text-sm font-medium transition-colors" href="inspiracie.html">Inšpirácie</a>
+    <a class="text-white/70 hover:text-primary text-sm font-medium transition-colors" href="#">Kontakt</a>
+</nav> <button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20">                 Získať ponuku             </button> </div> </header> <section class="relative min-h-[90vh] flex items-end pb-32 overflow-hidden"> <div class="absolute inset-0 z-0"> <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent z-10"></div> <div class="absolute inset-0 texture-overlay z-10 opacity-50 mix-blend-overlay"></div> <div class="w-full h-full bg-cover bg-center" data-alt="Dark moody interior with wood slat wall and warm orange lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDOSZ-QODkfhG3cEBhoqILFZBmJ3vm-Wk6GpznyWlqlPL5swqkZtd3RLJmudgWWBQLxz5lo8_LBKCVfPDhZWq3NcC4oe74VL2E2-RuS1k-s-Z8d4AzM05Rk4u7_CX4pGyy_6nubtm5bTxSz_yvg91LmSUqg7Hww_Jwe6rpbFBXThfmznoOuc-lPGTn8a2LOlJXAszqxXCrWO-knEbi_Me8VXrsfvKobQ3oTrlAXq_yrkx37umPzx3zu8RxQ140IiIh5U3gMTXNCNQU');"></div> </div> <div class="relative z-20 max-w-7xl mx-auto px-6 w-full"> <div class="max-w-3xl"> <span class="inline-block bg-primary/20 backdrop-blur-sm border border-primary/30 px-4 py-1.5 rounded-full text-primary font-bold tracking-[0.2em] text-[10px] uppercase mb-6">                     Showroom Kolekcia 2024                 </span> <h1 class="text-white text-7xl md:text-9xl font-black leading-[0.9] tracking-tighter mb-8">                     ATMOSFÉRA<br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">LUXUSU</span> </h1> <p class="text-white/70 text-xl max-w-xl mb-12 font-light border-l-2 border-primary pl-6">                     Objavte hmatateľnú dokonalosť. Vzorky dekoratívnych panelov Artstone® teraz dostupné pre architektov a dizajnérov.                 </p> <button onclick="document.getElementById('catalog-filter').scrollIntoView({behavior: 'smooth'})" class="bg-white text-background-dark hover:bg-primary hover:text-white px-10 py-5 rounded-lg text-lg font-bold tracking-wide transition-colors duration-300">                     PREHĽADÁVAŤ KOLEKCIU ↓                 </button> </div> </div> </section> <div id="catalog-filter" class="sticky top-20 z-40 bg-background-dark/95 backdrop-blur-md border-b border-border-muted py-4 shadow-2xl"> <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4"> <div class="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 no-scrollbar"> <button class="bg-primary text-white px-5 py-2 rounded-full text-sm font-bold whitespace-nowrap shadow-lg shadow-primary/20 transition-all filter-btn" data-category="all">Všetky</button>
+<button class="bg-surface border border-border-muted text-white/70 hover:text-white hover:border-primary px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all filter-btn" data-category="wood">Drevo</button>
+<button class="bg-surface border border-border-muted text-white/70 hover:text-white hover:border-primary px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all filter-btn" data-category="concrete">Betón</button>
+<button class="bg-surface border border-border-muted text-white/70 hover:text-white hover:border-primary px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all filter-btn" data-category="stone">Kameň</button>
+<button class="bg-surface border border-border-muted text-white/70 hover:text-white hover:border-primary px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all filter-btn" data-category="brick">Tehla</button> </div> <div class="relative w-full md:w-80"> <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-white/40">search</span> <input class="w-full bg-surface border border-border-muted rounded-full pl-10 pr-4 py-2.5 text-sm text-white focus:ring-1 focus:ring-primary focus:border-primary placeholder-white/30 transition-all" placeholder="Hľadať dekory..." type="text" id="searchInput"/> </div> </div> </div> <section class="py-12 bg-background-dark relative"> <div class="max-w-7xl mx-auto px-6"> <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-16 border-b border-border-muted pb-12"> <div class="lg:col-span-1"> <h3 class="text-2xl font-black text-white uppercase tracking-tight mb-2">Ako získať<br/><span class="text-primary">vzorku?</span></h3> <p class="text-white/50 text-sm">Jednoduchý proces pre vaše rozhodovanie.</p> </div> <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6"> <div class="flex items-start gap-4"> <div class="size-10 rounded bg-surface-highlight flex items-center justify-center shrink-0 border border-border-muted text-primary font-bold">1</div> <div> <h4 class="text-white font-bold mb-1">Vyberte dekor</h4> <p class="text-white/50 text-xs leading-relaxed">Prezrite si našu ponuku a zvoľte povrch, ktorý vás zaujíma.</p> </div> </div> <div class="flex items-start gap-4"> <div class="size-10 rounded bg-surface-highlight flex items-center justify-center shrink-0 border border-border-muted text-primary font-bold">2</div> <div> <h4 class="text-white font-bold mb-1">Objednajte vzorku</h4> <p class="text-white/50 text-xs leading-relaxed">Pridajte vzorku do košíka. Odosielame do 24 hodín.</p> </div> </div> <div class="flex items-start gap-4"> <div class="size-10 rounded bg-surface-highlight flex items-center justify-center shrink-0 border border-border-muted text-primary font-bold">3</div> <div> <h4 class="text-white font-bold mb-1">Otestujte doma</h4> <p class="text-white/50 text-xs leading-relaxed">Priložte vzorku k stene a sledujte hru svetla.</p> </div> </div> </div> </div> <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Plafont Bonamy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/1-plafont-bonamy/1-PLAFONT-BONAMY.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Plafont Bonamy</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Plafont Bonamy</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Versailes Creme Fonce" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/11-versailes-creme-fonce/1-VERSAILLES-FONCE-BLANC.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Versailes Creme Fonce</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Versailes Creme Fonce</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Vermont Noir Bronze" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/2-vermont-noir-bronze/1-VERMONT-FUE-VERT-DORE.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Vermont Noir Bronze</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Vermont Noir Bronze</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Victorian Bonamy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/2-victorian-bonamy/1-VICTORIAN-NOIR-BRONZE.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Victorian Bonamy</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Victorian Bonamy</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="B 321 01 Ladrillo Vintage Blanca" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/B-321-01 ladrillo vintage blanca/B-321-01-Ladrillo-Vintage-Blanca.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">B 321 01 Ladrillo Vintage Blanca</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">B 321 01 Ladrillo Vintage Blanca</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="DSC03335 Kopya" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/DSC03335-kopya/DSC03335-kopya.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">DSC03335 Kopya</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">DSC03335 Kopya</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Heritage XVIII" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/Heritage XVIII/Heritage-XVIII-Blanca-541-01.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Heritage XVIII</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Heritage XVIII</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Hormigon Loft" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/Hormigon loft/hormigon-loft-grey.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Hormigon Loft</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Hormigon Loft</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="JAKARTA" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/JAKARTA/JAKARTA.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">JAKARTA</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">JAKARTA</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="KORS" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/KORS/KORS.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">KORS</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">KORS</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Roca Natura" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/Roca-natura/ROCA-basalto.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Roca Natura</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Roca Natura</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="WOXX OXIDO" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/WOXX-OXIDO/WOXX-OXIDO.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">WOXX OXIDO</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">WOXX OXIDO</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Boabab Moss" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/boabab moss/BAOBAB-MOSS.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Boabab Moss</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Boabab Moss</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Bolts " class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/bolts /BOLTS.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Bolts </h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Bolts </h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Broderie Bronze" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/broderie-bronze/1-BRODERIE-NOIR-BRONZE.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Broderie Bronze</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Broderie Bronze</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Epicure Chambery" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/epicure chambery/1-EPICURE-CHAMBERY.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Epicure Chambery</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Epicure Chambery</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Forg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/forg/FORG-BRONZE.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Forg</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Forg</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="G Cube" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/g-cube/G-QUBE.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">G Cube</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">G Cube</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Grenier" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/grenier/1-GRENIER-OXYD-BLANC.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Grenier</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Grenier</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Hormigon" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/hormigon/hormigon-intenso.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Hormigon</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Hormigon</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Hormigon Oxido" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/hormigon oxido/hormigon-plus-oxido.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Hormigon Oxido</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Hormigon Oxido</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Hormigon Vintage Natura" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/hormigon vintage natura/hormigon-vintage-natura.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Hormigon Vintage Natura</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Hormigon Vintage Natura</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Horming Plus Grey" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/horming plus grey/hormigon-plus-anthracite-1.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Horming Plus Grey</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Horming Plus Grey</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Ladrillo Loft Rojo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/ladrillo-loft-rojo/ladrillo-loft-polo-rojo.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Ladrillo Loft Rojo</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Ladrillo Loft Rojo</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Ladrillo Multicolor" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/ladrillo-multicolor/ladrillo-blanca.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Ladrillo Multicolor</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Ladrillo Multicolor</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Ladrillo Perforado Electric" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/ladrillo-perforado electric/ladrillo-perforado-eclectic.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Ladrillo Perforado Electric</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Ladrillo Perforado Electric</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Lajas Ocre" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/lajas-ocre/lajas-blanca.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Lajas Ocre</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Lajas Ocre</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Lastra Ocobriza" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/lastra-ocobriza/lastra-cobriza.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Lastra Ocobriza</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Lastra Ocobriza</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Magma Blanca" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/magma-blanca/magma-basalto.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Magma Blanca</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Magma Blanca</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Picada Blanca" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/picada-blanca/picada-blanca.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Picada Blanca</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Picada Blanca</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Pizarra Intenso" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/pizarra intenso/pizarra-anthratice.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Pizarra Intenso</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Pizarra Intenso</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Rootz" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/rootz/rootz.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Rootz</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Rootz</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Ruina Ocre" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/ruina-ocre/ruina-ocre.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Ruina Ocre</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Ruina Ocre</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Rustica Castellana" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/rustica-castellana/rustica-castellana.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Rustica Castellana</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Rustica Castellana</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Sillarejo Cobriza" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/sillarejo-cobriza/sillarejo-blanca.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Sillarejo Cobriza</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Sillarejo Cobriza</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Timber Natura" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/timber-natura/timber-natura.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Timber Natura</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Timber Natura</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Tocho Earth" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/tocho-earth/tocho-earth.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Tocho Earth</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Tocho Earth</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Wood Barbados Earth" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/wood-barbados-earth/wood-barbados-blanca.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Wood Barbados Earth</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Wood Barbados Earth</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Zanzibar" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/zanzibar/zanzibar-anthracite.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Zanzibar</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Zanzibar</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Amazon Basalto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/amazon-basalto-1.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Amazon Basalto 1</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Amazon Basalto 1</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Amazon Earth" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/amazon-earth.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Amazon Earth</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Amazon Earth</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-surface rounded-2xl overflow-hidden border border-border-muted hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div class="aspect-[4/5] overflow-hidden relative">
+            <img alt="Amazon Natura 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" src="images/amazon-natura-1.jpg" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center translate-y-4 group-hover:translate-y-0">
+                <h3 class="text-2xl font-bold text-white mb-2">Amazon Natura 1</h3>
+                <p class="text-white/60 text-sm mb-6">Prémiový dekoratívny panel Artstone.</p>
+                <div class="space-y-3 w-full">
+                    <button class="w-full bg-primary hover:bg-white hover:text-primary text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        Objednať vzorku
+                    </button>
+                    <button class="w-full bg-transparent border border-white/20 hover:bg-white/10 text-white py-3 rounded font-bold uppercase text-xs tracking-widest transition-colors">
+                        Detail produktu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 relative bg-surface z-10 transition-transform duration-300 group-hover:-translate-y-full group-hover:opacity-0 absolute bottom-0 w-full">
+            <h3 class="text-xl font-bold text-white">Amazon Natura 1</h3>
+            <div class="flex justify-between items-center mt-2">
+                <p class="text-white/40 text-sm">Séria: Artstone</p>
+                <span class="text-primary font-bold">Cena na vyžiadanie</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mt-16 text-center"> <button class="border border-white/20 hover:border-primary hover:text-primary text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest transition-all">                     Načítať ďalšie produkty                 </button> </div> </div> </section> <section class="py-24 bg-surface relative overflow-hidden"> <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent"></div> <div class="max-w-7xl mx-auto px-6 relative z-10"> <div class="flex flex-col lg:flex-row items-center gap-16"> <div class="lg:w-1/2"> <div class="relative group cursor-pointer"> <div class="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-lg blur opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div> <div class="relative bg-black rounded-lg overflow-hidden border border-border-muted shadow-2xl rotate-1 group-hover:rotate-0 transition-transform duration-500"> <img alt="Katalóg Preview" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkrxGhHLkMTEIQhwQ6nenOmYzYXbXsJTnmbnWQobUfo8q2l7X-aOgg9tMz4D2eopxwXbxs7h6ijTjDBEKqlBTP1vfkCKmxbrPKhi3Wh-HU4fYSOXp30hVg4MJ2CfAywPUPyMzsDzaIPPPjkae1nZAz9yYurxMt2SqIhgHnhyQS0QI7mMIsL_rGRnpyV3Pm_S0gYAduxh55XBYaJeriA_wN0a_5C-A67Av_YM1Ebp7hMR77OUMPfw6k26uEFv6Zk6oQpsMMSz5sNbM"/> <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-8"> <p class="text-white/50 text-xs uppercase tracking-widest mb-2">Issue 2024 / Vol. 1</p> <h3 class="text-white font-serif text-3xl italic">Art &amp; Stone</h3> </div> </div> <div class="absolute -bottom-6 -right-6 bg-white text-black size-24 rounded-full flex flex-col items-center justify-center font-bold text-center text-xs leading-tight shadow-xl z-20 group-hover:scale-110 transition-transform"> <span>PDF</span> <span class="text-lg">FREE</span> </div> </div> </div> <div class="lg:w-1/2 space-y-8"> <span class="text-primary font-bold tracking-[0.2em] text-xs uppercase">Inšpirácia</span> <h2 class="text-5xl font-black text-white leading-tight">                         KATALÓG <br/> <span class="italic font-serif font-normal text-white/50">Trends 2024</span> </h2> <p class="text-white/60 text-lg leading-relaxed border-l-2 border-white/10 pl-6">                         Stiahnite si náš exkluzívny digitálny katalóg plný inšpirácií, technických detailov a prípadových štúdií. Viac ako 150 strán vizuálneho obsahu.                     </p> <div class="flex flex-col sm:flex-row gap-4 pt-4"> <button class="bg-white text-black hover:bg-primary hover:text-white px-8 py-4 rounded text-sm font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2"> <span class="material-symbols-outlined">download</span>                             Stiahnuť PDF                         </button> <button class="border border-white/20 text-white hover:border-white px-8 py-4 rounded text-sm font-bold uppercase tracking-wider transition-colors">                             Prelistovať online                         </button> </div> </div> </div> </div> </section> <section class="bg-primary text-white py-20"> <div class="max-w-4xl mx-auto px-6 text-center"> <h2 class="text-4xl md:text-5xl font-black mb-6 leading-tight">Váš projekt si zaslúži výnimočnosť.</h2> <p class="text-white/80 text-xl font-light mb-12 max-w-2xl mx-auto">                 Začnite s bezplatnou konzultáciou. Získajte cenovú ponuku a odporúčania od našich expertov do 24 hodín.             </p> <form class="bg-white/10 backdrop-blur-md p-2 rounded-2xl flex flex-col md:flex-row gap-2 max-w-2xl mx-auto border border-white/20"> <div class="flex-grow"> <select class="w-full h-14 bg-white/10 border-transparent rounded-xl text-white placeholder-white/50 focus:border-white focus:ring-0 px-4 appearance-none font-medium cursor-pointer hover:bg-white/20 transition-colors"> <option class="bg-surface text-white" disabled="" selected="" value="">Vyberte typ priestoru...</option> <option class="bg-surface text-white" value="obyvacka">Obývačka / Spálňa</option> <option class="bg-surface text-white" value="kuchyna">Kuchyňa / Kúpeľňa</option> <option class="bg-surface text-white" value="exterier">Exteriér / Fasáda</option> <option class="bg-surface text-white" value="komercne">Komerčný priestor</option> </select> </div> <div class="flex-grow"> <input class="w-full h-14 bg-white/10 border-transparent rounded-xl text-white placeholder-white/70 focus:border-white focus:ring-0 px-4 font-medium" placeholder="Váš email" type="email"/> </div> <button class="bg-white text-primary hover:bg-background-dark hover:text-white h-14 px-8 rounded-xl font-bold uppercase tracking-wide transition-all shadow-lg whitespace-nowrap">                     Mám záujem                 </button> </form> <p class="mt-6 text-white/40 text-xs uppercase tracking-widest">Nezáväzne • Bez spamu • Odpovedáme rýchlo</p> </div> </section> <footer class="bg-background-dark py-20 border-t border-border-muted"> <div class="max-w-7xl mx-auto px-6"> <div class="grid md:grid-cols-4 gap-12 mb-16"> <div class="col-span-2"> <a href="index.html" class="block mb-8">
+    <img src="logo-white.png?v=3" alt="Artstone Logo" class="h-8 w-auto object-contain">
+</a> <p class="text-white/40 max-w-sm mb-8 leading-relaxed">                         Prémiové riešenia pre modernú architektúru. Sme vašim partnerom pri tvorbe unikátnych a funkčných priestorov.                     </p> <div class="flex gap-4">
+    <a class="size-10 bg-surface border border-border-muted rounded flex items-center justify-center text-white hover:border-primary transition-colors" href="https://www.youtube.com/channel/UCQNOo7vbwD_hZlIxwfWK_Zw" target="_blank" rel="noopener noreferrer">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+    </a>
+    <a class="size-10 bg-surface border border-border-muted rounded flex items-center justify-center text-white hover:border-primary transition-colors" href="https://www.instagram.com/artstone_dekorativnepanely/" target="_blank" rel="noopener noreferrer">
+         <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+    </a>
+    <a class="size-10 bg-surface border border-border-muted rounded flex items-center justify-center text-white hover:border-primary transition-colors" href="https://www.facebook.com/dekorativnepanely" target="_blank" rel="noopener noreferrer">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+</div> </div> <div> <h4 class="text-white font-bold mb-6">Navigácia</h4> <ul class="space-y-4"> <li><a class="text-white/40 hover:text-primary transition-colors text-sm" href="#">Produkty</a></li> <li><a class="text-white/40 hover:text-primary transition-colors text-sm" href="#">Realizácie</a></li> <li><a class="text-white/40 hover:text-primary transition-colors text-sm" href="#">O nás</a></li> <li><a class="text-white/40 hover:text-primary transition-colors text-sm" href="#">Kontakt</a></li> </ul> </div> <div> <h4 class="text-white font-bold mb-6">Služby</h4> <ul class="space-y-4"> <li><a class="text-white/40 hover:text-primary transition-colors text-sm" href="#">Vizualizácie</a></li> <li><a class="text-white/40 hover:text-primary transition-colors text-sm" href="#">Montáž na kľúč</a></li> <li><a class="text-white/40 hover:text-primary transition-colors text-sm" href="#">Veľkoobchod</a></li> <li><a class="text-white/40 hover:text-primary transition-colors text-sm" href="#">Doprava</a></li> </ul> </div> </div> <div class="pt-8 border-t border-border-muted flex flex-col md:row justify-between items-center gap-4 text-white/30 text-xs"> <p>© <span id="copyright-year">2024</span> Artstone® Decorative Panels. Všetky práva vyhradené.</p> <div class="flex gap-8"> <a class="hover:text-white transition-colors" href="#">GDPR</a> <a class="hover:text-white transition-colors" href="#">Obchodné podmienky</a> </div> </div> </div> </footer>  
+<script>
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('searchInput');
+        // Select the grid that contains the products. 
+        // We know it has specific classes.
+        const productGrid = document.getElementById('product-grid');
+        
+        if (!searchInput || !productGrid) {
+            console.error('Search elements not found');
+            return;
+        }
+
+        const productCards = productGrid.querySelectorAll('.group.relative.bg-surface');
+
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+
+            productCards.forEach(card => {
+                const titleElement = card.querySelector('h3');
+                if (titleElement) {
+                    const title = titleElement.textContent.toLowerCase();
+                    if (title.includes(searchTerm)) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const productGrid = document.getElementById('product-grid');
+        const searchInput = document.getElementById('searchInput'); // Get search input to combine filters
+
+        // Heuristic mapping
+        const keywords = {
+            wood: ['wood', 'dub', 'timber', 'rootz', 'bonamy', 'versailes', 'vermont', 'victorian', 'broderie', 'epicure', 'grenier', 'plafont', 'tocho', 'bolts', 'forg', 'jakar', 'amazon'],
+            concrete: ['hormigon', 'beton', 'concrete', 'loft', 'oxido', 'vintage', 'plus'],
+            brick: ['ladrillo', 'tehla', 'brick', 'ruina', 'rustica'],
+            stone: ['stone', 'bridlica', 'mramor', 'travertin', 'rock', 'roca', 'lajas', 'pizarra', 'magma', 'lastra', 'picada', 'sillarejo', 'kors', 'g-cube', 'g-qube', 'zanzibar', 'woxx', 'baobab']
+        };
+
+        let currentCategory = 'all';
+
+        function filterProducts() {
+            const searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
+            const cards = productGrid.querySelectorAll('.group.relative.bg-surface');
+            
+            cards.forEach(card => {
+                const titleEl = card.querySelector('h3');
+                if (!titleEl) return;
+                const title = titleEl.textContent.toLowerCase();
+                
+                // 1. Search Check
+                const matchesSearch = title.includes(searchTerm);
+                
+                // 2. Category Check
+                let matchesCategory = true;
+                if (currentCategory !== 'all') {
+                    const categoryKeywords = keywords[currentCategory] || [];
+                    // Check if title contains any of the keywords
+                    matchesCategory = categoryKeywords.some(k => title.includes(k));
+                }
+
+                if (matchesSearch && matchesCategory) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Add Click Listeners to Buttons
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active state style
+                filterButtons.forEach(b => {
+                    b.className = "bg-surface border border-border-muted text-white/70 hover:text-white hover:border-primary px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all filter-btn";
+                });
+                btn.className = "bg-primary text-white px-5 py-2 rounded-full text-sm font-bold whitespace-nowrap shadow-lg shadow-primary/20 transition-all filter-btn";
+                
+                currentCategory = btn.getAttribute('data-category');
+                filterProducts();
+            });
+        });
+
+        // Hook into existing search input if possible to re-trigger filter
+        if (searchInput) {
+            searchInput.addEventListener('input', filterProducts);
+        }
+    });
+</script>
+
+</body></html>

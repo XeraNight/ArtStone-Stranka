@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html class="dark" lang="sk"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&amp;family=Open+Sans:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FF6E2E",
+                        "charcoal": "#1E1E1E",
+                        "background-light": "#ffffff",
+                        "background-dark": "#141414",
+                        "surface": "#1f1f1f",
+                        "surface-highlight": "#2a2a2a",
+                        "border-muted": "#333333"
+                    },
+                    fontFamily: {
+                        "display": ["Montserrat", "sans-serif"],
+                        "body": ["Open Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Open Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-display { font-family: 'Montserrat', sans-serif; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased">
+<header class="sticky top-0 z-50 w-full border-b border-border-muted bg-charcoal/90 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-3 group">
+    <img src="logo-white.png?v=3" alt="Artstone Logo" class="h-11 w-auto object-contain transition-transform group-hover:scale-105">
+</a>
+<nav class="hidden md:flex items-center gap-10">
+    <a class="text-white/70 hover:text-primary text-sm font-medium transition-colors" href="o-nas.html">O nás</a>
+    <a class="text-white/70 hover:text-primary text-sm font-medium transition-colors" href="proces-spoluprace.html">Proces spolupráce</a>
+    <a class="text-white/70 hover:text-primary text-sm font-medium transition-colors" href="produkty.html">Produkty</a>
+    <a class="text-white/70 hover:text-primary text-sm font-medium transition-colors" href="montaz.html">Montáž</a>
+    <a class="text-white/70 hover:text-primary text-sm font-medium transition-colors" href="inspiracie.html">Inšpirácie</a>
+    <a class="text-white/70 hover:text-primary text-sm font-medium transition-colors" href="#">Kontakt</a>
+</nav>
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded text-sm font-bold transition-all shadow-lg shadow-primary/20 uppercase tracking-wider">
+                E-shop
+            </button>
+</div>
+</header>
+<section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-charcoal text-center">
+<div class="absolute inset-0 z-0">
+<img alt="Luxury Interior" class="w-full h-full object-cover opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA26tBLqhAb2QBk3DEm0o8xDqLpbf-fAWHecwVSE3NSN1IiDwcUQ1utq7Q05DMdTqEGABQriFVwFnda58IeG17pVziONPAKq4DozNPXFwffQfqiG_X-ryTbQ16f6y0bpLrcFbfPP0JyMgYKyHYe5-kUEavlrHy5eF5p7hcJ813Yymg6nS2b2Nzscg36c5o4o9bk9TyEVB273mD7ng1z6Er-9YmQAHvRyKazTclNhQvvVe5pl35G0qePF4ZDzVMhvPEHVvNYA6Fd-C0"/>
+<div class="absolute inset-0 bg-gradient-to-b from-charcoal/80 via-charcoal/50 to-background-dark z-10"></div>
+<div class="absolute inset-0 opacity-20 z-10 mix-blend-overlay" style="background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.1\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E');"></div>
+</div>
+<div class="relative z-20 max-w-4xl mx-auto px-6 py-24">
+<span class="inline-block text-primary font-bold tracking-[0.3em] text-sm uppercase mb-6 font-display animate-fade-in-up">Showroom</span>
+<h1 class="text-white text-5xl md:text-7xl font-black leading-[1.1] tracking-tight mb-8 font-display drop-shadow-2xl">
+                INŠPIRÁCIE, KTORÉ<br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-300">DEFINUJÚ PRIESTOR</span>
+</h1>
+<p class="text-white/90 text-lg md:text-2xl max-w-2xl mx-auto mb-12 leading-relaxed font-light drop-shadow-md">
+                Objavte, ako dekoratívne panely Artstone® menia bežné steny na umelecké diela v každom kúte vášho domova.
+            </p>
+<div class="flex justify-center">
+<button class="group bg-transparent border-2 border-white text-white hover:bg-white hover:text-charcoal px-8 py-4 rounded-full text-sm font-bold tracking-widest uppercase transition-all flex items-center gap-3">
+                    Objaviť kolekcie <span class="material-symbols-outlined group-hover:translate-y-1 transition-transform">arrow_downward</span>
+</button>
+</div>
+</div>
+</section>
+<section class="py-16 bg-background-dark border-b border-border-muted overflow-hidden">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex items-center justify-between mb-10">
+<h3 class="text-2xl font-bold text-white font-display uppercase tracking-wide">Inšpirácie podľa štýlu</h3>
+<div class="hidden md:flex gap-2">
+<button class="size-10 rounded-full border border-border-muted flex items-center justify-center text-white hover:bg-surface hover:border-primary transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="size-10 rounded-full border border-border-muted flex items-center justify-center text-white hover:bg-surface hover:border-primary transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex gap-8 overflow-x-auto pb-8 scrollbar-hide snap-x">
+<a class="group flex flex-col items-center gap-4 min-w-[140px] snap-center cursor-pointer" href="#">
+<div class="size-32 rounded-full overflow-hidden border-2 border-transparent group-hover:border-primary transition-all relative">
+<img alt="Modern" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAnBo2XYYtxt_5cyzNCqapFDP9Ft5OrKC55NjeE3paLNc8M7_ykaSEQN1mwBfzrTcYab_1IWGZ8qkxosEGe3WUBwks44aiRovUWjVd-6_1_Vro3Knk2ADnIbT3r-1rsTAZsbUFQAigrdsGGbkSY4-1nb3x6_rNsb9B5hLOY_LZoeTiCF4C8PRRKH5yZouOWV7lEq88Tu9H1yaiH5gYcuTDxKZx88t4Nc3MHRKq-HSvU_2P3fV9N7g8YiIL8wRf7z7CTLSHvhwb11E"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<span class="text-white font-bold text-sm uppercase tracking-wider group-hover:text-primary transition-colors">Moderný</span>
+</a>
+<a class="group flex flex-col items-center gap-4 min-w-[140px] snap-center cursor-pointer" href="#">
+<div class="size-32 rounded-full overflow-hidden border-2 border-transparent group-hover:border-primary transition-all relative">
+<img alt="Industrial" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVpdQ2nEZEOoZuTTa1Ml7V8tbHEdaKBKkKkXe6wiFjoIgVJ6fL8BvnYAqq4puf6LqmOpgsiWH_FM5yIfcUo_08rw20mbi1pQDZHRrK31N3SvLt5B-0Hf8EMlFyubAuhv_iL66IpwyfwAklGCSCz7XmzbgihNV5h3mW9eRQncMVJMW9up2zgDLQ0IBEkvSWsPI4NH7inJ4fasxCgN_tUEsHNuyzvCtNOR72pSbbub588rnPOBvP3Y00YUoxKItepRFZaIbyrgT3qwg"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<span class="text-white font-bold text-sm uppercase tracking-wider group-hover:text-primary transition-colors">Industriálny</span>
+</a>
+<a class="group flex flex-col items-center gap-4 min-w-[140px] snap-center cursor-pointer" href="#">
+<div class="size-32 rounded-full overflow-hidden border-2 border-transparent group-hover:border-primary transition-all relative">
+<img alt="Luxury" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsHRuXJ35hznYa5m7PyV_YUVhi1_QldQTr5yzGmUUAXZYXVJi7hSVoWlR9VxHEMPjN4VJ_H5Z2R578iST98jL84sMngFEghWU1VLnvDacDldiAUiAa9kEWwWrb5t0930wQrITNio2pV-Th4TdJrdmXDoZsNBhau_wLcQ0X0deCAvkNOxTBbMhenZxIy2Hvm2N1K6tdEcIQT-T_LyoPA05DBMOG9r0RTGb_iHkRAXpsCkhJxWwJrYSEhFr7OTE516OZ1yadnrxfF1k"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<span class="text-white font-bold text-sm uppercase tracking-wider group-hover:text-primary transition-colors">Luxusný</span>
+</a>
+<a class="group flex flex-col items-center gap-4 min-w-[140px] snap-center cursor-pointer" href="#">
+<div class="size-32 rounded-full overflow-hidden border-2 border-transparent group-hover:border-primary transition-all relative">
+<img alt="Minimalist" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsIDaRZOUG8hWJ6uI-0hlkoeMtBjFWMrvoEmhFou5-SVXynAG432FRBLB44YfnddSxzgAuGFG9hBcc_50wruQktWa4phAgOoDiKOXiFvii6-z89IRX4xfNRjxxegaABqdZ95jWhZsb2mT12Htb9I1-wK6NOnsO7e_i6s5jLg_JhdXz4tuY99c0Quru8Vh9ahHzqt5oJ14cu7NAhmNi3Pgm16PDbBNBR-JqZS0oMK12p9s-3xV5xn-dmjoWDqTs2EBvP1J4U9_Gtl8"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<span class="text-white font-bold text-sm uppercase tracking-wider group-hover:text-primary transition-colors">Minimal</span>
+</a>
+<a class="group flex flex-col items-center gap-4 min-w-[140px] snap-center cursor-pointer" href="#">
+<div class="size-32 rounded-full overflow-hidden border-2 border-transparent group-hover:border-primary transition-all relative">
+<img alt="Classic" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD64QjnitJKXRSCqKQiCCQPqJPpRZvFJiVQopf7tE4UxsZeV_1fjmIfL0kvqCzJEPyZAlICIsCXbV0UjOINybUqsG_i4q3xdedvWlVR9eZyps2peLHsEr_CIImnlqcT70zug4NKHa8yH2-H2ir79lkBHqxPMe7M0Rn26i8DMvRFCIxLcFfxTEFjT7gonBhpS8Grj4QNOLCZBWplXjvYGByk9kvy4RbfHXjf4f7AVWQei3TNDDyli_7FJM81yDWqZy2ZBrnvyfI3Ge4"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<span class="text-white font-bold text-sm uppercase tracking-wider group-hover:text-primary transition-colors">Klasický</span>
+</a>
+<a class="group flex flex-col items-center gap-4 min-w-[140px] snap-center cursor-pointer" href="#">
+<div class="size-32 rounded-full overflow-hidden border-2 border-transparent group-hover:border-primary transition-all relative">
+<img alt="Rustic" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH4rppE9SPv7Kyd2fbo1L-5pWd2OsjGE8Wj_DXUmZB2cNsKa0R87DKjGJtsiKuGalYm3MbS3pu9M4LeaFruj-zpgWiFovzL-LA4Uv8MHeY_dfntIoEhzPfxySppZQ0NTYtM-wxcbUO-rb50tEqwJ6zbOjV7EEtcbrbnD1RbYvnOwDzukd-XQR1eWdmRgzZhVqTZ0ZcAC-1CC-vtpveymIMuD8li9HgaeKIXXBMw3EV_rATxINLMQtNP8EsreIeIXvSsMGRaRpyG9g"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<span class="text-white font-bold text-sm uppercase tracking-wider group-hover:text-primary transition-colors">Rustikálny</span>
+</a>
+</div>
+</div>
+</section>
+<section class="bg-charcoal">
+<div class="group py-20 border-b border-white/5">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col lg:flex-row items-center gap-16">
+<div class="lg:w-1/2 relative">
+<div class="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl border border-white/10 group-hover:border-primary/50 transition-colors duration-500">
+<img alt="TV Wall Design" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFWfi5E9eC2L1g17UOhl3H_7rT22XH4jCEjQA9UZQfn_WmzU7O11_RXbRkfBfonaERtRpb3fHtfkYm_MoEnmFR7CUvT5lHqvgVp6fF1pdO7RLqdLZD3NkqIht1sr4YfHLpruqXOo0NRbHmfrmfpkP7tU7EqFLgpXX_hiif7SMDByLTMpeHLqonSmBQRglTX92DQOfHGAPr30tIDSHzbKIvjspNs0COoL8JqeVj0rcepEFVZAaCj6qcN_Lh1-NOq-kzVuVNwIowWFE"/>
+<div class="absolute bottom-6 left-6 bg-charcoal/90 backdrop-blur px-4 py-2 rounded border border-white/10">
+<span class="text-xs font-bold text-primary uppercase tracking-widest">Inštalácia</span>
+<span class="text-xs text-white ml-2">4 hodiny</span>
+</div>
+</div>
+<div class="absolute -z-10 -top-6 -left-6 w-full h-full border border-white/5 rounded-2xl hidden lg:block"></div>
+</div>
+<div class="lg:w-1/2">
+<span class="text-primary font-bold tracking-[0.2em] text-xs uppercase font-display mb-3 block">Obývačka</span>
+<h2 class="text-3xl md:text-5xl font-black text-white mb-6 font-display">TV Stena, ktorá zaujme</h2>
+<p class="text-white/60 text-lg mb-8 leading-relaxed font-light">
+                            Zabudnite na nudné biele steny za televízorom. Kamenný obklad dodá vašej obývačke hĺbku, luxusný charakter a vizuálne oddelí relaxačnú zónu od zvyšku priestoru.
+                        </p>
+<div class="space-y-4 mb-10">
+<div class="flex items-start gap-4">
+<div class="mt-1 size-6 rounded-full bg-surface-highlight flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-sm">Prémiový efekt bez rekonštrukcie</h4>
+<p class="text-white/40 text-xs mt-1">Montáž priamo na existujúcu omietku bez búrania.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="mt-1 size-6 rounded-full bg-surface-highlight flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-sm">Elegantné skrytie kabeláže</h4>
+<p class="text-white/40 text-xs mt-1">Možnosť vytvoriť predsadenú stenu pre všetky káble.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="mt-1 size-6 rounded-full bg-surface-highlight flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-sm">Akustická pohoda</h4>
+<p class="text-white/40 text-xs mt-1">Štruktúrovaný povrch tlmí ozvenu v miestnosti.</p>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 pt-6">
+<span class="text-white/40 text-xs uppercase tracking-widest font-bold block mb-3">Odporúčané kolekcie</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 rounded-full bg-surface text-white text-xs font-bold border border-white/10 hover:border-primary hover:text-primary cursor-pointer transition-colors">Grand Stone</span>
+<span class="px-4 py-1.5 rounded-full bg-surface text-white text-xs font-bold border border-white/10 hover:border-primary hover:text-primary cursor-pointer transition-colors">Slate Flex</span>
+<span class="px-4 py-1.5 rounded-full bg-surface text-white text-xs font-bold border border-white/10 hover:border-primary hover:text-primary cursor-pointer transition-colors">Dark Marble</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="group py-20 border-b border-white/5 bg-background-dark">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+<div class="lg:w-1/2 relative">
+<div class="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl border border-white/10 group-hover:border-primary/50 transition-colors duration-500">
+<img alt="Kitchen Backsplash" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYT-0XbgFJ3X5_d0ZhKF2Ys0BX2Exdm3AlhihuNV4gDqipNDKoOsN9D0wdV3_VFkFUfRsv0u3N7pjKRHM4v3ZTkQzfbthfSvq46Ffzs9Vko8f0sRGua4r6yjosGN27IskgEafC45Yr_TwRsExvTrNG2t66MVM-n_KBP7Rj51YWZbgOU69oACoNabelOaY8rcvvfOycgSp9ajGUn5RIeLpF745Z46GA2Gc1V_w71xQOQ0mvFq9K-WeKCuDUnj9lApzMgAHyxfMCg9E"/>
+<div class="absolute bottom-6 left-6 bg-charcoal/90 backdrop-blur px-4 py-2 rounded border border-white/10">
+<span class="text-xs font-bold text-primary uppercase tracking-widest">Odolnosť</span>
+<span class="text-xs text-white ml-2">Voda &amp; Teplo</span>
+</div>
+</div>
+<div class="absolute -z-10 -bottom-6 -right-6 w-full h-full border border-white/5 rounded-2xl hidden lg:block"></div>
+</div>
+<div class="lg:w-1/2">
+<span class="text-primary font-bold tracking-[0.2em] text-xs uppercase font-display mb-3 block">Kuchyňa</span>
+<h2 class="text-3xl md:text-5xl font-black text-white mb-6 font-display">Odolná krása nad linkou</h2>
+<p class="text-white/60 text-lg mb-8 leading-relaxed font-light">
+                            Kuchynská zástena nemusí byť len praktická nutnosť. Panely Artstone® prinášajú do srdca domova textúru prírodného kameňa, ktorá je pripravená na každodenné varenie.
+                        </p>
+<div class="space-y-4 mb-10">
+<div class="flex items-start gap-4">
+<div class="mt-1 size-6 rounded-full bg-surface-highlight flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-sm">100% Vodeodolné</h4>
+<p class="text-white/40 text-xs mt-1">Ideálne riešenie za drez alebo varnú dosku.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="mt-1 size-6 rounded-full bg-surface-highlight flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-sm">Bezškárový dizajn</h4>
+<p class="text-white/40 text-xs mt-1">Žiadne špinavé škáry, len čistý povrch.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="mt-1 size-6 rounded-full bg-surface-highlight flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-sm">Jednoduchá údržba</h4>
+<p class="text-white/40 text-xs mt-1">Mastnota a nečistoty idú dole bežným zotretím.</p>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 pt-6">
+<span class="text-white/40 text-xs uppercase tracking-widest font-bold block mb-3">Odporúčané kolekcie</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 rounded-full bg-surface text-white text-xs font-bold border border-white/10 hover:border-primary hover:text-primary cursor-pointer transition-colors">Marble Deluxe</span>
+<span class="px-4 py-1.5 rounded-full bg-surface text-white text-xs font-bold border border-white/10 hover:border-primary hover:text-primary cursor-pointer transition-colors">Urban Concrete</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="group py-20 border-b border-white/5">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col lg:flex-row items-center gap-16">
+<div class="lg:w-1/2 relative">
+<div class="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl border border-white/10 group-hover:border-primary/50 transition-colors duration-500">
+<img alt="Bedroom Headboard" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6gYwcL0ItFY5NnD84PM_NbNZJIx-lZwJePia8Us8wut3YVZPOdKPLwxnu4Rk4RYYVHxVu8tDIeXqcLNAY3xWMma0HnrTtpUKVaAwa_bL5W8BZCDAKWSb2kKV7-VMj-oC5nMNBtJ0Sag1DeZfcz8G4XApAhkESjIlZJzO2IHv2O1GPZTjojZYMJ2qXs_Ys9EB9UTyDw9qE94DLQNW7fYIvYKspinOLYEz24ZtZFPp-z4a6TfFjzsXJYk76EOgznzPzIWBbBKKmaVc"/>
+<div class="absolute bottom-6 left-6 bg-charcoal/90 backdrop-blur px-4 py-2 rounded border border-white/10">
+<span class="text-xs font-bold text-primary uppercase tracking-widest">Atmosféra</span>
+<span class="text-xs text-white ml-2">Relax</span>
+</div>
+</div>
+<div class="absolute -z-10 -top-6 -left-6 w-full h-full border border-white/5 rounded-2xl hidden lg:block"></div>
+</div>
+<div class="lg:w-1/2">
+<span class="text-primary font-bold tracking-[0.2em] text-xs uppercase font-display mb-3 block">Spálňa</span>
+<h2 class="text-3xl md:text-5xl font-black text-white mb-6 font-display">Oáza pokoja</h2>
+<p class="text-white/60 text-lg mb-8 leading-relaxed font-light">
+                            Vytvorte si v spálni dominantu pomocou obloženia za čelom postele. Teplé tóny a 3D štruktúra panelov dodajú miestnosti pocit bezpečia a útulnosti.
+                        </p>
+<div class="space-y-4 mb-10">
+<div class="flex items-start gap-4">
+<div class="mt-1 size-6 rounded-full bg-surface-highlight flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-sm">Dizajnový akcent</h4>
+<p class="text-white/40 text-xs mt-1">Okamžitá premena atmosféry celej izby.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="mt-1 size-6 rounded-full bg-surface-highlight flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-sm">Ochrana steny</h4>
+<p class="text-white/40 text-xs mt-1">Chráni stenu pred ošúchaním od vankúšov.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="mt-1 size-6 rounded-full bg-surface-highlight flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-sm">Prírodný vzhľad</h4>
+<p class="text-white/40 text-xs mt-1">Verné imitácie kameňa a dreva pre spojenie s prírodou.</p>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 pt-6">
+<span class="text-white/40 text-xs uppercase tracking-widest font-bold block mb-3">Odporúčané kolekcie</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 rounded-full bg-surface text-white text-xs font-bold border border-white/10 hover:border-primary hover:text-primary cursor-pointer transition-colors">Wood Line</span>
+<span class="px-4 py-1.5 rounded-full bg-surface text-white text-xs font-bold border border-white/10 hover:border-primary hover:text-primary cursor-pointer transition-colors">Soft Rock</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-12 bg-background-dark border-b border-border-muted relative">
+<div class="max-w-7xl mx-auto px-6">
+<div class="bg-surface border border-white/10 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-2xl">
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="relative z-10 flex items-center gap-6">
+<div class="hidden md:flex size-16 rounded-full bg-primary/20 items-center justify-center text-primary border border-primary/20 shrink-0">
+<span class="material-symbols-outlined text-3xl">question_mark</span>
+</div>
+<div>
+<h3 class="text-2xl font-black text-white font-display mb-2">Nevieš si vybrať ten správny štýl?</h3>
+<p class="text-white/60 text-sm max-w-md">Naši dizajnéri ti pomôžu zladiť panely s tvojím interiérom. Stačí nám poslať fotku.</p>
+</div>
+</div>
+<div class="relative z-10 w-full md:w-auto">
+<button class="w-full md:w-auto bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded text-sm font-bold tracking-wider uppercase transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">support_agent</span>
+                        Kontaktovať podporu
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-primary relative overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-10">
+<svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
+<path d="M0 100 L100 0 L100 100 Z" fill="white"></path>
+</svg>
+</div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="lg:w-1/2 text-white">
+<h2 class="text-5xl font-black mb-6 leading-tight font-display">Získaj bezplatný návrh steny</h2>
+<p class="text-white/80 text-xl font-light leading-relaxed mb-8">
+                        Stále si nie ste istí montážou alebo výberom? Pošlite nám fotku vašej steny a my vám poradíme s technickým riešením aj dizajnom.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 font-bold text-lg"><span class="material-symbols-outlined bg-white text-primary rounded-full p-1 text-base">check</span> Kontrola vhodnosti podkladu</li>
+<li class="flex items-center gap-3 font-bold text-lg"><span class="material-symbols-outlined bg-white text-primary rounded-full p-1 text-base">check</span> Výpočet presného množstva lepidla</li>
+<li class="flex items-center gap-3 font-bold text-lg"><span class="material-symbols-outlined bg-white text-primary rounded-full p-1 text-base">check</span> Technické poradenstvo zdarma</li>
+</ul>
+</div>
+<div class="lg:w-1/2 w-full">
+<div class="bg-background-dark p-8 md:p-12 rounded-2xl shadow-2xl border border-white/10">
+<form class="space-y-6">
+<div class="grid md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-white/50 text-xs uppercase tracking-widest font-bold">Meno</label>
+<input class="w-full bg-surface border-border-muted rounded-lg text-white focus:ring-primary focus:border-primary px-4 py-3 transition-colors" placeholder="Jozef Mrkva" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-white/50 text-xs uppercase tracking-widest font-bold">Email</label>
+<input class="w-full bg-surface border-border-muted rounded-lg text-white focus:ring-primary focus:border-primary px-4 py-3 transition-colors" placeholder="jozef@email.sk" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-white/50 text-xs uppercase tracking-widest font-bold">Rozmer steny (š x v)</label>
+<input class="w-full bg-surface border-border-muted rounded-lg text-white focus:ring-primary focus:border-primary px-4 py-3 transition-colors" placeholder="napr. 3,5m x 2,6m" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-white/50 text-xs uppercase tracking-widest font-bold">Otázka k montáži</label>
+<textarea class="w-full bg-surface border-border-muted rounded-lg text-white focus:ring-primary focus:border-primary px-4 py-3 transition-colors" placeholder="Čo vás zaujíma?" rows="3"></textarea>
+</div>
+<button class="w-full bg-primary hover:bg-white hover:text-primary text-white h-16 rounded-xl text-lg font-black transition-all shadow-xl font-display uppercase tracking-wide">
+                                Získať konzultáciu
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-background-dark py-20 border-t border-border-muted">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-2">
+<a href="index.html" class="block mb-8">
+    <img src="logo-white.png?v=3" alt="Artstone Logo" class="h-8 w-auto object-contain">
+</a>
+<p class="text-white/40 max-w-sm mb-8 leading-relaxed text-sm">
+                        Prémiové riešenia pre modernú architektúru. Sme vašim partnerom pri tvorbe unikátnych a funkčných priestorov.
+                    </p>
+<div class="flex gap-4">
+    <a class="size-10 bg-surface border border-border-muted rounded flex items-center justify-center text-white hover:border-primary transition-colors" href="https://www.youtube.com/channel/UCQNOo7vbwD_hZlIxwfWK_Zw" target="_blank" rel="noopener noreferrer">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+    </a>
+    <a class="size-10 bg-surface border border-border-muted rounded flex items-center justify-center text-white hover:border-primary transition-colors" href="https://www.instagram.com/artstone_dekorativnepanely/" target="_blank" rel="noopener noreferrer">
+         <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+    </a>
+    <a class="size-10 bg-surface border border-border-muted rounded flex items-center justify-center text-white hover:border-primary transition-colors" href="https://www.facebook.com/dekorativnepanely" target="_blank" rel="noopener noreferrer">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 font-display uppercase tracking-wider text-sm">Odkazy</h4>
+<ul class="space-y-4">
+<li><a class="text-white/40 hover:text-primary transition-colors text-sm" href="#">Produkty</a></li>
+<li><a class="text-white/40 hover:text-primary transition-colors text-sm" href="#">Montážny návod</a></li>
+<li><a class="text-white/40 hover:text-primary transition-colors text-sm" href="#">Video galéria</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 font-display uppercase tracking-wider text-sm">Kontakt</h4>
+<ul class="space-y-4">
+<li><a class="text-white/40 hover:text-primary transition-colors text-sm" href="#">podpora@artstone.sk</a></li>
+<li><a class="text-white/40 hover:text-primary transition-colors text-sm" href="#">+421 900 000 000</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-border-muted flex flex-col md:row justify-between items-center gap-4 text-white/30 text-xs">
+<p>© <span id="copyright-year">2024</span> Artstone® Decorative Panels. Všetky práva vyhradené.</p>
+<div class="flex gap-8">
+<a class="hover:text-white transition-colors" href="#">Privacy</a>
+<a class="hover:text-white transition-colors" href="#">Terms</a>
+</div>
+</div>
+</div>
+</footer>
+
+
+<script>
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+</script>
+</body></html>
