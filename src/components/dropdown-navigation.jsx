@@ -28,7 +28,7 @@ export function DropdownNavigation({ navItems }) {
             >
               <a
                 href={navItem.link || "#"}
-                className="text-sm py-1.5 px-4 flex cursor-pointer group transition-colors duration-300 items-center justify-center gap-1 text-slate-900/60 dark:text-white/60 hover:text-slate-900 dark:hover:text-white relative"
+                className="text-sm py-1.5 px-6 flex cursor-pointer group transition-colors duration-300 items-center justify-center gap-1 text-slate-900/60 dark:text-white/60 hover:text-slate-900 dark:hover:text-white relative whitespace-nowrap"
                 onMouseEnter={() => setIsHover(navItem.id)}
                 onMouseLeave={() => setIsHover(null)}
               >
