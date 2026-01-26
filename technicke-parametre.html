@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html class="dark" lang="sk"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&amp;family=Open+Sans:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FF6E2E",
+                        "charcoal": "#1E1E1E",
+                        "background-light": "#ffffff",
+                        "background-dark": "#141414",
+                        "surface": "#1f1f1f",
+                        "surface-highlight": "#2a2a2a",
+                        "border-muted": "#333333"
+                    },
+                    fontFamily: {
+                        "display": ["Montserrat", "sans-serif"],
+                        "body": ["Open Sans", "sans-serif"]
+                    },
+                    backgroundImage: {
+                        'glow-gradient': 'radial-gradient(circle at center, rgba(255,110,46,0.15) 0%, rgba(30,30,30,0) 70%)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Open Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-display { font-family: 'Montserrat', sans-serif; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        .progress-ring__circle {
+            transition: stroke-dashoffset 0.35s;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+    </style>
+  <script type="module" crossorigin src="/ArtStone-Stranka/assets/nav-mount-BhQIcOm0.js"></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased">
+<header class="sticky top-0 z-50 w-full border-b border-border-muted bg-charcoal/90 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-3 group">
+    <img src="/ArtStone-Stranka/assets/logo-white-B3RZLt7F.png?v=3" alt="Artstone Logo" class="h-11 w-auto object-contain transition-transform group-hover:scale-105">
+</a> <div id="nav-root" class="hidden md:flex flex-1 justify-center items-center"></div>
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded text-sm font-bold transition-all shadow-lg shadow-primary/20 uppercase tracking-wider">
+                E-shop
+            </button>
+</div>
+</header>
+<section class="relative min-h-[85vh] flex items-center overflow-hidden bg-charcoal">
+<div class="absolute inset-0 z-0 opacity-20" style="background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.1\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E');"></div>
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/95 to-charcoal/70 z-10"></div>
+<div class="w-full h-full bg-cover bg-center mix-blend-overlay opacity-40" data-alt="Wood slat texture background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDOSZ-QODkfhG3cEBhoqILFZBmJ3vm-Wk6GpznyWlqlPL5swqkZtd3RLJmudgWWBQLxz5lo8_LBKCVfPDhZWq3NcC4oe74VL2E2-RuS1k-s-Z8d4AzM05Rk4u7_CX4pGyy_6nubtm5bTxSz_yvg91LmSUqg7Hww_Jwe6rpbFBXThfmznoOuc-lPGTn8a2LOlJXAszqxXCrWO-knEbi_Me8VXrsfvKobQ3oTrlAXq_yrkx37umPzx3zu8RxQ140IiIh5U3gMTXNCNQU');"></div>
+</div>
+<div class="relative z-20 max-w-7xl mx-auto px-6 py-24">
+<div class="max-w-4xl">
+<span class="inline-block text-primary font-bold tracking-[0.2em] text-sm uppercase mb-6 font-display border border-primary/30 px-3 py-1 rounded bg-primary/10">Technická špecifikácia</span>
+<h1 class="text-white text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight mb-8 font-display uppercase">
+                    Keď dizajn vyzerá luxusne a zároveň <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">má parametre</span>
+</h1>
+<p class="text-white/80 text-lg md:text-xl max-w-2xl mb-12 leading-relaxed font-light border-l-2 border-primary pl-6">
+                    Artstone® nie je len o vzhľade. Je to spojenie inžinierskej presnosti, certifikovanej bezpečnosti a materiálovej stálosti pre náročné projekty.
+                </p>
+<div class="flex flex-col sm:flex-row gap-5 mb-16">
+<button class="bg-primary hover:bg-white hover:text-primary text-white h-14 px-8 rounded text-base font-bold tracking-wider transition-all shadow-lg shadow-primary/25 uppercase flex items-center justify-center gap-2 group">
+                        Získať návrh steny <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="border-2 border-white/20 text-white hover:border-white hover:bg-white/5 h-14 px-8 rounded text-base font-bold tracking-wider transition-all uppercase flex items-center justify-center">
+                        Pozrieť produkty
+                    </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 border-t border-white/10" id="specifikacia">
+<div class="flex items-center gap-4 group cursor-default">
+<div class="bg-surface-highlight p-3 rounded text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">flight</span>
+</div>
+<div>
+<p class="text-white font-bold text-sm uppercase font-display tracking-wide">Ultra ľahké</p>
+<p class="text-white/40 text-xs">Iba 3-4 kg/m²</p>
+</div>
+</div>
+<div class="flex items-center gap-4 group cursor-default">
+<div class="bg-surface-highlight p-3 rounded text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">shield</span>
+</div>
+<div>
+<p class="text-white font-bold text-sm uppercase font-display tracking-wide">Extrémna odolnosť</p>
+<p class="text-white/40 text-xs">Proti nárazom a oderu</p>
+</div>
+</div>
+<div class="flex items-center gap-4 group cursor-default">
+<div class="bg-surface-highlight p-3 rounded text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">verified_user</span>
+</div>
+<div>
+<p class="text-white font-bold text-sm uppercase font-display tracking-wide">Certifikované</p>
+<p class="text-white/40 text-xs">ISO normy a bezpečnosť</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-black py-24 relative overflow-hidden border-y border-white/5" id="bezpecnost">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="flex flex-col lg:flex-row items-center gap-16">
+<div class="lg:w-1/2 flex justify-center">
+<div class="relative group">
+<div class="absolute inset-0 bg-primary/20 blur-2xl rounded-full group-hover:bg-primary/30 transition-all duration-500"></div>
+<div class="relative size-64 md:size-80 border-4 border-primary/20 bg-gradient-to-br from-surface to-black rounded-2xl flex flex-col items-center justify-center p-8 backdrop-blur-sm shadow-2xl">
+<span class="material-symbols-outlined text-primary text-6xl mb-4 animate-pulse">local_fire_department</span>
+<span class="text-8xl md:text-9xl font-black text-white font-display tracking-tighter drop-shadow-[0_0_15px_rgba(255,110,46,0.5)]">A2</span>
+<span class="text-white/60 text-xs uppercase tracking-[0.3em] font-bold mt-2">Trieda nehorľavosti</span>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 text-center lg:text-left">
+<span class="text-primary font-bold tracking-[0.2em] text-xs uppercase font-display mb-4 block">Bezpečnostný štandard</span>
+<h2 class="text-4xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight font-display">
+                        Nehorľavosť A2 – <br/><span class="text-white/50">bezpečnosť, ktorá rozhoduje</span>
+</h2>
+<p class="text-white/70 text-lg leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
+                        Panely Artstone® spĺňajú prísnu normu reakcie na oheň triedy A2-s1, d0. Sú nehorľavé, nevytvárajú dym a nekvapkajú, vďaka čomu sú ideálne pre komerčné priestory, únikové cesty a verejné budovy.
+                    </p>
+<button class="inline-flex items-center gap-3 text-white border-b border-primary pb-1 hover:text-primary transition-colors uppercase font-bold tracking-wider text-sm">
+                        Požiadať o technické dokumenty
+                        <span class="material-symbols-outlined text-lg">download</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-surface py-24 border-b border-border-muted" id="zlozenie">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-20">
+<span class="text-primary font-bold tracking-[0.2em] text-xs uppercase font-display">Materiálové zloženie</span>
+<h2 class="text-3xl md:text-4xl font-black text-white mt-3 uppercase tracking-tighter font-display">Čo tvorí Artstone®?</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+<div class="flex flex-col items-center">
+<div class="relative size-48 mb-8">
+<svg class="size-full -rotate-90" viewBox="0 0 100 100">
+<circle class="text-white/5 stroke-current" cx="50" cy="50" fill="transparent" r="40" stroke-width="8"></circle>
+<circle class="text-primary progress-ring__circle stroke-current" cx="50" cy="50" fill="transparent" r="40" stroke-dasharray="251.2" stroke-dashoffset="175" stroke-linecap="round" stroke-width="8"></circle> 
+</svg>
+<div class="absolute inset-0 flex items-center justify-center flex-col">
+<span class="text-4xl font-black text-white font-display">30%</span>
+</div>
+</div>
+<h3 class="text-xl font-bold text-white uppercase font-display mb-2">Sklenné vlákna</h3>
+<p class="text-center text-white/50 text-sm">Zabezpečujú pevnosť v ťahu a tvarovú stálosť panelu.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="relative size-48 mb-8">
+<svg class="size-full -rotate-90" viewBox="0 0 100 100">
+<circle class="text-white/5 stroke-current" cx="50" cy="50" fill="transparent" r="40" stroke-width="8"></circle>
+<circle class="text-primary progress-ring__circle stroke-current" cx="50" cy="50" fill="transparent" r="40" stroke-dasharray="251.2" stroke-dashoffset="200" stroke-linecap="round" stroke-width="8"></circle> 
+</svg>
+<div class="absolute inset-0 flex items-center justify-center flex-col">
+<span class="text-4xl font-black text-white font-display">20%</span>
+</div>
+</div>
+<h3 class="text-xl font-bold text-white uppercase font-display mb-2">Eko-živice</h3>
+<p class="text-center text-white/50 text-sm">Prírodné spojivo bez prchavých látok pre dokonalú súdržnosť.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="relative size-48 mb-8">
+<svg class="size-full -rotate-90" viewBox="0 0 100 100">
+<circle class="text-white/5 stroke-current" cx="50" cy="50" fill="transparent" r="40" stroke-width="8"></circle>
+<circle class="text-primary progress-ring__circle stroke-current" cx="50" cy="50" fill="transparent" r="40" stroke-dasharray="251.2" stroke-dashoffset="125" stroke-linecap="round" stroke-width="8"></circle> 
+</svg>
+<div class="absolute inset-0 flex items-center justify-center flex-col">
+<span class="text-4xl font-black text-white font-display">50%</span>
+</div>
+</div>
+<h3 class="text-xl font-bold text-white uppercase font-display mb-2">Prírodný kameň</h3>
+<p class="text-center text-white/50 text-sm">Kamenný prach a pigmenty pre autentický vzhľad a textúru.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-background-dark py-24" id="pouzitie">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<span class="text-primary font-bold tracking-[0.2em] text-xs uppercase font-display">Všestrannosť</span>
+<h2 class="text-3xl md:text-4xl font-black text-white mt-3 uppercase tracking-tighter font-display">Kde použiť Artstone?</h2>
+</div>
+<p class="text-white/50 max-w-md text-sm text-right md:text-left">
+                    Systém navrhnutý pre každú miestnosť a podmienku. Od vlhkých prostredí až po vysoko namáhané verejné priestory.
+                </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+<div class="bg-surface p-6 rounded-lg border border-white/5 hover:border-primary/50 hover:bg-surface-highlight transition-all group">
+<span class="material-symbols-outlined text-white/30 text-3xl mb-4 group-hover:text-primary transition-colors">chair</span>
+<h4 class="text-white font-bold uppercase font-display text-sm mb-1">Obývačka</h4>
+<p class="text-white/40 text-[10px] uppercase tracking-wide">Akustika &amp; Dizajn</p>
+</div>
+<div class="bg-surface p-6 rounded-lg border border-white/5 hover:border-primary/50 hover:bg-surface-highlight transition-all group">
+<span class="material-symbols-outlined text-white/30 text-3xl mb-4 group-hover:text-primary transition-colors">countertops</span>
+<h4 class="text-white font-bold uppercase font-display text-sm mb-1">Kuchyňa</h4>
+<p class="text-white/40 text-[10px] uppercase tracking-wide">Umývateľnosť</p>
+</div>
+<div class="bg-surface p-6 rounded-lg border border-white/5 hover:border-primary/50 hover:bg-surface-highlight transition-all group">
+<span class="material-symbols-outlined text-white/30 text-3xl mb-4 group-hover:text-primary transition-colors">bathtub</span>
+<h4 class="text-white font-bold uppercase font-display text-sm mb-1">Kúpeľňa</h4>
+<p class="text-white/40 text-[10px] uppercase tracking-wide">Vodeodolnosť</p>
+</div>
+<div class="bg-surface p-6 rounded-lg border border-white/5 hover:border-primary/50 hover:bg-surface-highlight transition-all group">
+<span class="material-symbols-outlined text-white/30 text-3xl mb-4 group-hover:text-primary transition-colors">meeting_room</span>
+<h4 class="text-white font-bold uppercase font-display text-sm mb-1">Chodba</h4>
+<p class="text-white/40 text-[10px] uppercase tracking-wide">Oteruvzdornosť</p>
+</div>
+<div class="bg-surface p-6 rounded-lg border border-white/5 hover:border-primary/50 hover:bg-surface-highlight transition-all group">
+<span class="material-symbols-outlined text-white/30 text-3xl mb-4 group-hover:text-primary transition-colors">bed</span>
+<h4 class="text-white font-bold uppercase font-display text-sm mb-1">Spálňa</h4>
+<p class="text-white/40 text-[10px] uppercase tracking-wide">Zdravotná nezávadnosť</p>
+</div>
+<div class="bg-surface p-6 rounded-lg border border-white/5 hover:border-primary/50 hover:bg-surface-highlight transition-all group">
+<span class="material-symbols-outlined text-white/30 text-3xl mb-4 group-hover:text-primary transition-colors">desk</span>
+<h4 class="text-white font-bold uppercase font-display text-sm mb-1">Kancelária</h4>
+<p class="text-white/40 text-[10px] uppercase tracking-wide">Reprezentatívnosť</p>
+</div>
+<div class="bg-surface p-6 rounded-lg border border-white/5 hover:border-primary/50 hover:bg-surface-highlight transition-all group">
+<span class="material-symbols-outlined text-white/30 text-3xl mb-4 group-hover:text-primary transition-colors">storefront</span>
+<h4 class="text-white font-bold uppercase font-display text-sm mb-1">Komerčné</h4>
+<p class="text-white/40 text-[10px] uppercase tracking-wide">Požiarna odolnosť A2</p>
+</div>
+<div class="bg-surface p-6 rounded-lg border border-white/5 hover:border-primary/50 hover:bg-surface-highlight transition-all group">
+<span class="material-symbols-outlined text-white/30 text-3xl mb-4 group-hover:text-primary transition-colors">apartment</span>
+<h4 class="text-white font-bold uppercase font-display text-sm mb-1">Fasáda</h4>
+<p class="text-white/40 text-[10px] uppercase tracking-wide">UV stabilita</p>
+</div>
+<div class="bg-surface p-6 rounded-lg border border-white/5 hover:border-primary/50 hover:bg-surface-highlight transition-all group">
+<span class="material-symbols-outlined text-white/30 text-3xl mb-4 group-hover:text-primary transition-colors">spa</span>
+<h4 class="text-white font-bold uppercase font-display text-sm mb-1">Wellness</h4>
+<p class="text-white/40 text-[10px] uppercase tracking-wide">Hygienickosť</p>
+</div>
+<div class="bg-surface p-6 rounded-lg border border-white/5 hover:border-primary/50 hover:bg-surface-highlight transition-all group">
+<span class="material-symbols-outlined text-white/30 text-3xl mb-4 group-hover:text-primary transition-colors">fireplace</span>
+<h4 class="text-white font-bold uppercase font-display text-sm mb-1">Obklad krbu</h4>
+<p class="text-white/40 text-[10px] uppercase tracking-wide">Teplotná stálosť</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-charcoal py-24 border-y border-white/5" id="vyhody">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<span class="text-primary font-bold tracking-[0.2em] text-xs uppercase font-display">Benefity</span>
+<h2 class="text-3xl md:text-4xl font-black text-white mt-3 uppercase tracking-tighter font-display">Technické Výhody</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
+<div class="flex flex-col items-center text-center p-6 border border-white/5 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors">
+<div class="size-16 bg-primary/20 rounded-full flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl">scale</span>
+</div>
+<h3 class="text-white font-bold uppercase font-display mb-2">Nízka hmotnosť</h3>
+<p class="text-white/60 text-sm">Minimálne zaťaženie konštrukcie, jednoduchá manipulácia.</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 border border-white/5 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors">
+<div class="size-16 bg-primary/20 rounded-full flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl">build</span>
+</div>
+<h3 class="text-white font-bold uppercase font-display mb-2">Jednoduchá inštalácia</h3>
+<p class="text-white/60 text-sm">Rýchla montáž lepením bez nutnosti mokrých procesov.</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 border border-white/5 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors">
+<div class="size-16 bg-primary/20 rounded-full flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl">water_drop</span>
+</div>
+<h3 class="text-white font-bold uppercase font-display mb-2">Odolnosť voči vlhkosti</h3>
+<p class="text-white/60 text-sm">Nenasiakavý materiál vhodný aj do priameho styku s vodou.</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 border border-white/5 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors">
+<div class="size-16 bg-primary/20 rounded-full flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl">cleaning_services</span>
+</div>
+<h3 class="text-white font-bold uppercase font-display mb-2">Bezúdržbovosť</h3>
+<p class="text-white/60 text-sm">Povrch odpudzuje prach a nevyžaduje impregnáciu.</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 border border-white/5 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors">
+<div class="size-16 bg-primary/20 rounded-full flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl">texture</span>
+</div>
+<h3 class="text-white font-bold uppercase font-display mb-2">3D Štruktúra</h3>
+<p class="text-white/60 text-sm">Hlboký reliéf verne imitujúci prírodný materiál.</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 border border-white/5 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors">
+<div class="size-16 bg-primary/20 rounded-full flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl">hourglass_top</span>
+</div>
+<h3 class="text-white font-bold uppercase font-display mb-2">Dlhá životnosť</h3>
+<p class="text-white/60 text-sm">Materiál, ktorý si zachováva vlastnosti desiatky rokov.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-surface border-t border-border-muted" id="faq">
+<div class="max-w-3xl mx-auto px-6">
+<h2 class="text-3xl font-black text-white uppercase tracking-tighter text-center mb-12 font-display">Časté otázky</h2>
+<div class="space-y-4">
+<details class="group bg-background-dark border border-border-muted rounded-lg overflow-hidden transition-all duration-300 open:border-primary/50">
+<summary class="flex justify-between items-center p-6 cursor-pointer text-white font-bold select-none hover:text-primary transition-colors font-display">
+                        Je materiál certifikovaný pre použitie v interiéri?
+                        <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-white/60 leading-relaxed">
+                        Áno, všetky panely Artstone® sú certifikované ako zdravotne nezávadné a neuvoľňujú žiadne VOC (prchavé organické látky) do ovzdušia.
+                    </div>
+</details>
+<details class="group bg-background-dark border border-border-muted rounded-lg overflow-hidden transition-all duration-300 open:border-primary/50">
+<summary class="flex justify-between items-center p-6 cursor-pointer text-white font-bold select-none hover:text-primary transition-colors font-display">
+                        Ako sa panely správajú pri zmenách teplôt?
+                        <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-white/60 leading-relaxed">
+                        Kompozitný materiál je teplotne stabilný v rozsahu od -40°C do +80°C, čo umožňuje použitie v exteriéri aj okolo krbových vložiek (pri dodržaní izolačných odstupov).
+                    </div>
+</details>
+<details class="group bg-background-dark border border-border-muted rounded-lg overflow-hidden transition-all duration-300 open:border-primary/50">
+<summary class="flex justify-between items-center p-6 cursor-pointer text-white font-bold select-none hover:text-primary transition-colors font-display">
+                        Sú panely vhodné do sprchového kúta?
+                        <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-white/60 leading-relaxed">
+                        Áno, panely sú 100% vodeodolné. Pri inštalácii v priamom styku s vodou odporúčame použiť špeciálny hydroizolačný tmel v spojoch.
+                    </div>
+</details>
+<details class="group bg-background-dark border border-border-muted rounded-lg overflow-hidden transition-all duration-300 open:border-primary/50">
+<summary class="flex justify-between items-center p-6 cursor-pointer text-white font-bold select-none hover:text-primary transition-colors font-display">
+                        Aká je záruka na produkty?
+                        <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-white/60 leading-relaxed">
+                        Na stálosť materiálu a výrobné vady poskytujeme predĺženú záruku 10 rokov pre rezidenčné projekty a 5 rokov pre komerčné priestory.
+                    </div>
+</details>
+</div>
+</div>
+</section>
+<section class="py-24 bg-primary relative overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-10">
+<svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
+<path d="M0 100 L100 0 L100 100 Z" fill="white"></path>
+</svg>
+</div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="lg:w-1/2 text-white">
+<h2 class="text-4xl md:text-5xl font-black mb-6 leading-tight font-display">Potrebujete technickú radu?</h2>
+<p class="text-white/80 text-xl font-light leading-relaxed mb-8">
+                        Náš tím inžinierov je pripravený zodpovedať vaše špecifické dotazy ohľadom montáže, certifikácie alebo atypických riešení.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 font-bold text-lg"><span class="material-symbols-outlined bg-white text-primary rounded-full p-1 text-base">check</span> Zaslanie technických listov</li>
+<li class="flex items-center gap-3 font-bold text-lg"><span class="material-symbols-outlined bg-white text-primary rounded-full p-1 text-base">check</span> Konzultácia pre architektov</li>
+<li class="flex items-center gap-3 font-bold text-lg"><span class="material-symbols-outlined bg-white text-primary rounded-full p-1 text-base">check</span> Vzorky materiálu zdarma</li>
+</ul>
+</div>
+<div class="lg:w-1/2 w-full">
+<div class="bg-background-dark p-8 md:p-12 rounded-2xl shadow-2xl border border-white/10">
+<form class="space-y-6">
+<div class="grid md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-white/50 text-xs uppercase tracking-widest font-bold">Meno / Firma</label>
+<input class="w-full bg-surface border-border-muted rounded-lg text-white focus:ring-primary focus:border-primary px-4 py-3 transition-colors" placeholder="Váš názov" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-white/50 text-xs uppercase tracking-widest font-bold">Email</label>
+<input class="w-full bg-surface border-border-muted rounded-lg text-white focus:ring-primary focus:border-primary px-4 py-3 transition-colors" placeholder="email@firma.sk" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-white/50 text-xs uppercase tracking-widest font-bold">Typ projektu</label>
+<select class="w-full bg-surface border-border-muted rounded-lg text-white focus:ring-primary focus:border-primary px-4 py-3 transition-colors">
+<option>Rezidenčný projekt</option>
+<option>Komerčný priestor</option>
+<option>Hotel / Gastro</option>
+<option>Iné</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-white/50 text-xs uppercase tracking-widest font-bold">Technická otázka</label>
+<textarea class="w-full bg-surface border-border-muted rounded-lg text-white focus:ring-primary focus:border-primary px-4 py-3 transition-colors" placeholder="Popíšte, čo potrebujete vedieť..." rows="3"></textarea>
+</div>
+<button class="w-full bg-primary hover:bg-white hover:text-primary text-white h-16 rounded-xl text-lg font-black transition-all shadow-xl font-display uppercase tracking-wide">
+                                Odoslať dopyt
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-background-dark py-20 border-t border-border-muted">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-2">
+<div class="flex items-center gap-3 mb-8">
+<div class="size-8 bg-primary flex items-center justify-center rounded">
+<span class="material-symbols-outlined text-white text-xl">architecture</span>
+</div>
+<h2 class="text-white text-lg font-black uppercase tracking-tighter font-display">Artstone®</h2>
+</div>
+<p class="text-white/40 max-w-sm mb-8 leading-relaxed text-sm">
+                        Prémiové riešenia pre modernú architektúru. Sme vašim partnerom pri tvorbe unikátnych a funkčných priestorov.
+                    </p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 font-display uppercase tracking-wider text-sm">Odkazy</h4>
+<ul class="space-y-4">
+<li><a class="text-white/40 hover:text-primary transition-colors text-sm" href="#">Produkty</a></li>
+<li><a class="text-white/40 hover:text-primary transition-colors text-sm" href="#">Montážny návod</a></li>
+<li><a class="text-white/40 hover:text-primary transition-colors text-sm" href="#">Video galéria</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 font-display uppercase tracking-wider text-sm">Kontakt</h4>
+<ul class="space-y-4">
+<li><a class="text-white/40 hover:text-primary transition-colors text-sm" href="#">podpora@artstone.sk</a></li>
+<li><a class="text-white/40 hover:text-primary transition-colors text-sm" href="#">+421 900 000 000</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-border-muted flex flex-col md:row justify-between items-center gap-4 text-white/30 text-xs">
+<p>© 2024 Artstone® Decorative Panels. Všetky práva vyhradené.</p>
+<div class="flex gap-8">
+<a class="hover:text-white transition-colors" href="#">Privacy</a>
+<a class="hover:text-white transition-colors" href="#">Terms</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>
