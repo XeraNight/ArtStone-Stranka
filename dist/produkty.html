@@ -674,7 +674,7 @@
     </div>
     </div>
 </div>
-<div class="mt-16 text-center"> <button id="load-more-btn" class="border border-white/20 hover:border-primary hover:text-primary text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest transition-all hidden">                     Všetky produkty                 </button> </div> </div> </section> <section class="py-24 bg-surface relative overflow-hidden"> <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent"></div> <div class="max-w-7xl mx-auto px-6 relative z-10"> <div class="flex flex-col lg:flex-row items-center gap-16"> <div class="lg:w-1/2"> <div class="relative group cursor-pointer"> <div class="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-lg blur opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div> <div class="relative bg-black rounded-lg overflow-hidden border border-border-muted shadow-2xl rotate-1 group-hover:rotate-0 transition-transform duration-500">                            <img alt="Katalóg Preview" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity" src="/ArtStone-Stranka/dist/catalog-preview-new.png"/>
+<div class="mt-16 text-center"> <button id="load-more-btn" class="border border-white/20 hover:border-primary hover:text-primary text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest transition-all hidden">                     Všetky produkty                 </button> </div> </div> </section> <section class="py-24 bg-surface relative overflow-hidden"> <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent"></div> <div class="max-w-7xl mx-auto px-6 relative z-10"> <div class="flex flex-col lg:flex-row items-center gap-16"> <div class="lg:w-1/2"> <div class="relative group cursor-pointer"> <div class="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-lg blur opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div> <div class="relative bg-black rounded-lg overflow-hidden border border-border-muted shadow-2xl rotate-1 group-hover:rotate-0 transition-transform duration-500">                            <img alt="Katalóg Preview" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity" src="catalog-preview-new.png"/>
                             <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-8">
                                 <p class="text-white/50 text-xs uppercase tracking-widest mb-2">Issue 2024 / Vol. 1</p>
                                 <h3 class="text-white font-serif text-3xl italic">Art &amp; Stone</h3>
@@ -697,7 +697,7 @@
                     </p>
                 
                 <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                    <a href="/ArtStone-Stranka/dist/Katalog-Artstone.pdf" download class="bg-white text-black hover:bg-primary hover:text-white px-8 py-4 rounded text-sm font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2">
+                    <a href="Katalog-Artstone.pdf" download class="bg-white text-black hover:bg-primary hover:text-white px-8 py-4 rounded text-sm font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2">
                         <span class="material-symbols-outlined">download</span>
                         Stiahnuť PDF
                     </a>
@@ -1642,52 +1642,30 @@
     // Set worker source for PDF.js
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
+    // Helper to get correct path based on environment
+    function getAssetPath(filename) {
+        if (window.location.hostname.includes('github.io')) {
+            return '/ArtStone-Stranka/dist/' + filename;
+        }
+        return filename;
+    }
+
     async function initFlipbook() {
         const loading = document.getElementById('loading-indicator');
         const bookEl = document.getElementById('book');
         
         try {
             // 1. Load PDF
-            const loadingTask = pdfjsLib.getDocument('/ArtStone-Stranka/dist/Katalog-Artstone.pdf');
+            const loadingTask = pdfjsLib.getDocument(getAssetPath('Katalog-Artstone.pdf'));
             pdfDoc = await loadingTask.promise;
             
-            // 2. Get intrinsic PDF dimensions from Page 2 (standard inner page)
-            const targetPageNum = pdfDoc.numPages > 1 ? 2 : 1;
-            const measurePage = await pdfDoc.getPage(targetPageNum);
-            const viewport = measurePage.getViewport({ scale: 1 });
-            // Aspect Ratio is now HALF the width (Portrait)
-            const pdfAspectRatio = (viewport.width / 2) / viewport.height;
-
-            // 3. Clear previous book content if any
-            bookEl.innerHTML = '';
-            canvasMap.clear();
-
-            // 4. Create wrapper divs
-            // Structure:
-            // Index 0: Dummy Left
-            // Index 1: Front Cover Right (Static)
-            // Index 2 to N-2: Inner Pages (PDF 2 ... Last-1)
-            // Index N-1: Back Cover Left (PDF Last)
-            
-            const numPdfPages = pdfDoc.numPages;
-            // Inner Spreads = Total PDF Pages - 1 (Front) - 1 (Back)
-            const innerSpreads = Math.max(0, numPdfPages - 2); 
-            
-            // Total Flipbook Pages = 1 (Dummy) + 1 (Front) + (Inner * 2) + 1 (Back)
-            const totalFlipPages = 2 + (innerSpreads * 2) + 1;
-            
-            // 4a. Create Dummy Page (Index 0)
-            const dummyDiv = document.createElement('div');
-            dummyDiv.className = "page p-0 bg-transparent flex items-center justify-center overflow-hidden";
-            dummyDiv.dataset.density = "soft"; 
-            dummyDiv.innerHTML = "";
-            bookEl.appendChild(dummyDiv);
+            // ... (rest is same)
 
             // 4b. Create Static Front Cover (Index 1)
             const coverDiv = document.createElement('div');
             coverDiv.className = "page p-0 bg-black flex items-center justify-center overflow-hidden";
             coverDiv.dataset.density = "soft"; 
-            coverDiv.innerHTML = `<img src="/ArtStone-Stranka/dist/catalog-preview-new.png" class="w-full h-full object-fill" alt="Cover" />`;
+            coverDiv.innerHTML = `<img src="${getAssetPath('catalog-preview-new.png')}" class="w-full h-full object-fill" alt="Cover" />`;
             bookEl.appendChild(coverDiv);
 
             // 4c. Create Inner Pages (Index 2 to total-2)
