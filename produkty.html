@@ -1656,7 +1656,37 @@
             const loadingTask = pdfjsLib.getDocument('./Katalog-Artstone.pdf');
             pdfDoc = await loadingTask.promise;
             
-            // ... (rest is same)
+            // 2. Get intrinsic PDF dimensions from Page 2 (standard inner page)
+            const targetPageNum = pdfDoc.numPages > 1 ? 2 : 1;
+            const measurePage = await pdfDoc.getPage(targetPageNum);
+            const viewport = measurePage.getViewport({ scale: 1 });
+            // Aspect Ratio is now HALF the width (Portrait)
+            const pdfAspectRatio = (viewport.width / 2) / viewport.height;
+
+            // 3. Clear previous book content if any
+            bookEl.innerHTML = '';
+            canvasMap.clear();
+
+            // 4. Create wrapper divs
+            // Structure:
+            // Index 0: Dummy Left
+            // Index 1: Front Cover Right (Static)
+            // Index 2 to N-2: Inner Pages (PDF 2 ... Last-1)
+            // Index N-1: Back Cover Left (PDF Last)
+            
+            const numPdfPages = pdfDoc.numPages;
+            // Inner Spreads = Total PDF Pages - 1 (Front) - 1 (Back)
+            const innerSpreads = Math.max(0, numPdfPages - 2); 
+            
+            // Total Flipbook Pages = 1 (Dummy) + 1 (Front) + (Inner * 2) + 1 (Back)
+            const totalFlipPages = 2 + (innerSpreads * 2) + 1;
+            
+            // 4a. Create Dummy Page (Index 0)
+            const dummyDiv = document.createElement('div');
+            dummyDiv.className = "page p-0 bg-transparent flex items-center justify-center overflow-hidden";
+            dummyDiv.dataset.density = "soft"; 
+            dummyDiv.innerHTML = "";
+            bookEl.appendChild(dummyDiv);
 
             // 4b. Create Static Front Cover (Index 1)
             const coverDiv = document.createElement('div');
