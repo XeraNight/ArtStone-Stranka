@@ -3,7 +3,7 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 
 export default defineConfig({
-  base: "/",
+  base: "/ArtStone-Stranka/dist/",
   build: {
     rollupOptions: {
       input: {
