@@ -7,8 +7,8 @@
         header img { height: 100% !important; width: auto !important; max-width: none !important; }
     </style>
 
-  <script type="module" crossorigin src="/ArtStone-Stranka/dist/assets/nav-mount-Cb_7BE_v.js"></script>
-  <link rel="stylesheet" crossorigin href="/ArtStone-Stranka/dist/assets/nav-mount-CRl9I3p5.css">
+  <script type="module" crossorigin src="/ArtStone-Stranka/dist/assets/nav-mount-Cf6mAyPD.js"></script>
+  <link rel="stylesheet" crossorigin href="/ArtStone-Stranka/dist/assets/nav-mount-D9Bp5gHN.css">
 </head> <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased"> <header class="sticky top-0 z-50 w-full border-b border-border-muted bg-background-dark/80 backdrop-blur-md"> <div class="header-inner w-full px-6 h-28 flex items-center justify-between relative border-none outline-none" style="height: 7rem;">
 <a href="index.html" class="logo-link h-20 flex items-center gap-3 group border-none outline-none ml-8" style="height: 5rem;">
     <img src="/ArtStone-Stranka/dist/assets/logo-white-B3RZLt7F.png?v=3" alt="Artstone Logo" width="588" height="176" class="h-full w-auto object-contain transition-transform group-hover:scale-105 origin-top-left" style="height: 5rem; width: auto; clip-path: inset(0 0 0 2px);">
@@ -1642,21 +1642,18 @@
     // Set worker source for PDF.js
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
-    // Helper to get correct path based on environment
-    function getAssetPath(filename) {
-        if (window.location.hostname.includes('github.io')) {
-            return '/ArtStone-Stranka/dist/' + filename;
-        }
-        return filename;
-    }
-
     async function initFlipbook() {
         const loading = document.getElementById('loading-indicator');
         const bookEl = document.getElementById('book');
         
         try {
+            if (typeof St === 'undefined') {
+                throw new Error('Knižnica PageFlip sa nenačítala. Skontrolujte pripojenie na internet.');
+            }
+
             // 1. Load PDF
-            const loadingTask = pdfjsLib.getDocument(getAssetPath('Katalog-Artstone.pdf'));
+            // Use relative path - safest for dist/ deployment
+            const loadingTask = pdfjsLib.getDocument('./Katalog-Artstone.pdf');
             pdfDoc = await loadingTask.promise;
             
             // ... (rest is same)
@@ -1665,7 +1662,7 @@
             const coverDiv = document.createElement('div');
             coverDiv.className = "page p-0 bg-black flex items-center justify-center overflow-hidden";
             coverDiv.dataset.density = "soft"; 
-            coverDiv.innerHTML = `<img src="${getAssetPath('catalog-preview-new.png')}" class="w-full h-full object-fill" alt="Cover" />`;
+            coverDiv.innerHTML = `<img src="./catalog-preview-new.png" class="w-full h-full object-fill" alt="Cover" />`;
             bookEl.appendChild(coverDiv);
 
             // 4c. Create Inner Pages (Index 2 to total-2)
@@ -1734,7 +1731,7 @@
 
         } catch (error) {
             console.error('Error loading catalog:', error);
-            loading.innerHTML = '<p class="text-red-500">Chyba pri načítaní katalógu.</p>';
+            loading.innerHTML = `<p class="text-red-500 text-center px-4">Chyba pri načítaní katalógu:<br><span class="text-xs text-red-400">${error.message}</span></p>`;
         }
     }
 

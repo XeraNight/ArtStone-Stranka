@@ -1642,21 +1642,18 @@
     // Set worker source for PDF.js
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
-    // Helper to get correct path based on environment
-    function getAssetPath(filename) {
-        if (window.location.hostname.includes('github.io')) {
-            return '/ArtStone-Stranka/dist/' + filename;
-        }
-        return filename;
-    }
-
     async function initFlipbook() {
         const loading = document.getElementById('loading-indicator');
         const bookEl = document.getElementById('book');
         
         try {
+            if (typeof St === 'undefined') {
+                throw new Error('Knižnica PageFlip sa nenačítala. Skontrolujte pripojenie na internet.');
+            }
+
             // 1. Load PDF
-            const loadingTask = pdfjsLib.getDocument(getAssetPath('Katalog-Artstone.pdf'));
+            // Use relative path - safest for dist/ deployment
+            const loadingTask = pdfjsLib.getDocument('./Katalog-Artstone.pdf');
             pdfDoc = await loadingTask.promise;
             
             // ... (rest is same)
@@ -1665,7 +1662,7 @@
             const coverDiv = document.createElement('div');
             coverDiv.className = "page p-0 bg-black flex items-center justify-center overflow-hidden";
             coverDiv.dataset.density = "soft"; 
-            coverDiv.innerHTML = `<img src="${getAssetPath('catalog-preview-new.png')}" class="w-full h-full object-fill" alt="Cover" />`;
+            coverDiv.innerHTML = `<img src="./catalog-preview-new.png" class="w-full h-full object-fill" alt="Cover" />`;
             bookEl.appendChild(coverDiv);
 
             // 4c. Create Inner Pages (Index 2 to total-2)
@@ -1734,7 +1731,7 @@
 
         } catch (error) {
             console.error('Error loading catalog:', error);
-            loading.innerHTML = '<p class="text-red-500">Chyba pri načítaní katalógu.</p>';
+            loading.innerHTML = `<p class="text-red-500 text-center px-4">Chyba pri načítaní katalógu:<br><span class="text-xs text-red-400">${error.message}</span></p>`;
         }
     }
 
