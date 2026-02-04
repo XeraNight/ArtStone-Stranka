@@ -1,0 +1,114 @@
+@import "tailwindcss";
+/* stylelint-disable-next-line at-rule-no-unknown */
+@config "../tailwind.config.js";
+
+body {
+  font-family: "Epilogue", sans-serif;
+}
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Material Symbols Fill Utility */
+.fill-1 {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* --- Aether Search Bar Design --- */
+
+
+#poda {
+  position: relative;
+  width: 333px;
+  max-width: 100%; /* Responsive fix */
+  height: 64px;
+  background: linear-gradient(145deg, #a77b5a, #825e41);
+  border: 4px solid #2d241d;
+  border-radius: 8px; /* Softer radius */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6), 6px 6px 0px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+#main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background: #2d241d;
+  border-radius: 6px; /* Softer radius */
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+.aether-input {
+  width: 100%;
+  height: 100%;
+  padding: 0 45px 0 50px;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 18px;
+  color: #e4d5c7;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+
+.aether-input:focus {
+  outline: none;
+  color: #fff;
+}
+
+.aether-input::placeholder {
+  color: #9c8c7e;
+  opacity: 1;
+}
+
+
+
+#search-icon,
+#filter-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: grid;
+  place-items: center;
+}
+
+#search-icon {
+  left: 12px;
+  pointer-events: none;
+}
+
+#filter-icon {
+  right: 0;
+  height: 100%;
+  width: 42px;
+  background: linear-gradient(145deg, #966f54, #7a563f); /* Slightly more orange */
+  cursor: pointer;
+  border-left: 2px solid #2d241d;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+#filter-icon:active {
+  background: linear-gradient(145deg, #7a563f, #966f54);
+}
+
+#search-icon svg circle,
+#search-icon svg line {
+  stroke: #d4ac8e;
+  stroke-width: 2.5;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7));
+}
+
+#filter-icon svg path {
+  stroke: #d4ac8e;
+  stroke-width: 1.5;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7));
+}
