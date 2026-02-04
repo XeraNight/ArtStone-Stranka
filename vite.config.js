@@ -13,7 +13,6 @@ export default defineConfig({
         produkty: resolve(__dirname, "produkty.html"),
         montaz: resolve(__dirname, "montaz.html"),
         realizacie: resolve(__dirname, "realizacie.html"),
-        inspiracie: resolve(__dirname, "inspiracie.html"),
         technicke: resolve(__dirname, "technicke-parametre.html"),
         kontakt: resolve(__dirname, "kontakt.html"),
       },
