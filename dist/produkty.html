@@ -1648,7 +1648,7 @@
         
         try {
             // 1. Load PDF
-            const loadingTask = pdfjsLib.getDocument('Katalog-Artstone.pdf');
+            const loadingTask = pdfjsLib.getDocument('/ArtStone-Stranka/dist/Katalog-Artstone.pdf');
             pdfDoc = await loadingTask.promise;
             
             // 2. Get intrinsic PDF dimensions from Page 2 (standard inner page)
@@ -1687,7 +1687,7 @@
             const coverDiv = document.createElement('div');
             coverDiv.className = "page p-0 bg-black flex items-center justify-center overflow-hidden";
             coverDiv.dataset.density = "soft"; 
-            coverDiv.innerHTML = `<img src="catalog-cover-final.png" class="w-full h-full object-fill" alt="Cover" />`;
+            coverDiv.innerHTML = `<img src="/ArtStone-Stranka/dist/catalog-preview-new.png" class="w-full h-full object-fill" alt="Cover" />`;
             bookEl.appendChild(coverDiv);
 
             // 4c. Create Inner Pages (Index 2 to total-2)
