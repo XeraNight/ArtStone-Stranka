@@ -674,7 +674,29 @@
     </div>
     </div>
 </div>
-<div class="mt-16 text-center"> <button id="load-more-btn" class="border border-white/20 hover:border-primary hover:text-primary text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest transition-all hidden">                     Všetky produkty                 </button> </div> </div> </section> <section class="py-24 bg-surface relative overflow-hidden"> <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent"></div> <div class="max-w-7xl mx-auto px-6 relative z-10"> <div class="flex flex-col lg:flex-row items-center gap-16"> <div class="lg:w-1/2"> <div class="relative group cursor-pointer"> <div class="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-lg blur opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div> <div class="relative bg-black rounded-lg overflow-hidden border border-border-muted shadow-2xl rotate-1 group-hover:rotate-0 transition-transform duration-500"> <img alt="Katalóg Preview" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity" src="catalog-preview-new.png"/> <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-8"> <p class="text-white/50 text-xs uppercase tracking-widest mb-2">Issue 2024 / Vol. 1</p> <h3 class="text-white font-serif text-3xl italic">Art &amp; Stone</h3> </div> </div> <div class="absolute -bottom-6 -right-6 bg-white text-black size-24 rounded-full flex flex-col items-center justify-center font-bold text-center text-xs leading-tight shadow-xl z-20 group-hover:scale-110 transition-transform"> <span>PDF</span> <span class="text-lg">FREE</span> </div> </div> </div> <div class="lg:w-1/2 space-y-8"> <span class="text-primary font-bold tracking-[0.2em] text-xs uppercase">Inšpirácia</span> <h2 class="text-5xl font-black text-white leading-tight">                         KATALÓG <br/> <span class="italic font-serif font-normal text-white/50">Trends 2024</span> </h2> <p class="text-white/60 text-lg leading-relaxed border-l-2 border-white/10 pl-6">                         Stiahnite si náš exkluzívny digitálny katalóg plný inšpirácií, technických detailov a prípadových štúdií. Viac ako 150 strán vizuálneho obsahu.                     </p>                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+<div class="mt-16 text-center"> <button id="load-more-btn" class="border border-white/20 hover:border-primary hover:text-primary text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest transition-all hidden">                     Všetky produkty                 </button> </div> </div> </section> <section class="py-24 bg-surface relative overflow-hidden"> <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent"></div> <div class="max-w-7xl mx-auto px-6 relative z-10"> <div class="flex flex-col lg:flex-row items-center gap-16"> <div class="lg:w-1/2"> <div class="relative group cursor-pointer"> <div class="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-lg blur opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div> <div class="relative bg-black rounded-lg overflow-hidden border border-border-muted shadow-2xl rotate-1 group-hover:rotate-0 transition-transform duration-500">                            <img alt="Katalóg Preview" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity" src="catalog-preview-new.png"/>
+                            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-8">
+                                <p class="text-white/50 text-xs uppercase tracking-widest mb-2">Issue 2024 / Vol. 1</p>
+                                <h3 class="text-white font-serif text-3xl italic">Art &amp; Stone</h3>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-white text-black size-24 rounded-full flex flex-col items-center justify-center font-bold text-center text-xs leading-tight shadow-xl z-20 group-hover:scale-110 transition-transform">
+                            <span>PDF</span>
+                            <span class="text-lg">FREE</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 space-y-8">
+                    <span class="text-primary font-bold tracking-[0.2em] text-xs uppercase">Inšpirácia</span>
+                    <h2 class="text-5xl font-black text-white leading-tight">
+                        KATALÓG <br/>
+                        <span class="italic font-serif font-normal text-white/50">Trends 2024</span>
+                    </h2>
+                    <p class="text-white/60 text-lg leading-relaxed border-l-2 border-white/10 pl-6">
+                        Stiahnite si náš exkluzívny digitálny katalóg plný inšpirácií, technických detailov a prípadových štúdií. Viac ako 150 strán vizuálneho obsahu.
+                    </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
                     <a href="Katalog-Artstone.pdf" download class="bg-white text-black hover:bg-primary hover:text-white px-8 py-4 rounded text-sm font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2">
                         <span class="material-symbols-outlined">download</span>
                         Stiahnuť PDF
@@ -1625,8 +1647,13 @@
         const bookEl = document.getElementById('book');
         
         try {
+            if (typeof St === 'undefined') {
+                throw new Error('Knižnica PageFlip sa nenačítala. Skontrolujte pripojenie na internet.');
+            }
+
             // 1. Load PDF
-            const loadingTask = pdfjsLib.getDocument('Katalog-Artstone.pdf');
+            // Use relative path - safest for dist/ deployment
+            const loadingTask = pdfjsLib.getDocument('./Katalog-Artstone.pdf');
             pdfDoc = await loadingTask.promise;
             
             // 2. Get intrinsic PDF dimensions from Page 2 (standard inner page)
@@ -1665,7 +1692,7 @@
             const coverDiv = document.createElement('div');
             coverDiv.className = "page p-0 bg-black flex items-center justify-center overflow-hidden";
             coverDiv.dataset.density = "soft"; 
-            coverDiv.innerHTML = `<img src="catalog-cover-final.png" class="w-full h-full object-fill" alt="Cover" />`;
+            coverDiv.innerHTML = `<img src="./catalog-preview-new.png" class="w-full h-full object-fill" alt="Cover" />`;
             bookEl.appendChild(coverDiv);
 
             // 4c. Create Inner Pages (Index 2 to total-2)
@@ -1734,7 +1761,7 @@
 
         } catch (error) {
             console.error('Error loading catalog:', error);
-            loading.innerHTML = '<p class="text-red-500">Chyba pri načítaní katalógu.</p>';
+            loading.innerHTML = `<p class="text-red-500 text-center px-4">Chyba pri načítaní katalógu:<br><span class="text-xs text-red-400">${error.message}</span></p>`;
         }
     }
 

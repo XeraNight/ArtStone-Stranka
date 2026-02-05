@@ -20,6 +20,16 @@
         header img { height: 100% !important; width: auto !important; max-width: none !important; }
     </style>
 
+
+
+    <script>
+        // GitHub Pages Redirect Fix
+        // This script redirects visitors to the built version in /dist/ when running on GitHub Pages
+        if (window.location.hostname.includes('github.io') && !window.location.pathname.includes('/dist/')) {
+            window.sessionStorage.setItem('redirected', 'true');
+            window.location.replace('./dist/index.html');
+        }
+    </script>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased">
     <header class="sticky top-0 z-50 w-full border-b border-border-muted bg-background-dark/80 backdrop-blur-md">

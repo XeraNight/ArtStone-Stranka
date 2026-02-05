@@ -1,0 +1,1941 @@
+<!DOCTYPE html> <html class="dark" lang="sk"><head> <meta charset="utf-8"/> <meta content="width=device-width, initial-scale=1.0" name="viewport"/>  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/> <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>  <style>body {     font-family: "Anton", sans-serif     } details > summary {     list-style: none     } details > summary::-webkit-details-marker {     display: none     } .texture-overlay {     background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAXbJnE9Q1sLIfzKt8npvgv3sBYfATxSglMYmu8gR_rX8QCrH0Tg7jicecV9vyN_4kPUn5MB9Sd4hu8ktqFmPT16c4dn6R-SBlyrjGqgHK1o3bdIl8yYKLKVA1UmJbS_J5S0j92pR51uIochx7oq1lFq01-DTaxgGSqZzVb5T-96zv3OQ5R-Kjih7AmXT8MoPwf0U-u5WMbASIYXIT6_wgdFoNzFaL0AuE4nZdX8NvyViZfqOVyzrWWqwdiCm8ObnaO_fJuO6AcirA)     }</style> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <style>
+        /* CRITICAL CSS TO PREVENT FOUC/FLICKER */
+        header .header-inner { height: 7rem; } /* h-28 = 7rem = 112px */
+        header .logo-link { height: 5rem; display: flex; align-items: center; } /* h-24 = 6rem = 96px */
+        header img { height: 100% !important; width: auto !important; max-width: none !important; }
+    </style>
+
+  <script type="module" crossorigin src="/ArtStone-Stranka/dist/assets/nav-mount-Cf6mAyPD.js"></script>
+  <link rel="stylesheet" crossorigin href="/ArtStone-Stranka/dist/assets/nav-mount-D9Bp5gHN.css">
+</head> <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased"> <header class="sticky top-0 z-50 w-full border-b border-border-muted bg-background-dark/80 backdrop-blur-md"> <div class="header-inner w-full px-6 h-28 flex items-center justify-between relative border-none outline-none" style="height: 7rem;">
+<a href="index.html" class="logo-link h-20 flex items-center gap-3 group border-none outline-none ml-8" style="height: 5rem;">
+    <img src="/ArtStone-Stranka/dist/assets/logo-white-B3RZLt7F.png?v=3" alt="Artstone Logo" width="588" height="176" class="h-full w-auto object-contain transition-transform group-hover:scale-105 origin-top-left" style="height: 5rem; width: auto; clip-path: inset(0 0 0 2px);">
+</a> <div id="nav-root" class="flex-1 flex justify-center items-center"></div> </div> </header> <section class="relative min-h-[90vh] flex items-end pb-32 overflow-hidden"> <div class="absolute inset-0 z-0"> <div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent z-10"></div> <div class="absolute inset-0 texture-overlay z-10 opacity-50 mix-blend-overlay"></div> <div class="w-full h-full bg-cover bg-center" data-alt="Dark moody interior with wood slat wall and warm orange lighting" style="background-image: url('Interier/abraaj-2.jpg');"></div> </div> <div class="relative z-20 max-w-7xl mx-auto px-6 w-full"> <div class="max-w-3xl"> <span class="inline-block bg-primary/20 backdrop-blur-sm border border-primary/30 px-4 py-1.5 rounded-full text-primary font-bold tracking-[0.2em] text-[10px] uppercase mb-6">                     Showroom Kolekcia 2024                 </span> <h1 class="text-white text-7xl md:text-9xl font-black leading-[0.9] tracking-tighter mb-8">                     ATMOSFÉRA<br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">LUXUSU</span> </h1> <p class="text-white/70 text-xl max-w-xl mb-12 font-light border-l-2 border-primary pl-6">                     Objavte hmatateľnú dokonalosť. Vzorky dekoratívnych panelov Artstone® teraz dostupné pre architektov a dizajnérov.                 </p> <button onclick="document.getElementById('catalog-filter').scrollIntoView({behavior: 'smooth'})" class="bg-white text-background-dark hover:bg-primary hover:text-white px-10 py-5 rounded-lg text-lg font-bold tracking-wide transition-colors duration-300">                     PREHĽADÁVAŤ KOLEKCIU ↓                 </button> </div> </div> </section> <div id="catalog-filter" class="sticky top-28 z-40 bg-background-dark/95 backdrop-blur-md border-b border-border-muted py-4 shadow-2xl"> <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4"> <div class="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 no-scrollbar"> <button class="bg-primary text-white px-5 py-2 rounded-full text-sm font-bold whitespace-nowrap shadow-lg shadow-primary/20 transition-all filter-btn" data-category="all">All</button>
+<button class="bg-surface border border-border-muted text-white/70 hover:text-primary hover:border-primary px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all filter-btn" data-category="brick">Brick</button>
+<button class="bg-surface border border-border-muted text-white/70 hover:text-primary hover:border-primary px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all filter-btn" data-category="concrete">Concrete</button>
+<button class="bg-surface border border-border-muted text-white/70 hover:text-primary hover:border-primary px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all filter-btn" data-category="innovative">Innovative art</button>
+<button class="bg-surface border border-border-muted text-white/70 hover:text-primary hover:border-primary px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all filter-btn" data-category="karoart">Karoart series</button>
+<button class="bg-surface border border-border-muted text-white/70 hover:text-primary hover:border-primary px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all filter-btn" data-category="steel">Steel</button>
+<button class="bg-surface border border-border-muted text-white/70 hover:text-primary hover:border-primary px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all filter-btn" data-category="stone">Stone</button> </div> 
+    <div id="poda">
+      <!-- <div class="aether-border"></div> Removed as per request -->
+      <div id="main">
+        <input placeholder="Hľadať dekory..." type="text" id="searchInput" class="aether-input" name="text" autocomplete="off" />
+        <div id="search-icon">
+          <svg xmlns="http://www.w.org/2000/svg" width="22" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" height="22" fill="none">
+            <circle r="8" cy="11" cx="11"></circle>
+            <line y2="16.65" y1="22" x2="16.65" x1="22"></line>
+          </svg>
+        </div>
+        <div id="filter-icon">
+          <svg preserveAspectRatio="none" height="24" width="24" viewBox="4.8 4.56 14.832 15.408" fill="none">
+            <path d="M8.16 6.65002H15.83C16.47 6.65002 16.99 7.17002 16.99 7.81002V9.09002C16.99 9.56002 16.7 10.14 16.41 10.43L13.91 12.64C13.56 12.93 13.33 13.51 13.33 13.98V16.48C13.33 16.83 13.1 17.29 12.81 17.47L12 17.98C11.24 18.45 10.2 17.92 10.2 16.99V13.91C10.2 13.5 9.97 12.98 9.73 12.69L7.52 10.36C7.23 10.08 7 9.55002 7 9.20002V7.87002C7 7.17002 7.52 6.65002 8.16 6.65002Z"></path>
+          </svg>
+        </div>
+      </div>
+      <!-- Autocomplete Dropdown -->
+      <ul id="autocomplete-list" class="absolute top-full left-0 w-full bg-[#2d241d] border border-[#a77b5a] rounded-b-lg hidden z-50 max-h-60 overflow-y-auto shadow-2xl mt-1">
+          <!-- Items will be injected here -->
+      </ul>
+    </div>
+ </div> </div> <section class="py-12 bg-background-dark relative"> <div class="max-w-7xl mx-auto px-6"> <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-16 border-b border-border-muted pb-12"> <div class="lg:col-span-1"> <h3 class="text-2xl font-black text-white uppercase tracking-tight mb-2">Ako získať<br/><span class="text-primary">vzorku?</span></h3> <p class="text-white/50 text-sm">Jednoduchý proces pre vaše rozhodovanie.</p> </div> <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6"> <div class="flex items-start gap-4"> <div class="size-10 rounded bg-surface-highlight flex items-center justify-center shrink-0 border border-border-muted text-primary font-bold">1</div> <div> <h4 class="text-white font-bold mb-1">Vyberte dekor</h4> <p class="text-white/50 text-xs leading-relaxed">Prezrite si našu ponuku a zvoľte povrch, ktorý vás zaujíma.</p> </div> </div> <div class="flex items-start gap-4"> <div class="size-10 rounded bg-surface-highlight flex items-center justify-center shrink-0 border border-border-muted text-primary font-bold">2</div> <div> <h4 class="text-white font-bold mb-1">Objednajte vzorku</h4> <p class="text-white/50 text-xs leading-relaxed">Pridajte vzorku do košíka. Odosielame do 24 hodín.</p> </div> </div> <div class="flex items-start gap-4"> <div class="size-10 rounded bg-surface-highlight flex items-center justify-center shrink-0 border border-border-muted text-primary font-bold">3</div> <div> <h4 class="text-white font-bold mb-1">Otestujte doma</h4> <p class="text-white/50 text-xs leading-relaxed">Priložte vzorku k stene a sledujte hru svetla.</p> </div> </div> </div> </div> <div id="product-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
+
+    
+    <div data-product-key="1-plafont-bonamy" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/1-plafont-bonamy/1-PLAFONT-BONAMY.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Plafont Bonamy</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="11-versailes-creme-fonce" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/11-versailes-creme-fonce/1-VERSAILLES-FONCE-BLANC.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Versailes Creme Fonce</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="2-vermont-noir-bronze" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/2-vermont-noir-bronze/1-VERMONT-FUE-VERT-DORE.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Vermont Noir Bronze</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="2-victorian-bonamy" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/2-victorian-bonamy/1-VICTORIAN-NOIR-BRONZE.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Victorian Bonamy</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="B-321-01 ladrillo vintage blanca" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/B-321-01 ladrillo vintage blanca/B-321-01-Ladrillo-Vintage-Blanca.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">B 321 01 Ladrillo Vintage Blanca</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="DSC03335-kopya" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/DSC03335-kopya/DSC03335-kopya.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">DSC03335 Kopya</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="Heritage XVIII" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/Heritage XVIII/Heritage-XVIII-Blanca-541-01.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Heritage XVIII</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="Hormigon loft" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/Hormigon loft/hormigon-loft-grey.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Hormigon Loft</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="JAKARTA" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/JAKARTA/JAKARTA.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">JAKARTA</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="KORS" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/KORS/KORS.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">KORS</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="Roca-natura" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/Roca-natura/ROCA-basalto.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Roca Natura</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="WOXX-OXIDO" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/WOXX-OXIDO/WOXX-OXIDO.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">WOXX OXIDO</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="boabab moss" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/boabab moss/BAOBAB-MOSS.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Boabab Moss</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="bolts " class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/bolts /BOLTS.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Bolts </h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="broderie-bronze" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/broderie-bronze/1-BRODERIE-NOIR-BRONZE.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Broderie Bronze</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="epicure chambery" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/epicure chambery/1-EPICURE-CHAMBERY.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Epicure Chambery</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="forg" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/forg/FORG-BRONZE.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Forg</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="g-cube" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/g-cube/G-QUBE.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">G Cube</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="grenier" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/grenier/1-GRENIER-OXYD-BLANC.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Grenier</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="hormigon" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/hormigon/hormigon-intenso.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Hormigon</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="hormigon oxido" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/hormigon oxido/hormigon-plus-oxido.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Hormigon Oxido</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="hormigon vintage natura" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/hormigon vintage natura/hormigon-vintage-natura.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Hormigon Vintage Natura</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="horming plus grey" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/horming plus grey/hormigon-plus-anthracite-1.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Horming Plus Grey</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="ladrillo-loft-rojo" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/ladrillo-loft-rojo/ladrillo-loft-polo-rojo.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Ladrillo Loft Rojo</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="ladrillo-multicolor" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/ladrillo-multicolor/ladrillo-blanca.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Ladrillo Multicolor</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="ladrillo-perforado electric" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/ladrillo-perforado electric/ladrillo-perforado-eclectic.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Ladrillo Perforado Electric</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="lajas-ocre" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/lajas-ocre/lajas-blanca.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Lajas Ocre</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="lastra-ocobriza" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/lastra-ocobriza/lastra-cobriza.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Lastra Ocobriza</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="magma-blanca" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/magma-blanca/magma-basalto.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Magma Blanca</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="picada-blanca" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/picada-blanca/picada-blanca.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Picada Blanca</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="pizarra intenso" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/pizarra intenso/pizarra-anthratice.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Pizarra Intenso</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="rootz" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/rootz/rootz.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Rootz</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="ruina-ocre" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/ruina-ocre/ruina-ocre.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Ruina Ocre</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="rustica-castellana" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/rustica-castellana/rustica-castellana.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Rustica Castellana</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="sillarejo-cobriza" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/sillarejo-cobriza/sillarejo-blanca.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Sillarejo Cobriza</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="timber-natura" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/timber-natura/timber-natura.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Timber Natura</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="tocho-earth" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/tocho-earth/tocho-earth.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Tocho Earth</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="wood-barbados-earth" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/wood-barbados-earth/wood-barbados-blanca.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Wood Barbados Earth</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="zanzibar" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/zanzibar/zanzibar-anthracite.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Zanzibar</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="amazon-basalto-1" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/amazon-basalto-1.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Amazon Basalto 1</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="amazon-earth" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/amazon-earth.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Amazon Earth</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <div data-product-key="amazon-natura-1" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
+        <a href="#" class="relative block w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]" style="box-shadow: 0 0 40px -15px hsl(var(--theme-color) / 0.5);">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-110" style="background-image: url('images/amazon-natura-1.jpg');"></div>
+            <div class="absolute inset-0 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100" style="background: linear-gradient(to top, hsl(var(--theme-color) / 0.9), hsl(var(--theme-color) / 0.6) 15%, transparent 40%);"></div>
+            <div class="relative flex flex-col justify-end h-full p-3 md:p-6 text-white">
+                <h3 class="text-sm md:text-xl font-bold tracking-tight">Amazon Natura 1</h3>
+                <p class="text-[10px] md:text-sm text-white/80 mt-1 font-medium">Prémiový dekoratívny panel Artstone. • Cena na vyžiadanie</p>
+                <div class="mt-3 md:mt-8 flex items-center justify-between bg-[hsl(var(--theme-color)/0.2)] backdrop-blur-md border border-[hsl(var(--theme-color)/0.3)] rounded-lg px-2 py-1.5 md:px-4 md:py-3 transition-all duration-300 group-hover:bg-[hsl(var(--theme-color)/0.4)] group-hover:border-[hsl(var(--theme-color)/0.5)]">
+                    <span class="text-[10px] md:text-sm font-semibold tracking-wide">Detail produktu</span>
+                    <span class="material-symbols-outlined transform transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    </div>
+</div>
+<div class="mt-16 text-center"> <button id="load-more-btn" class="border border-white/20 hover:border-primary hover:text-primary text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest transition-all hidden">                     Všetky produkty                 </button> </div> </div> </section> <section class="py-24 bg-surface relative overflow-hidden"> <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent"></div> <div class="max-w-7xl mx-auto px-6 relative z-10"> <div class="flex flex-col lg:flex-row items-center gap-16"> <div class="lg:w-1/2"> <div class="relative group cursor-pointer"> <div class="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-lg blur opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div> <div class="relative bg-black rounded-lg overflow-hidden border border-border-muted shadow-2xl rotate-1 group-hover:rotate-0 transition-transform duration-500">                            <img alt="Katalóg Preview" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity" src="catalog-preview-new.png"/>
+                            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-8">
+                                <p class="text-white/50 text-xs uppercase tracking-widest mb-2">Issue 2024 / Vol. 1</p>
+                                <h3 class="text-white font-serif text-3xl italic">Art &amp; Stone</h3>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-white text-black size-24 rounded-full flex flex-col items-center justify-center font-bold text-center text-xs leading-tight shadow-xl z-20 group-hover:scale-110 transition-transform">
+                            <span>PDF</span>
+                            <span class="text-lg">FREE</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 space-y-8">
+                    <span class="text-primary font-bold tracking-[0.2em] text-xs uppercase">Inšpirácia</span>
+                    <h2 class="text-5xl font-black text-white leading-tight">
+                        KATALÓG <br/>
+                        <span class="italic font-serif font-normal text-white/50">Trends 2024</span>
+                    </h2>
+                    <p class="text-white/60 text-lg leading-relaxed border-l-2 border-white/10 pl-6">
+                        Stiahnite si náš exkluzívny digitálny katalóg plný inšpirácií, technických detailov a prípadových štúdií. Viac ako 150 strán vizuálneho obsahu.
+                    </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href="Katalog-Artstone.pdf" download class="bg-white text-black hover:bg-primary hover:text-white px-8 py-4 rounded text-sm font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined">download</span>
+                        Stiahnuť PDF
+                    </a>
+                    <button onclick="openCatalogModal()" class="border border-white/20 text-white hover:border-white px-8 py-4 rounded text-sm font-bold uppercase tracking-wider transition-colors">
+                        Prelistovať online
+                    </button>
+                </div> </div> </div> </div> </section> <section class="py-24 bg-background-dark border-t border-border-muted relative overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+             <span class="text-primary font-bold tracking-[0.2em] text-xs uppercase font-display">Technické parametre</span>
+             <h2 class="text-4xl md:text-5xl font-black text-white mt-3 uppercase tracking-tighter font-display">Prečo Artstone®?</h2>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+             <!-- Left: Composition -->
+             <div class="bg-surface border border-border-muted p-8 rounded-2xl relative group hover:border-primary/50 transition-colors">
+                 <h3 class="text-2xl font-bold text-white mb-8 border-b border-white/10 pb-4">Zloženie Panelu</h3>
+                 <div class="space-y-6">
+                     <div class="flex items-center gap-6">
+                        <div class="size-16 rounded-full border-2 border-primary/30 flex items-center justify-center text-primary font-bold text-xl bg-white/5">
+                            30%
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold uppercase text-sm">Skelné vlákna</h4>
+                            <p class="text-white/50 text-xs">Pevnosť a stálosť</p>
+                        </div>
+                     </div>
+                     <div class="flex items-center gap-6">
+                        <div class="size-16 rounded-full border-2 border-primary/30 flex items-center justify-center text-primary font-bold text-xl bg-white/5">
+                            20%
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold uppercase text-sm">Eko Živica</h4>
+                            <p class="text-white/50 text-xs">Flexibilita a ľahkosť</p>
+                        </div>
+                     </div>
+                     <div class="flex items-center gap-6">
+                        <div class="size-16 rounded-full border-2 border-primary/30 flex items-center justify-center text-primary font-bold text-xl bg-white/5">
+                            50%
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold uppercase text-sm">Prírodný Kameň</h4>
+                            <p class="text-white/50 text-xs">Autentický vzhľad</p>
+                        </div>
+                     </div>
+                 </div>
+             </div>
+
+             <!-- Right: Data Table -->
+             <div class="space-y-8">
+                 <p class="text-white/70 text-lg leading-relaxed">
+                     Panely Artstone® predstavujú technologickú špičku v oblasti dekoratívnych obkladov. Sú navrhnuté tak, aby odolali náročným podmienkam a zároveň poskytovali nekompromisnú estetiku.
+                 </p>
+
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                     <div class="bg-white/5 p-4 rounded-lg border border-white/5">
+                         <span class="block text-white/40 text-xs uppercase tracking-wider mb-1">Reakcia na oheň</span>
+                         <span class="block text-white font-bold text-xl">Trieda A2-s1, d0</span>
+                     </div>
+                     <div class="bg-white/5 p-4 rounded-lg border border-white/5">
+                         <span class="block text-white/40 text-xs uppercase tracking-wider mb-1">Hmotnosť</span>
+                         <span class="block text-white font-bold text-xl">3 - 5 kg/m²</span>
+                     </div>
+                     <div class="bg-white/5 p-4 rounded-lg border border-white/5">
+                         <span class="block text-white/40 text-xs uppercase tracking-wider mb-1">Teplotná odolnosť</span>
+                         <span class="block text-white font-bold text-xl">-40°C až +80°C</span>
+                     </div>
+                     <div class="bg-white/5 p-4 rounded-lg border border-white/5">
+                         <span class="block text-white/40 text-xs uppercase tracking-wider mb-1">Záruka</span>
+                         <span class="block text-white font-bold text-xl">15 Rokov</span>
+                     </div>
+                 </div>
+
+                 <div class="pt-6">
+                     <a href="technicke-parametre.html" class="inline-flex items-center gap-2 text-primary hover:text-white font-bold uppercase tracking-wider transition-colors group">
+                         Zobraziť kompletnú špecifikáciu
+                         <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                     </a>
+                 </div>
+             </div>
+        </div>
+    </div>
+</section>
+<section class="bg-primary text-white py-20"> <div class="max-w-4xl mx-auto px-6 text-center"> <h2 class="text-4xl md:text-5xl font-black mb-6 leading-tight">Váš projekt si zaslúži výnimočnosť.</h2> <p class="text-white/80 text-xl font-light mb-12 max-w-2xl mx-auto">                 Začnite s bezplatnou konzultáciou. Získajte cenovú ponuku a odporúčania od našich expertov do 24 hodín.             </p> <form class="bg-white/10 backdrop-blur-md p-2 rounded-2xl flex flex-col md:flex-row gap-2 max-w-2xl mx-auto border border-white/20"> <div class="flex-grow"> <select class="w-full h-14 bg-white/10 border-transparent rounded-xl text-white placeholder-white/50 focus:border-white focus:ring-0 px-4 appearance-none font-medium cursor-pointer hover:bg-white/20 transition-colors"> <option class="bg-surface text-white" disabled="" selected="" value="">Vyberte typ priestoru...</option> <option class="bg-surface text-white" value="obyvacka">Obývačka / Spálňa</option> <option class="bg-surface text-white" value="kuchyna">Kuchyňa / Kúpeľňa</option> <option class="bg-surface text-white" value="exterier">Exteriér / Fasáda</option> <option class="bg-surface text-white" value="komercne">Komerčný priestor</option> </select> </div> <div class="flex-grow"> <input class="w-full h-14 bg-white/10 border-transparent rounded-xl text-white placeholder-white/70 focus:border-white focus:ring-0 px-4 font-medium" placeholder="Váš email" type="email"/> </div> <button class="bg-white text-primary hover:bg-background-dark hover:text-white h-14 px-8 rounded-xl font-bold uppercase tracking-wide transition-all shadow-lg whitespace-nowrap">                     Mám záujem                 </button> </form> <p class="mt-6 text-white/40 text-xs uppercase tracking-widest">Nezáväzne • Bez spamu • Odpovedáme rýchlo</p> </div> </section> <footer class="bg-background-dark py-20 border-t border-border-muted">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-12 mb-16">
+            <!-- Column 1: Address & Contact (Spans 2 columns) -->
+            <div class="col-span-2">
+                <a href="index.html" class="block mb-8">
+                    <img src="/ArtStone-Stranka/dist/assets/logo-white-B3RZLt7F.png" alt="Artstone Logo" class="h-8 w-auto object-contain">
+                </a>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Address -->
+                    <div>
+                        <h4 class="text-white font-bold mb-4 font-display uppercase tracking-wider text-sm">Adresa & Kontakt</h4>
+                        <p class="text-white/40 text-sm leading-relaxed mb-6">
+                            Showroom: Smrečianska 20, 831 01 Bratislava<br>
+                            Showroom: Rožňavská 19, 04501 Moldava nad Bodvou
+                        </p>
+                        <div class="space-y-2 mb-8">
+                            <a href="tel:+421908667780" class="block text-white hover:text-primary transition-colors font-bold">+421 908 66 77 80</a>
+                            <a href="mailto:info@dekorativnepanely.sk" class="block text-white hover:text-primary transition-colors">info@dekorativnepanely.sk</a>
+                        </div>
+                        
+                        <!-- Social Icons -->
+                        <div class="flex gap-4">
+                            <a class="size-10 bg-surface border border-border-muted rounded flex items-center justify-center text-white hover:border-primary transition-colors" href="https://www.instagram.com/artstone_dekorativnepanely/" target="_blank" rel="noopener noreferrer">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                            </a>
+                            <a class="size-10 bg-surface border border-border-muted rounded flex items-center justify-center text-white hover:border-primary transition-colors" href="https://www.youtube.com/channel/UCQNOo7vbwD_hZlIxwfWK_Zw" target="_blank" rel="noopener noreferrer">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Billing Data -->
+                    <div>
+                        <h4 class="text-white font-bold mb-4 font-display uppercase tracking-wider text-sm">Fakturačné údaje</h4>
+                        <p class="text-white/40 text-sm leading-relaxed">
+                            <strong class="text-white">MAS 1 s.r.o.</strong><br>
+                            sídlo: Južná trieda 4B<br>
+                            040 01 Košice – mestská časť Juh<br>
+                            Prevádzka: Rožňavská 19,<br>
+                            045 01 Moldava nad Bodvou<br>
+                            IČO: 56332394<br>
+                            IČ DPH: SK2122279951<br>
+                            Zap. v OR SR Košice I., Vl.č.: 59871/V
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2: Menu & Buttons -->
+            <div>
+                <h4 class="text-white font-bold mb-6 text-xl">Menu</h4>
+                <ul class="space-y-4 mb-8">
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html">Produkty</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="technicke-parametre.html">Výhody artstone</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="montaz.html">Inštalácia a údržba</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="realizacie.html">Inšpirácie</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="kontakt.html">Kontakty</a></li>
+                </ul>
+                
+                <div class="flex flex-col gap-4">
+                    <button onclick="openCatalogModal()" class="block w-full text-center bg-white text-background-dark hover:bg-primary hover:text-white px-6 py-3 rounded-lg text-sm font-bold uppercase tracking-wide transition-all">
+                        ONLINE KATALOG
+                    </button>
+                    <a href="Katalog-Artstone.pdf" download class="block w-full text-center border border-white/20 text-white hover:border-primary hover:text-primary px-6 py-3 rounded-lg text-sm font-bold uppercase tracking-wide transition-all">
+                        KATALÓG NA STIAHNUTIE
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 3: Categories -->
+            <div>
+                <h4 class="text-white font-bold mb-6 text-xl">Kategórie</h4>
+                <ul class="space-y-4">
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html?category=brick">Brick</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html?category=concrete">Concrete</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html?category=innovative">Innovative art</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html?category=karoart">Karoart series</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html?category=steel">Steel</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html?category=stone">Stone</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="pt-8 border-t border-border-muted flex flex-col md:row justify-between items-center gap-4 text-white/30 text-sm">
+            <p>Artstone <span id="copyright-year"></span>. Všetky práva vyhradené. Web vytvoril Xpandor</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+</script>
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const productGrid = document.getElementById('product-grid');
+        const searchInput = document.getElementById('searchInput'); // Get search input to combine filters
+
+        // Heuristic mapping
+        const keywords = {
+            wood: ['wood', 'dub', 'timber', 'rootz', 'bonamy', 'versailes', 'vermont', 'victorian', 'broderie', 'epicure', 'grenier', 'plafont', 'tocho', 'bolts', 'forg', 'jakar', 'amazon'],
+            concrete: ['hormigon', 'beton', 'concrete', 'loft', 'oxido', 'vintage', 'plus'],
+            brick: ['ladrillo', 'tehla', 'brick', 'ruina', 'rustica'],
+            stone: ['stone', 'bridlica', 'mramor', 'travertin', 'rock', 'roca', 'lajas', 'pizarra', 'magma', 'lastra', 'picada', 'sillarejo', 'kors', 'g-cube', 'g-qube', 'zanzibar', 'woxx', 'baobab']
+        };
+
+        let currentCategory = 'all';
+        let visibleLimit = 12; 
+        const loadMoreBtn = document.getElementById('load-more-btn');
+
+        function filterProducts() {
+            const searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
+            const cards = productGrid.querySelectorAll('.product-card');
+            let visibleCount = 0;
+            let totalMatching = 0;
+            
+            cards.forEach(card => {
+                const titleEl = card.querySelector('h3');
+                if (!titleEl) return;
+                const title = titleEl.textContent.toLowerCase();
+                
+                // 1. Search Check
+                const matchesSearch = title.includes(searchTerm);
+                
+                // 2. Category Check
+                let matchesCategory = true;
+                if (currentCategory !== 'all') {
+                    const categoryKeywords = keywords[currentCategory] || [];
+                    // Check if title contains any of the keywords
+                    matchesCategory = categoryKeywords.some(k => title.includes(k));
+                }
+
+                if (matchesSearch && matchesCategory) {
+                    totalMatching++;
+                    if (visibleCount < visibleLimit) {
+                        card.style.display = '';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Update Load More Button Visibility
+            if (loadMoreBtn) {
+                if (totalMatching > visibleLimit) {
+                    loadMoreBtn.classList.remove('hidden');
+                } else {
+                    loadMoreBtn.classList.add('hidden');
+                }
+            }
+        }
+        
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', () => {
+                visibleLimit = 9999; // Show all
+                filterProducts();
+            });
+        }
+
+        // Add Click Listeners to Buttons
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active state style
+                filterButtons.forEach(b => {
+                    b.className = "bg-surface border border-border-muted text-white/70 hover:text-white hover:border-primary px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all filter-btn";
+                });
+                btn.className = "bg-primary text-white px-5 py-2 rounded-full text-sm font-bold whitespace-nowrap shadow-lg shadow-primary/20 transition-all filter-btn";
+                
+                currentCategory = btn.getAttribute('data-category');
+                visibleLimit = 6; // Reset limit on category change
+                filterProducts();
+            });
+        });
+
+
+        if (searchInput) {
+            searchInput.addEventListener('input', filterProducts);
+        }
+        
+        filterProducts();
+    });
+</script>
+
+<!-- Product Modal -->
+<div id="product-modal" class="fixed inset-0 z-[100] hidden opacity-0 transition-opacity duration-300" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <!-- Backdrop -->
+    <div class="absolute inset-0 bg-black/90 backdrop-blur-md transition-opacity" onclick="closeModal()"></div>
+
+    <!-- Modal Content -->
+    <div class="absolute inset-0 flex items-center justify-center p-4 sm:p-6 pointer-events-none">
+        <div class="bg-surface border border-border-muted rounded-2xl w-full max-w-7xl h-[85vh] md:h-[90vh] flex flex-col md:flex-row overflow-hidden relative shadow-2xl transform scale-95 opacity-0 transition-all duration-300 pointer-events-auto" id="modal-panel">
+            
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 z-20 p-2 bg-black/50 text-white/70 hover:text-white rounded-full hover:bg-primary transition-all backdrop-blur-sm">
+                <span class="material-symbols-outlined text-2xl">close</span>
+            </button>
+
+            <!-- Left: Gallery -->
+            <div class="w-full md:w-2/3 relative flex items-center justify-center group select-none overflow-hidden">
+                <!-- Background Image with Zoom -->
+                <div class="absolute inset-0 bg-cover bg-left z-0 origin-left scale-125 transition-transform duration-700" style="background-image: url('images/Gemini_Generated_Image_n05ncnn05ncnn05n.png');"></div>
+                <!-- Overlay -->
+                <div class="absolute inset-0 bg-black/70 z-0"></div>
+                <!-- Main Image -->
+                <div class="w-full h-full flex items-center justify-center p-1 md:p-2 relative overflow-hidden z-10">
+                    <img id="modal-image" src="" alt="Detail produktu" class="max-w-full max-h-full object-contain shadow-2xl transition-transform duration-500" />
+                </div>
+                
+                <!-- Navigation Arrows -->
+                <button id="prev-btn" onclick="prevImage()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-primary/90 text-white p-3 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0 translate-x-4 group-hover:translate-x-0 z-10">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                </button>
+                <button id="next-btn" onclick="nextImage()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-primary/90 text-white p-3 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0 -translate-x-4 group-hover:translate-x-0 z-10">
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+
+                <!-- Thumbnails Overlay -->
+                <div id="modal-thumbnails" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 p-2 bg-black/80 backdrop-blur-md rounded-xl border border-primary max-w-[95%] overflow-x-auto no-scrollbar opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                    <!-- Thumbnails injected via JS -->
+                </div>
+            </div>
+
+            <!-- Right: Info -->
+            <div class="w-full md:w-1/3 bg-[#111] border-l border-white/10 flex flex-col">
+                <div class="p-8 md:p-10 overflow-y-auto flex-1 custom-scrollbar">
+                    <!-- Header -->
+                    <span class="text-primary font-bold tracking-[0.2em] text-[10px] uppercase mb-6 block flex items-center gap-2">
+                        <span class="w-6 h-[2px] bg-primary"></span>
+                        Detail Produktu
+                    </span>
+                    
+                    <!-- Title -->
+                    <h2 id="modal-title" class="text-4xl md:text-5xl font-normal text-white mb-3 leading-[0.9] tracking-tight font-display"></h2>
+                    
+                    <!-- Subtitle -->
+                    <p id="modal-desc" class="text-white/50 text-sm font-light mb-10 leading-relaxed"></p>
+
+                    <!-- Specs Grid -->
+                    <div class="grid grid-cols-2 gap-3 mb-10">
+                        <div class="bg-white/5 rounded-2xl p-4 border border-white/5 flex flex-col justify-between h-24 hover:border-white/20 transition-colors group/card">
+                            <div class="flex justify-between items-start">
+                                <span class="text-white/30 text-[10px] uppercase tracking-widest font-bold">Dostupnosť</span>
+                                <span class="material-symbols-outlined text-white/30 text-lg group-hover/card:text-primary transition-colors">check_circle</span>
+                            </div>
+                            <span class="text-white font-bold text-lg">Skladom</span>
+                        </div>
+                        <div class="bg-white/5 rounded-2xl p-4 border border-white/5 flex flex-col justify-between h-24 hover:border-white/20 transition-colors group/card">
+                             <div class="flex justify-between items-start">
+                                <span class="text-white/30 text-[10px] uppercase tracking-widest font-bold">Typ</span>
+                                <span class="material-symbols-outlined text-white/30 text-lg group-hover/card:text-primary transition-colors">grid_view</span>
+                            </div>
+                            <span class="text-white font-bold text-lg leading-tight">Interiér / Exteriér</span>
+                        </div>
+                    </div>
+
+                    <!-- Price Section -->
+                    <div class="mb-10">
+                         <span class="text-white/40 text-[10px] uppercase tracking-widest font-bold block mb-2">Orientačná cena</span>
+                         <p class="text-3xl font-bold text-[#ff9e5e] mb-3 tracking-tight">Na vyžiadanie</p>
+                         <p class="text-white/40 text-xs leading-relaxed max-w-sm">
+                            Cena je závislá od metráže, typu povrchovej úpravy a inštalačných podmienok. Pre presnú cenovú ponuku nás prosím kontaktujte.
+                         </p>
+                    </div>
+                    
+                    <!-- Detailed Description -->
+                    <div class="mb-6">
+                        <span class="text-white/90 text-xs font-bold uppercase mb-2 block tracking-wider">Podrobný popis:</span>
+                         <p class="text-white/60 text-sm leading-relaxed font-light">
+                            Tieto panely sú vyrobené z odolného materiálu Artstone, ktorý verne imituje staré cínové stropy. Vhodné pre interiéry aj exteriéry, dodajú priestoru rustikálny a historický šarm. Jednoduchá inštalácia, vysoká trvanlivosť a jednoduchá údržba.
+                         </p>
+                    </div>
+                </div>
+
+                <!-- Footer Actions -->
+                <div class="p-6 md:p-8 border-t border-white/10 bg-[#111] mt-auto z-10 space-y-3">
+                     <button onclick="window.location.href='kontakt.html'" class="w-full bg-[#ff702e] hover:bg-[#ff854e] text-white py-4 rounded-xl font-bold uppercase tracking-wide transition-all shadow-lg shadow-orange-900/20 flex items-center justify-center gap-2 group/btn">
+                        <span>Mám záujem o vzorku</span>
+                        <span class="material-symbols-outlined text-lg group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+                    </button>
+                    <button class="w-full bg-white/5 hover:bg-white/10 border border-white/10 text-white py-4 rounded-xl font-bold uppercase tracking-wide transition-all flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-lg">download</span>
+                        <span>Technický list</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Injected Product Data
+    const productData = {
+      "1-plafont-bonamy": [
+        "images/1-plafont-bonamy/1-PLAFONT-BONAMY.jpg",
+        "images/1-plafont-bonamy/2-PLAFONT-NOIR-BLANC.jpg",
+        "images/1-plafont-bonamy/3-PLAFONT-NOIR-DOR.jpg",
+        "images/1-plafont-bonamy/4-PLAFONT-ANTHRACITE-BRONZE.jpg",
+        "images/1-plafont-bonamy/5-PLAFONT-DIJON.jpg"
+      ],
+      "11-versailes-creme-fonce": [
+        "images/11-versailes-creme-fonce/1-VERSAILLES-FONCE-BLANC.jpg",
+        "images/11-versailes-creme-fonce/10-VERSAILLES-FONCE-GRIS-NOIR.jpg",
+        "images/11-versailes-creme-fonce/11-VERSAILLES-CREME-FONCE.jpg",
+        "images/11-versailes-creme-fonce/2-VERSAILLES-FUE-VERT-DOR.jpg",
+        "images/11-versailes-creme-fonce/3-VERSAILLES-MOREDORE-NOIR.jpg",
+        "images/11-versailes-creme-fonce/5-VERSAILLES-DIJON-BLANC.jpg",
+        "images/11-versailes-creme-fonce/6-VERSAILLES-FAON-BLANC.jpg",
+        "images/11-versailes-creme-fonce/7-VERSAILLES-ANTHRACITE-ROSE.jpg",
+        "images/11-versailes-creme-fonce/8-VERSAILLES-ROSE-DOR.jpg",
+        "images/11-versailes-creme-fonce/9-VERSAILLES-BLANC-DOR.jpg"
+      ],
+      "2-vermont-noir-bronze": [
+        "images/2-vermont-noir-bronze/1-VERMONT-FUE-VERT-DORE.jpg",
+        "images/2-vermont-noir-bronze/2-VERMONT-NOIR-BRONZE.jpg",
+        "images/2-vermont-noir-bronze/3-VERMONT-FONCE-DOR.jpg",
+        "images/2-vermont-noir-bronze/4-VERMONT-CREME-DOR.jpg",
+        "images/2-vermont-noir-bronze/5-VERMONT-AZURE-BRONZE.jpg",
+        "images/2-vermont-noir-bronze/6-VERMONT-ROSE-ARGENT.jpg"
+      ],
+      "2-victorian-bonamy": [
+        "images/2-victorian-bonamy/1-VICTORIAN-NOIR-BRONZE.jpg",
+        "images/2-victorian-bonamy/2-VICTORIAN-BONAMY.jpg",
+        "images/2-victorian-bonamy/3-VICTORIAN-DIJON-BLANC.jpg",
+        "images/2-victorian-bonamy/4-VICTORIAN-BLANC-DOR.jpg",
+        "images/2-victorian-bonamy/5-VICTORIAN-FONCE-BLANC.jpg",
+        "images/2-victorian-bonamy/6-VICTORIAN-OXYD.jpg"
+      ],
+      "B-321-01 ladrillo vintage blanca": [
+        "images/B-321-01 ladrillo vintage blanca/B-321-01-Ladrillo-Vintage-Blanca.jpg",
+        "images/B-321-01 ladrillo vintage blanca/B-321-06-Ladrillo-Vintage-Bombay.jpg",
+        "images/B-321-01 ladrillo vintage blanca/B-321-10-Ladrillo-Vintage-Anthracite.jpg",
+        "images/B-321-01 ladrillo vintage blanca/B-322-Ladrillo-Vintage-Multicolor.jpg",
+        "images/B-321-01 ladrillo vintage blanca/B-323-Ladrillo-Vintage-Rojo.jpg",
+        "images/B-321-01 ladrillo vintage blanca/B-324-02-Ladrillo-Vintage-Polo-Eclectic.jpg",
+        "images/B-321-01 ladrillo vintage blanca/B-324-Ladrillo-Vintage-Polo.jpg",
+        "images/B-321-01 ladrillo vintage blanca/B-325-02-Ladrillo-Vintage-Polo-Earth.jpg",
+        "images/B-321-01 ladrillo vintage blanca/B-325-03-Ladrillo-Vintage-Earth-Eclectic.jpg",
+        "images/B-321-01 ladrillo vintage blanca/B-325-Ladrillo-Vintage-Earth.jpg",
+        "images/B-321-01 ladrillo vintage blanca/B-326-Ladrillo-Vintage-Triamel.jpg",
+        "images/B-321-01 ladrillo vintage blanca/B-327-Ladrillo-Vintage-Eclectic.jpg",
+        "images/B-321-01 ladrillo vintage blanca/B-328-Ladrillo-Vintage-Cobriza.jpg"
+      ],
+      "DSC03335-kopya": [
+        "images/DSC03335-kopya/DSC03335-kopya.jpg"
+      ],
+      "Heritage XVIII": [
+        "images/Heritage XVIII/Heritage-XVIII-Blanca-541-01.jpg",
+        "images/Heritage XVIII/Heritage-XVIII-Blanca-Dark-547.jpg",
+        "images/Heritage XVIII/Heritage-XVIII-Earth-545.jpg",
+        "images/Heritage XVIII/Heritage-XVIII-Eclectic-544.jpg",
+        "images/Heritage XVIII/Heritage-XVIII-Gold-Dark-548.jpg",
+        "images/Heritage XVIII/Heritage-XVIII-Oxido-543.jpg",
+        "images/Heritage XVIII/Heritage-XVIII-Rojo-542.jpg"
+      ],
+      "Hormigon loft": [
+        "images/Hormigon loft/hormigon-loft-grey.jpg",
+        "images/Hormigon loft/hormigon-loft-intenso.jpg",
+        "images/Hormigon loft/hormigon-loft-natura.jpg"
+      ],
+      "JAKARTA": [
+        "images/JAKARTA/JAKARTA.jpg"
+      ],
+      "KORS": [
+        "images/KORS/KORS.jpg"
+      ],
+      "Roca-natura": [
+        "images/Roca-natura/ROCA-basalto.jpg",
+        "images/Roca-natura/ROCA-blanca-min.jpg",
+        "images/Roca-natura/ROCA-natura.jpg",
+        "images/Roca-natura/ROCA-triamel.jpg"
+      ],
+      "WOXX-OXIDO": [
+        "images/WOXX-OXIDO/WOXX-OXIDO.jpg"
+      ],
+      "boabab moss": [
+        "images/boabab moss/BAOBAB-MOSS.jpg"
+      ],
+      "bolts ": [
+        "images/bolts /BOLTS.jpg"
+      ],
+      "broderie-bronze": [
+        "images/broderie-bronze/1-BRODERIE-NOIR-BRONZE.jpg",
+        "images/broderie-bronze/2-BRODERIE-CREME-DOR.jpg",
+        "images/broderie-bronze/3-BRODERIE-NOIR-ARGENT.jpg",
+        "images/broderie-bronze/4-BRODERIE-FONCE-DOR.jpg",
+        "images/broderie-bronze/5-BRODERIE-FONCE-ARGENT.jpg",
+        "images/broderie-bronze/6-BRODERIE-FONCE-GRIS.jpg"
+      ],
+      "epicure chambery": [
+        "images/epicure chambery/1-EPICURE-CHAMBERY.jpg",
+        "images/epicure chambery/10-EPICURE-ROSE-POL-AZURE.jpg",
+        "images/epicure chambery/2-EPICURE-DOR-BRONZE.jpg",
+        "images/epicure chambery/3-EPICURE-DIJON.jpg",
+        "images/epicure chambery/4-EPICURE-AZURE-ROSE.jpg",
+        "images/epicure chambery/5-EPICURE-ANTHRACITE-ARGENT.jpg",
+        "images/epicure chambery/6-EPICURE-CREME-DOR.jpg",
+        "images/epicure chambery/7-EPICURE-BLUE-MARINE-DOR.jpg",
+        "images/epicure chambery/8-EPICURE-FONCE-ARGENT.jpg",
+        "images/epicure chambery/9-EPICURE-FONCE-DOR.jpg"
+      ],
+      "forg": [
+        "images/forg/FORG-BRONZE.jpg"
+      ],
+      "g-cube": [
+        "images/g-cube/G-QUBE.jpg"
+      ],
+      "grenier": [
+        "images/grenier/1-GRENIER-OXYD-BLANC.jpg",
+        "images/grenier/2-GRENIER-BONAMY.jpg",
+        "images/grenier/3-GRENIER-NOIR-BLANC.jpg",
+        "images/grenier/4-GRENIER-BLANC-DOR-NOIR.jpg",
+        "images/grenier/5-GRENIER-OXYD.jpg",
+        "images/grenier/6-GRENIER-ROSE-BLANC.jpg"
+      ],
+      "hormigon": [
+        "images/hormigon/hormigon-intenso.jpg"
+      ],
+      "hormigon oxido": [
+        "images/hormigon oxido/hormigon-plus-oxido.jpg"
+      ],
+      "hormigon vintage natura": [
+        "images/hormigon vintage natura/hormigon-vintage-natura.jpg"
+      ],
+      "horming plus grey": [
+        "images/horming plus grey/hormigon-plus-anthracite-1.jpg",
+        "images/horming plus grey/hormigon-plus-blanca.jpg",
+        "images/horming plus grey/hormigon-plus-grey.jpg",
+        "images/horming plus grey/hormigon-plus-triamel.jpg"
+      ],
+      "ladrillo-loft-rojo": [
+        "images/ladrillo-loft-rojo/ladrillo-loft-polo-rojo.jpg",
+        "images/ladrillo-loft-rojo/ladrillo-loft-rojo-castellana.jpg",
+        "images/ladrillo-loft-rojo/ladrillo-loft-rojo.jpg"
+      ],
+      "ladrillo-multicolor": [
+        "images/ladrillo-multicolor/ladrillo-blanca.jpg",
+        "images/ladrillo-multicolor/ladrillo-multicolor.jpg",
+        "images/ladrillo-multicolor/ladrillo-rojo.jpg"
+      ],
+      "ladrillo-perforado electric": [
+        "images/ladrillo-perforado electric/ladrillo-perforado-eclectic.jpg",
+        "images/ladrillo-perforado electric/ladrillo-perforado-rojo.jpg"
+      ],
+      "lajas-ocre": [
+        "images/lajas-ocre/lajas-blanca.jpg",
+        "images/lajas-ocre/lajas-carmin.jpg",
+        "images/lajas-ocre/lajas-cobriza.jpg",
+        "images/lajas-ocre/lajas-gris.jpg",
+        "images/lajas-ocre/lajas-ocre.jpg"
+      ],
+      "lastra-ocobriza": [
+        "images/lastra-ocobriza/lastra-cobriza.jpg"
+      ],
+      "magma-blanca": [
+        "images/magma-blanca/magma-basalto.jpg",
+        "images/magma-blanca/magma-blanca.jpg",
+        "images/magma-blanca/magma-carmin.jpg"
+      ],
+      "picada-blanca": [
+        "images/picada-blanca/picada-blanca.jpg",
+        "images/picada-blanca/picada-castellana.jpg"
+      ],
+      "pizarra intenso": [
+        "images/pizarra intenso/pizarra-anthratice.jpg",
+        "images/pizarra intenso/pizarra-intenso.jpg"
+      ],
+      "rootz": [
+        "images/rootz/rootz.jpg"
+      ],
+      "ruina-ocre": [
+        "images/ruina-ocre/ruina-ocre.jpg"
+      ],
+      "rustica-castellana": [
+        "images/rustica-castellana/rustica-castellana.jpg",
+        "images/rustica-castellana/rustica-cobriza.jpg",
+        "images/rustica-castellana/rustica-gris.jpg",
+        "images/rustica-castellana/rustica-ocre.jpg"
+      ],
+      "sillarejo-cobriza": [
+        "images/sillarejo-cobriza/sillarejo-blanca.jpg",
+        "images/sillarejo-cobriza/sillarejo-carmin.jpg",
+        "images/sillarejo-cobriza/sillarejo-cobriza.jpg"
+      ],
+      "timber-natura": [
+        "images/timber-natura/timber-natura.jpg"
+      ],
+      "tocho-earth": [
+        "images/tocho-earth/tocho-earth.jpg"
+      ],
+      "wood-barbados-earth": [
+        "images/wood-barbados-earth/wood-barbados-blanca.jpg",
+        "images/wood-barbados-earth/wood-barbados-cobriza.jpg",
+        "images/wood-barbados-earth/wood-barbados-earth.jpg"
+      ],
+      "zanzibar": [
+        "images/zanzibar/zanzibar-anthracite.jpg",
+        "images/zanzibar/zanzibar-blanca.jpg",
+        "images/zanzibar/zanzibar-intenso.jpg"
+      ]
+    };
+
+    let currentImages = [];
+    let currentImageIndex = 0;
+
+    const modal = document.getElementById('product-modal');
+    const modalImage = document.getElementById('modal-image');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDesc = document.getElementById('modal-desc');
+    const modalPanel = document.getElementById('modal-panel');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const thumbnailsContainer = document.getElementById('modal-thumbnails');
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // ... existing filter code ...
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const productGrid = document.getElementById('product-grid');
+        const searchInput = document.getElementById('searchInput'); 
+        const loadMoreBtn = document.getElementById('load-more-btn');
+
+        // ... existing search logic ... (Keep lines 699-781)
+        // Updated mapping based on new categories
+        const keywords = {
+            brick: ['ladrillo', 'tehla', 'rustica', 'picada', 'ruina', 'tocho', 'sillarejo'],
+            concrete: ['hormigon', 'beton', 'concrete', 'loft', 'vintage', 'plus'],
+            innovative: ['wood', 'dub', 'timber', 'rootz', 'bonamy', 'versailes', 'vermont', 'victorian', 'broderie', 'epicure', 'grenier', 'plafont', 'amazon', 'baobab', 'zanzibar', 'jakarta'],
+            karoart: ['heritage', 'karo'],
+            steel: ['steel', 'metal', 'bolts', 'forg', 'woxx', 'oxido'],
+            stone: ['stone', 'bridlica', 'mramor', 'travertin', 'rock', 'roca', 'lajas', 'pizarra', 'magma', 'lastra', 'kors', 'g-cube', 'g-qube']
+        };
+
+        // Fix overlap: If a product matches multiple (e.g. Hormigon Oxido matches Concrete and Steel), prioritize.
+        // The current logic allows it to show in ALL matching categories, which is good behavior.
+
+
+        let currentCategory = 'all';
+        let visibleLimit = 12; 
+
+        function filterProducts() {
+             const searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
+             const cards = productGrid.querySelectorAll('.product-card');
+             let visibleCount = 0;
+             let totalMatching = 0;
+             
+             cards.forEach(card => {
+                 const titleEl = card.querySelector('h3');
+                 if (!titleEl) return;
+                 const title = titleEl.textContent.toLowerCase();
+                 
+                 // 1. Search Check
+                 const matchesSearch = title.includes(searchTerm);
+                 
+                 // 2. Category Check
+                 let matchesCategory = true;
+                 if (currentCategory !== 'all') {
+                     const categoryKeywords = keywords[currentCategory] || [];
+                     matchesCategory = categoryKeywords.some(k => title.includes(k));
+                 }
+
+                 if (matchesSearch && matchesCategory) {
+                     totalMatching++;
+                     if (visibleCount < visibleLimit) {
+                         card.style.display = '';
+                         visibleCount++;
+                     } else {
+                         card.style.display = 'none';
+                     }
+                 } else {
+                     card.style.display = 'none';
+                 }
+             });
+
+             if (loadMoreBtn) {
+                 if (totalMatching > visibleLimit) {
+                     loadMoreBtn.classList.remove('hidden');
+                 } else {
+                     loadMoreBtn.classList.add('hidden');
+                 }
+             }
+        }
+        
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', () => {
+                visibleLimit = 9999; 
+                filterProducts();
+            });
+        }
+
+        // --- AUTOCOMPLETE LOGIC ---
+        const autocompleteList = document.getElementById('autocomplete-list');
+        
+        if (searchInput && autocompleteList) {
+            searchInput.addEventListener('input', function() {
+                const val = this.value.toLowerCase().trim();
+                const cards = productGrid.querySelectorAll('.product-card');
+                
+                // Clear existing items
+                autocompleteList.innerHTML = '';
+                
+                if (!val) {
+                    autocompleteList.classList.add('hidden');
+                    return; // Stop if empty
+                }
+
+                let matchesFound = false;
+
+                cards.forEach(card => {
+                    const titleEl = card.querySelector('h3');
+                    if (!titleEl) return;
+                    const title = titleEl.textContent;
+                    
+                    if (title.toLowerCase().includes(val)) {
+                        matchesFound = true;
+                        
+                        // Create LI
+                        const li = document.createElement('li');
+                        li.className = "px-4 py-3 text-[#e4d5c7] hover:bg-[#a77b5a] hover:text-white cursor-pointer transition-colors border-b border-[#a77b5a]/20 last:border-0";
+                        li.textContent = title;
+                        
+                        // Click Handler
+                        li.addEventListener('click', () => {
+                            // Find the link to click
+                            const link = card.querySelector('a');
+                            if (link) {
+                                link.click(); // Open modal
+                            }
+                            // Clear input/list
+                            searchInput.value = title;
+                            autocompleteList.classList.add('hidden');
+                        });
+                        
+                        autocompleteList.appendChild(li);
+                    }
+                });
+
+                if (matchesFound) {
+                    autocompleteList.classList.remove('hidden');
+                } else {
+                    autocompleteList.classList.add('hidden');
+                }
+            });
+
+        // --- AUTO CLOSE AUTOCOMPLETE ---
+            document.addEventListener('click', function(e) {
+                if (!searchInput.contains(e.target) && !autocompleteList.contains(e.target)) {
+                    autocompleteList.classList.add('hidden');
+                }
+            });
+        }
+
+        // --- URL PARAMETER HANDLING (DEEP LINKING) ---
+        const urlParams = new URLSearchParams(window.location.search);
+        const productParam = urlParams.get('product');
+
+        if (productParam) {
+            // Wait for DOM to be fully ready
+            setTimeout(() => {
+                const cards = document.querySelectorAll('.product-card');
+                let bestMatch = null;
+                let bestScore = 0; // 3 = Exact, 2 = StartsWith, 1 = Includes
+
+                const paramLower = productParam.toLowerCase();
+
+                cards.forEach(card => {
+                    const titleEl = card.querySelector('h3');
+                    if (!titleEl) return;
+                    const title = titleEl.textContent.trim();
+                    const titleLower = title.toLowerCase();
+
+                    let score = 0;
+                    if (titleLower === paramLower) {
+                        score = 3;
+                    } else if (titleLower.startsWith(paramLower)) {
+                        score = 2;
+                    } else if (titleLower.includes(paramLower)) {
+                        score = 1;
+                    }
+
+                    if (score > bestScore) {
+                        bestScore = score;
+                        bestMatch = card;
+                    }
+                });
+
+                if (bestMatch) {
+                    const link = bestMatch.querySelector('a');
+                    if (link) {
+                        link.click();
+                         // Scroll to the card
+                        bestMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            }, 500); // Small delay to ensure everything is rendered/filtered
+        }
+
+
+
+        // --- MODAL LOGIC ---
+        const cards = document.querySelectorAll('.product-card a');
+        cards.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const card = this.closest('.product-card');
+                
+                // Get Product Info
+                const title = card.querySelector('h3').textContent;
+                const desc = card.querySelector('p').textContent;
+                // Get Image URL
+                const bgDiv = card.querySelector('.absolute.inset-0.bg-cover');
+                const style = window.getComputedStyle(bgDiv);
+                let bgImage = style.backgroundImage.slice(4, -1).replace(/["']/g, "");
+                
+                // Use data attribute
+                const productKey = card.dataset.productKey;
+
+                if (productKey) {
+                    // Try exact match
+                    if (productData[productKey]) {
+                        currentImages = productData[productKey];
+                    } else {
+                        // Try key match (e.g. handle decoded/encoded mismatch or slight variations)
+                        // Also handle case where key from script might be "amazon-earth" but data has "Amazon Earth" or similar?
+                        // Actually let's just do a case-insensitive lookup
+                        const foundKey = Object.keys(productData).find(k => k.toLowerCase() === productKey.toLowerCase());
+                        if (foundKey) {
+                            currentImages = productData[foundKey];
+                        } else {
+                             // Fallback to single image
+                             currentImages = [bgImage];
+                        }
+                    }
+                } else {
+                    // Fallback to single image if no key
+                    currentImages = [bgImage];
+                }
+
+                openModal(title, desc, 0);
+            });
+        });
+    });
+
+    function openModal(title, desc, index) {
+        modalTitle.textContent = title;
+        modalDesc.textContent = desc;
+        currentImageIndex = index;
+        
+        updateGallery();
+
+        modal.classList.remove('hidden');
+        // Small timeout for fade in
+        setTimeout(() => {
+            modal.classList.remove('opacity-0');
+            modalPanel.classList.remove('opacity-0', 'scale-95');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.add('opacity-0');
+        modalPanel.classList.add('opacity-0', 'scale-95');
+        setTimeout(() => {
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }, 300);
+    }
+
+    function updateGallery() {
+        const url = currentImages[currentImageIndex];
+        modalImage.src = url;
+        
+        // Buttons
+        if (currentImages.length > 1) {
+            prevBtn.style.display = 'block';
+            nextBtn.style.display = 'block';
+            thumbnailsContainer.innerHTML = '';
+            
+            // Generate Thumbnails
+            currentImages.forEach((img, idx) => {
+                const thumb = document.createElement('img');
+                thumb.src = img;
+                thumb.className = `w-16 h-16 object-cover rounded-lg border-2 cursor-pointer transition-all ${idx === currentImageIndex ? 'border-primary opacity-100 scale-110' : 'border-transparent opacity-60 hover:opacity-100'}`;
+                thumb.onclick = () => {
+                    currentImageIndex = idx;
+                    updateGallery();
+                };
+                thumbnailsContainer.appendChild(thumb);
+            });
+            
+        } else {
+            prevBtn.style.display = 'none';
+            nextBtn.style.display = 'none';
+            thumbnailsContainer.innerHTML = '';
+        }
+    }
+
+    function nextImage() {
+        currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+        updateGallery();
+    }
+
+    function prevImage() {
+        currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+        updateGallery();
+    }
+    
+    // Keyboard nav
+    document.addEventListener('keydown', (e) => {
+        if (modal.classList.contains('hidden')) return;
+        if (e.key === 'Escape') closeModal();
+        if (e.key === 'ArrowRight') nextImage();
+        if (e.key === 'ArrowLeft') prevImage();
+    });
+</script>
+
+<!-- CATALOG MODAL HTML -->
+<div id="catalog-modal" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-sm flex items-center justify-center">
+    <button onclick="closeCatalogModal()" class="absolute top-6 right-6 z-50 text-white hover:text-primary transition-colors bg-black/50 rounded-full p-2">
+        <span class="material-symbols-outlined text-3xl">close</span>
+    </button>
+    
+    <!-- Flipbook Container -->
+    <div class="relative w-full h-full flex items-center justify-center">
+        <!-- The Book -->
+        <div id="book" class="relative shadow-2xl transition-transform duration-500 ease-in-out"></div>
+        
+        <!-- Loading Indicator -->
+        <div id="loading-indicator" class="absolute inset-0 flex items-center justify-center text-white flex-col gap-4 pointer-events-none">
+            <span class="material-symbols-outlined animate-spin text-4xl">progress_activity</span>
+            <p>Načítavam katalóg...</p>
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPTS FOR FLIPBOOK -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.js"></script>
+
+<script>
+    // --- FLIPBOOK LOGIC ---
+    let pdfDoc = null;
+    let pageFlip = null;
+    let isRendering = false;
+    let catalogPageWidth = 0; // Store width for centering logic
+    const canvasMap = new Map(); // Store rendered page indices
+
+    // Set worker source for PDF.js
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+    async function initFlipbook() {
+        const loading = document.getElementById('loading-indicator');
+        const bookEl = document.getElementById('book');
+        
+        try {
+            if (typeof St === 'undefined') {
+                throw new Error('Knižnica PageFlip sa nenačítala. Skontrolujte pripojenie na internet.');
+            }
+
+            // 1. Load PDF
+            // Use relative path - safest for dist/ deployment
+            const loadingTask = pdfjsLib.getDocument('./Katalog-Artstone.pdf');
+            pdfDoc = await loadingTask.promise;
+            
+            // 2. Get intrinsic PDF dimensions from Page 2 (standard inner page)
+            const targetPageNum = pdfDoc.numPages > 1 ? 2 : 1;
+            const measurePage = await pdfDoc.getPage(targetPageNum);
+            const viewport = measurePage.getViewport({ scale: 1 });
+            // Aspect Ratio is now HALF the width (Portrait)
+            const pdfAspectRatio = (viewport.width / 2) / viewport.height;
+
+            // 3. Clear previous book content if any
+            bookEl.innerHTML = '';
+            canvasMap.clear();
+
+            // 4. Create wrapper divs
+            // Structure:
+            // Index 0: Dummy Left
+            // Index 1: Front Cover Right (Static)
+            // Index 2 to N-2: Inner Pages (PDF 2 ... Last-1)
+            // Index N-1: Back Cover Left (PDF Last)
+            
+            const numPdfPages = pdfDoc.numPages;
+            // Inner Spreads = Total PDF Pages - 1 (Front) - 1 (Back)
+            const innerSpreads = Math.max(0, numPdfPages - 2); 
+            
+            // Total Flipbook Pages = 1 (Dummy) + 1 (Front) + (Inner * 2) + 1 (Back)
+            const totalFlipPages = 2 + (innerSpreads * 2) + 1;
+            
+            // 4a. Create Dummy Page (Index 0)
+            const dummyDiv = document.createElement('div');
+            dummyDiv.className = "page p-0 bg-transparent flex items-center justify-center overflow-hidden";
+            dummyDiv.dataset.density = "soft"; 
+            dummyDiv.innerHTML = "";
+            bookEl.appendChild(dummyDiv);
+
+            // 4b. Create Static Front Cover (Index 1)
+            const coverDiv = document.createElement('div');
+            coverDiv.className = "page p-0 bg-black flex items-center justify-center overflow-hidden";
+            coverDiv.dataset.density = "soft"; 
+            coverDiv.innerHTML = `<img src="./catalog-preview-new.png" class="w-full h-full object-fill" alt="Cover" />`;
+            bookEl.appendChild(coverDiv);
+
+            // 4c. Create Inner Pages (Index 2 to total-2)
+            for (let i = 2; i < totalFlipPages - 1; i++) {
+                const pageDiv = document.createElement('div');
+                pageDiv.className = "page p-0 bg-white flex items-center justify-center overflow-hidden";
+                pageDiv.dataset.density = "soft"; 
+                pageDiv.innerHTML = `<div class="text-gray-200 text-[10px] hidden">Strana ${i}</div>`; 
+                bookEl.appendChild(pageDiv);
+            }
+
+            // 4d. Create Back Cover (Last Index) - Always Left
+            const backCoverDiv = document.createElement('div');
+            backCoverDiv.className = "page p-0 bg-white flex items-center justify-center overflow-hidden";
+            backCoverDiv.dataset.density = "soft"; // Soft for curl
+            backCoverDiv.innerHTML = `<div class="text-gray-200 text-[10px] hidden">Zadná strana</div>`;
+            bookEl.appendChild(backCoverDiv);
+
+            // 5. Calculate Optimal Dimensions
+            const isMobile = window.innerWidth < 768;
+            const maxH = window.innerHeight * 0.85; 
+            const maxW = window.innerWidth * 0.85;
+            
+            let pageWidth, pageHeight;
+
+            if (isMobile) {
+                pageWidth = Math.min(maxW, maxH * pdfAspectRatio);
+                pageHeight = pageWidth / pdfAspectRatio;
+            } else {
+                pageHeight = Math.min(maxH, (maxW / 2) / pdfAspectRatio);
+                pageWidth = pageHeight * pdfAspectRatio;
+            }
+            
+            catalogPageWidth = pageWidth;
+
+            // 6. Initialize PageFlip
+            pageFlip = new St.PageFlip(bookEl, {
+                width: pageWidth,
+                height: pageHeight,
+                size: 'fixed',
+                minWidth: 100,
+                maxWidth: 3000,
+                minHeight: 100,
+                maxHeight: 3000,
+                maxShadowOpacity: 0.5,
+                showCover: false, 
+                mobileScrollSupport: false,
+                useMouseEvents: true
+            });
+
+            pageFlip.loadFromHTML(document.querySelectorAll('.page'));
+
+            // 7. Render Initial Pages
+            const initialPdfPages = [2, 3];
+            for (const pNum of initialPdfPages) {
+                if (pNum <= numPdfPages) await renderPageToCanvas(pNum);
+            }
+            
+            loading.classList.add('hidden');
+            updateBookPosition();
+
+            pageFlip.on('flip', (e) => {
+                renderVisiblePages();
+                updateBookPosition();
+            });
+
+        } catch (error) {
+            console.error('Error loading catalog:', error);
+            loading.innerHTML = `<p class="text-red-500 text-center px-4">Chyba pri načítaní katalógu:<br><span class="text-xs text-red-400">${error.message}</span></p>`;
+        }
+    }
+
+    function updateBookPosition() {
+        if (!pageFlip) return;
+        const bookEl = document.getElementById('book');
+        const isMobile = window.innerWidth < 768;
+        
+        if (isMobile) {
+            bookEl.style.transform = 'translate(0, 0)';
+            return;
+        }
+
+        const currentIndex = pageFlip.getCurrentPageIndex();
+        const totalPages = pageFlip.getPageCount();
+
+        // Center logic:
+        // Cover (Start) -> Shift Left (Show Right Page)
+        // Back Cover (End) -> Shift Right (Show Left Page)
+        
+        if (currentIndex <= 1) {
+            // Front Cover View
+            bookEl.style.transform = `translateX(-${catalogPageWidth / 2}px)`;
+        } else if (currentIndex >= totalPages - 2) {
+            // Back Cover View (assuming last page is the only one visible on left)
+             bookEl.style.transform = `translateX(${catalogPageWidth / 2}px)`;
+        } else {
+            bookEl.style.transform = 'translate(0, 0)';
+        }
+    }
+
+    async function renderVisiblePages() {
+        if (!pageFlip || !pdfDoc) return;
+
+        const flipIndex = pageFlip.getCurrentPageIndex();
+        
+        // Map Logic:
+        // 0,1 -> Dummy/Front
+        // 2,3 -> PDF 2
+        // ...
+        // Back Cover Index -> PDF Last
+        
+        if (flipIndex < 2) {
+             await renderPageToCanvas(2);
+             return;
+        }
+
+        // Approx mapping
+        let currentPdfPage = Math.floor((flipIndex - 2) / 2) + 2;
+        
+        // Clamp
+        if (currentPdfPage > pdfDoc.numPages) currentPdfPage = pdfDoc.numPages;
+
+        const range = 2; 
+        for (let i = currentPdfPage - range; i <= currentPdfPage + range; i++) {
+            if (i >= 2 && i <= pdfDoc.numPages) {
+                if (!canvasMap.has(i-1)) {
+                     await renderPageToCanvas(i);
+                }
+            }
+        }
+    }
+
+    async function renderPageToCanvas(pageNumber) {
+        if (canvasMap.has(pageNumber-1)) return;
+
+        try {
+            const page = await pdfDoc.getPage(pageNumber);
+            const isBackCover = (pageNumber === pdfDoc.numPages);
+            
+            // DOM Target Indices
+            let targetLeftIndex, targetRightIndex;
+            
+            if (isBackCover) {
+                // Back Cover corresponds to the last flipbook page (Left side)
+                // Calculated: 2 (Dummy+Front) + (pageNumber - 2)*2
+                // Wait.
+                // PDF 2 -> Index 2,3
+                // PDF 3 -> Index 4,5
+                // PDF Last -> Index 2 + (Last - 2)*2 ... Wait.
+                // Loop check: 
+                // i starts at 2.
+                // i=2 corresponds to PDF 2.
+                
+                // Formula: 
+                // Left Index = 2 + (pageNumber - 2) * 2
+                targetLeftIndex = 2 + (pageNumber - 2) * 2;
+                targetRightIndex = null; // No right part for Back Cover
+            } else {
+                targetLeftIndex = 2 + (pageNumber - 2) * 2;
+                targetRightIndex = targetLeftIndex + 1;
+            }
+
+            const pages = document.querySelectorAll('.page');
+            const containerLeft = pages[targetLeftIndex];
+            const containerRight = targetRightIndex !== null ? pages[targetRightIndex] : null;
+
+            if (!containerLeft && !containerRight) return;
+
+            const viewport = page.getViewport({ scale: 2.5 });
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            canvas.width = viewport.width;
+            canvas.height = viewport.height;
+
+            await page.render({
+                canvasContext: context,
+                viewport: viewport
+            }).promise;
+
+            const w = canvas.width;
+            const h = canvas.height;
+            const halfW = w / 2;
+
+            // 1. Left Half (Used for Normal-Left OR Back Cover)
+            if (containerLeft) {
+                const canvasLeft = document.createElement('canvas');
+                canvasLeft.width = halfW;
+                canvasLeft.height = h;
+                // Draw LEFT half of PDF (0 to halfW)
+                canvasLeft.getContext('2d').drawImage(canvas, 0, 0, halfW, h, 0, 0, halfW, h);
+                
+                const imgLeft = document.createElement('img');
+                imgLeft.src = canvasLeft.toDataURL('image/jpeg', 0.9);
+                imgLeft.className = "w-full h-full object-fill";
+                
+                containerLeft.innerHTML = '';
+                containerLeft.appendChild(imgLeft);
+            }
+
+            // 2. Right Half (Only for Inner Pages)
+            if (containerRight) {
+                const canvasRight = document.createElement('canvas');
+                canvasRight.width = halfW;
+                canvasRight.height = h;
+                // Draw RIGHT half of PDF (halfW to w)
+                canvasRight.getContext('2d').drawImage(canvas, halfW, 0, halfW, h, 0, 0, halfW, h);
+
+                const imgRight = document.createElement('img');
+                imgRight.src = canvasRight.toDataURL('image/jpeg', 0.9);
+                imgRight.className = "w-full h-full object-fill";
+
+                containerRight.innerHTML = '';
+                containerRight.appendChild(imgRight);
+            }
+
+            canvasMap.set(pageNumber - 1, true);
+
+        } catch (err) {
+            console.error("Page render error:", err);
+        }
+    }
+
+    // --- MODAL CONTROLS ---
+    function openCatalogModal() {
+        const modal = document.getElementById('catalog-modal');
+        if (modal) {
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            
+            // Initialize only if not already done
+            if (!pageFlip) {
+                initFlipbook();
+            }
+        }
+    }
+
+    function closeCatalogModal() {
+        const modal = document.getElementById('catalog-modal');
+        if (modal) {
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+    }
+</script>
+
+</body></html>
