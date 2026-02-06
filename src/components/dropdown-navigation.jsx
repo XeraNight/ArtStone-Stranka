@@ -114,7 +114,7 @@ export function DropdownNavigation({ navItems }) {
       {navItems.find(item => item.label === "Kontakt") && (
         <a 
           href="kontakt.html" 
-          className="bg-primary text-white font-bold h-12 px-8 flex items-center justify-center rounded-full text-base shrink-0 ml-8 transition-transform active:scale-95 shadow-lg shadow-primary/20 hover:scale-105"
+          className="bg-primary text-white font-bold h-14 px-10 flex items-center justify-center rounded-full text-lg shrink-0 ml-8 transition-transform active:scale-95 shadow-lg shadow-primary/20 hover:scale-105"
         >
           Kontakt
         </a>
