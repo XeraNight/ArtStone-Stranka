@@ -14,12 +14,46 @@ export function DropdownNavigation({ navItems }) {
 
 
   const [isHover, setIsHover] = useState(null);
+  const [currentPath, setCurrentPath] = useState("");
+
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      setCurrentPath(window.location.pathname);
+    }
+  }, []);
+
+  const isActive = (navItem) => {
+    const link = navItem.link;
+    if (!link) return false;
+    // Normalize path to handle trailing slashes or full URLs if necessary
+    const path = currentPath.split("/").pop() || "index.html"; 
+    
+    // Handle root path
+    if (path === "" && link === "index.html") return true; 
+    
+    // Exact match for the filename
+    if (path === link) return true;
+
+    // Check submenus
+    if (navItem.subMenus) {
+      return navItem.subMenus.some(sub => 
+        sub.items.some(item => {
+           const itemLink = item.link.split("/").pop(); // Handle full paths in submenus if necessary
+           return itemLink === path;
+        })
+      );
+    }
+
+    return false;
+  };
   
   return (
     <main className="relative w-full flex items-start md:items-center justify-between px-4">
       <div className="relative gap-12 flex flex-col items-center justify-center flex-1">
         <ul className="relative flex items-center gap-10">
-          {navItems.filter(item => item.label !== "Kontakt").map((navItem) => (
+          {navItems.filter(item => item.label !== "Kontakt").map((navItem) => {
+            const active = isActive(navItem);
+            return (
             <li
               key={navItem.label}
               className="relative"
@@ -32,7 +66,11 @@ export function DropdownNavigation({ navItems }) {
             >
               <a
                 href={navItem.link || "#"}
-                className="text-xl font-bold py-3 px-3 flex cursor-pointer group transition-colors duration-300 items-center justify-center gap-1 text-slate-900/80 dark:text-white/80 hover:text-primary dark:hover:text-primary relative whitespace-nowrap"
+                className={`text-xl font-bold py-3 px-3 flex cursor-pointer group transition-all duration-300 items-center justify-center gap-1 relative whitespace-nowrap
+                  ${active 
+                    ? "text-primary scale-110" 
+                    : "text-slate-900/80 dark:text-white/80 hover:text-primary dark:hover:text-primary"
+                  }`}
                 onMouseEnter={() => {
                   if (navItem.subMenus) {
                     setIsHover(navItem.id);
@@ -107,7 +145,8 @@ export function DropdownNavigation({ navItems }) {
                 )}
               </AnimatePresence>
             </li>
-          ))}
+            );
+          })}
         </ul>
       </div>
 
