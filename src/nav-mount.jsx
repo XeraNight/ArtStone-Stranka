@@ -20,36 +20,40 @@ const navItems = [
     link: "produkty.html",
   },
   {
-    id: 7,
+    id: 2,
     label: "Naše výhody",
     link: "technicke-parametre.html",
   },
   {
-    id: 2,
+    id: 3,
     label: "Proces spolupráce",
     link: "proces-spoluprace.html",
     subMenus: [
       {
         title: "Spolupráca",
         items: [
-           { label: "Proces spolupráce", description: "Ako pracujeme", icon: MessageSquare, link: "proces-spoluprace.html" },
-           { label: "Montáž", description: "Odborná inštalácia a podpora", icon: Hammer, link: "montaz.html" },
-        ],
-      },
-    ],
+          {
+            label: "Montáž",
+            link: "montaz.html",
+            icon: Hammer,
+            desc: "Inštalácia a technické info"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 4,
+    id: 5,
     label: "Realizácie",
     link: "realizacie.html",
   },
   {
-    id: 9,
+    id: 6,
     label: "Katalóg",
     link: "katalog.html",
   },
   {
-    id: 8,
+    id: 7,
     label: "Kontakt",
     link: "kontakt.html",
   },

@@ -140,6 +140,7 @@
     });
 
     // --- FLIPBOOK RENDER LOGIC ---
+    // --- FLIPBOOK RENDER LOGIC ---
     async function initFlipbook() {
         const loading = document.getElementById('loading-indicator');
         const bookEl = document.getElementById('book');
@@ -170,79 +171,69 @@
             bookEl.innerHTML = '';
             canvasMap.clear();
 
-            // 4. Create Pages
-            // Structure:
-            // 0: Cover (Static)
-            // 1: Inside Front (White)
-            // 2,3: PDF Page 2 (Left, Right)
-            // ...
-            
-            // 4. Create Pages
-            // Structure:
-            // 0: Cover (Static)
-            // 1: Inside Front (White)
-            // 2,3: PDF Page 2 (Left, Right)
-            // ...
-            
-            // 4. Create Pages (Manual Cover Strategy for Curl)
-            // Structure:
-            // 0: Dummy (Invisible Left)
-            // 1: Cover (Visible Right - Soft)
-            // 2: PDF Page 2 Left (Back of Cover)
-            // 3: PDF Page 2 Right
-            // ...
-            
-            // 0 - Dummy (Left)
-            const dummyDiv = document.createElement('div');
-            dummyDiv.className = "page p-0 bg-black flex items-center justify-center overflow-hidden";
-            dummyDiv.dataset.density = "hard"; // Hard backing
-            dummyDiv.innerHTML = "";
-            bookEl.appendChild(dummyDiv);
+            // 4. Create Pages (Manual Cover Strategy)
+            const isMobile = window.innerWidth < 768;
 
-            // 1 - Cover (Right)
+            // 0 - Dummy (Left) - Only for Desktop
+            if (!isMobile) {
+                const dummyDiv = document.createElement('div');
+                dummyDiv.className = "page p-0 bg-black flex items-center justify-center overflow-hidden";
+                dummyDiv.dataset.density = "hard";
+                dummyDiv.dataset.type = "dummy-start"; // Mark type
+                bookEl.appendChild(dummyDiv);
+            }
+
+            // 1 - Cover (Right in Desktop, 1st in Mobile)
             const coverDiv = document.createElement('div');
             coverDiv.className = "page p-0 bg-black flex items-center justify-center overflow-hidden";
-            coverDiv.dataset.density = "soft"; // SOFT for Curl Effect!
+            coverDiv.dataset.density = "soft";
+            coverDiv.dataset.type = "cover";
             coverDiv.innerHTML = `<img src="${COVER_IMAGE}" class="w-full h-full object-fill" alt="Cover" />`;
             bookEl.appendChild(coverDiv);
             
             // Inner Pages Steps
-            // PDF Page 2 -> Divs 2, 3
-            // PDF Page K -> Divs 2 + (K-2)*2, 2 + (K-2)*2 + 1
-            
             for (let i = 2; i <= pdfDoc.numPages; i++) {
                 const isBackCover = (i === pdfDoc.numPages);
                 
-                // Left Side (Always content/white)
-                const pLeft = document.createElement('div');
-                pLeft.className = "page p-0 bg-white flex items-center justify-center overflow-hidden";
-                pLeft.dataset.density = "soft"; 
-                pLeft.innerHTML = `<div class="text-gray-200 text-[10px] hidden">PDF ${i} L</div>`;
-                bookEl.appendChild(pLeft);
+                // Left Side
+                // FIX: Skip Page 2 Left on Mobile (The unwanted white page)
+                const skipLeft = isMobile && i === 2;
+
+                if (!skipLeft) {
+                    const pLeft = document.createElement('div');
+                    pLeft.className = "page p-0 bg-white flex items-center justify-center overflow-hidden";
+                    pLeft.dataset.density = "soft"; 
+                    pLeft.dataset.pdf = i; 
+                    pLeft.dataset.side = "L";
+                    pLeft.innerHTML = `<div class="text-gray-200 text-[10px] hidden">PDF ${i} L</div>`;
+                    bookEl.appendChild(pLeft);
+                }
                 
                 // Right Side
                 const pRight = document.createElement('div');
-                // If Back Cover, Right side is Dummy Transparent
-                if (isBackCover) {
+                if (isBackCover && !isMobile) {
                     pRight.className = "page p-0 bg-transparent flex items-center justify-center overflow-hidden";
                     pRight.dataset.density = "soft";
-                    pRight.innerHTML = ""; // Empty
+                    pRight.dataset.type = "dummy-end";
                 } else {
                     pRight.className = "page p-0 bg-white flex items-center justify-center overflow-hidden";
-                    pRight.dataset.density = "soft"; 
+                    pRight.dataset.density = "soft";
+                    pRight.dataset.pdf = i;
+                    pRight.dataset.side = "R";
                     pRight.innerHTML = `<div class="text-gray-200 text-[10px] hidden">PDF ${i} R</div>`;
                 }
                 bookEl.appendChild(pRight);
             }
 
             // 5. Dimensions
-            const isMobile = window.innerWidth < 768;
             const maxH = window.innerHeight * 0.85; 
             const maxW = window.innerWidth * 0.85;
             
             let pageWidth, pageHeight;
 
             if (isMobile) {
+                // Mobile: Fit width, keeping aspect ratio of ONE split page (half of wider spread)
+                // pdfAspectRatio is Width/Height of ONE split page.
                 pageWidth = Math.min(maxW, maxH * pdfAspectRatio);
                 pageHeight = pageWidth / pdfAspectRatio;
             } else {
@@ -257,16 +248,10 @@
                 width: pageWidth,
                 height: pageHeight,
                 size: 'fixed',
-                minWidth: 100,
-                maxWidth: 3000,
-                minHeight: 100,
-                maxHeight: 3000,
-                maxShadowOpacity: 0.5,
-                showCover: false, // Manual Cover
+                showCover: false, 
                 mobileScrollSupport: false 
             });
 
-            console.log("Loading pages into PageFlip...");
             pageFlip.loadFromHTML(document.querySelectorAll('.page'));
             
             // 7. Events
@@ -279,7 +264,7 @@
             // Done
             loading.style.display = 'none';
             // Render initial state
-            renderVisiblePages(1); 
+            renderVisiblePages(0); // Check 0 for mobile start
             updateBookPosition();
             
         } catch (err) {
@@ -292,22 +277,21 @@
         if (!pageFlip) return;
         const bookEl = document.getElementById('book');
         const isMobile = window.innerWidth < 768;
+        const currentIndex = pageFlip.getCurrentPageIndex();
         
         if (isMobile) {
+            // FIX: Center on Mobile (User Request)
+            // Previously shifted right 15%, now centered.
             bookEl.style.transform = 'translate(0, 0)';
             return;
         }
 
-        const currentIndex = pageFlip.getCurrentPageIndex();
         const totalPages = pageFlip.getPageCount();
         
-        // Center logic for Manual Cover:
-        
-        // FRONT: Closed Cover (Index 0/1). Shift LEFT to center Index 1.
+        // Desktop Center Logic
         if (currentIndex <= 1) {
             bookEl.style.transform = `translateX(-${catalogPageWidth / 2}px)`;
         } 
-        // BACK: Closed Back Cover (Last Spread). Shift RIGHT to center Left Page.
         else if (currentIndex >= totalPages - 2) {
              bookEl.style.transform = `translateX(${catalogPageWidth / 2}px)`;
         }
@@ -319,30 +303,39 @@
     async function renderVisiblePages(currentIndex) {
         if (!pageFlip || !pdfDoc) return;
         
+        // Naive Proximity: Render everything +/- 2 PDF pages from "guess"
+        
         const totalPdf = pdfDoc.numPages;
         
         for (let pdfP = 2; pdfP <= totalPdf; pdfP++) {
-            // Formula:
-            // leftIdx = 2 + (pdfP - 2) * 2
-            const leftIdx = 2 + (pdfP - 2) * 2;
-            const rightIdx = leftIdx + 1;
-            
-            // Check proximity
-            if (Math.abs(leftIdx - currentIndex) <= 4 || Math.abs(rightIdx - currentIndex) <= 4) {
-                 if (!canvasMap.get(pdfP)) {
-                     await renderPdfPageToCanvas(pdfP, leftIdx, rightIdx);
-                 }
+            // Check if containers exist
+            const domL = document.querySelector(`.page[data-pdf="${pdfP}"][data-side="L"]`);
+            const domR = document.querySelector(`.page[data-pdf="${pdfP}"][data-side="R"]`);
+             
+            if (!canvasMap.get(pdfP)) {
+                 await renderPdfPageToCanvas(pdfP);
             }
         }
     }
     
-    async function renderPdfPageToCanvas(pageNumber, targetLeftIndex, targetRightIndex) {
+    async function renderPdfPageToCanvas(pageNumber) {
         if (canvasMap.get(pageNumber)) return;
-        canvasMap.set(pageNumber, true); // Mark as processing/done
+        
+        // Check if we even need this page (are containers present?)
+        const containerLeft = document.querySelector(`.page[data-pdf="${pageNumber}"][data-side="L"]`);
+        const containerRight = document.querySelector(`.page[data-pdf="${pageNumber}"][data-side="R"]`);
+        
+        if (!containerLeft && !containerRight) {
+             // Neither exists (e.g. skipped), mark done
+             canvasMap.set(pageNumber, true);
+             return;
+        }
+
+        canvasMap.set(pageNumber, true); // Mark processing
 
         try {
             const page = await pdfDoc.getPage(pageNumber);
-            const viewport = page.getViewport({ scale: 2.5 }); // High res
+            const viewport = page.getViewport({ scale: 2.5 }); 
             
             const canvas = document.createElement('canvas');
             const context = canvas.getContext('2d');
@@ -354,17 +347,12 @@
                 viewport: viewport
             }).promise;
             
-            // Split
-            const pages = document.querySelectorAll('.page');
-            const containerLeft = pages[targetLeftIndex];
-            // SPECIAL: If Back Cover (Last PDF Page), Ignore Right Container (It's Dummy)
-            const isBackCover = (pageNumber === pdfDoc.numPages);
-            const containerRight = isBackCover ? null : pages[targetRightIndex];
-            
             const w = canvas.width;
             const h = canvas.height;
             const halfW = w / 2;
 
+            // FIX: Lookup using Data Attributes
+            
             if (containerLeft) {
                 const cL = document.createElement('canvas');
                 cL.width = halfW; cL.height = h;
@@ -389,7 +377,7 @@
             
         } catch (e) {
             console.error("Render error page " + pageNumber, e);
-            canvasMap.delete(pageNumber); // Retry later if failed?
+            canvasMap.delete(pageNumber); 
         }
     }
 

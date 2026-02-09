@@ -2,7 +2,7 @@
 <html class="dark" lang="sk">
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
     <link rel="stylesheet" href="/src/index.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;700;900&amp;display=swap"
@@ -33,20 +33,13 @@
       }
     </style>
     <style>
-      /* CRITICAL CSS TO PREVENT FOUC/FLICKER */
-      header .header-inner {
-        height: 7rem;
-      }
-      header .logo-link {
-        height: 5rem;
-        display: flex;
-        align-items: center;
-      }
-      header img {
-        height: 100% !important;
-        width: auto !important;
-        max-width: none !important;
-      }
+        /* CRITICAL CSS TO PREVENT FOUC/FLICKER */
+        @media (min-width: 768px) {
+            header .header-inner { height: 7rem; } /* h-28 */
+            header .logo-link { height: 5rem; } /* h-20 */
+        }
+        header .logo-link { display: flex; align-items: center; }
+        header img { height: 100% !important; width: auto !important; max-width: none !important; }
     </style>
   </head>
   <body
@@ -56,13 +49,11 @@
       class="sticky top-0 z-50 w-full border-b border-border-muted bg-background-dark/80 backdrop-blur-md"
     >
       <div
-        class="header-inner w-full px-6 h-28 flex items-center justify-between relative border-none outline-none"
-        style="height: 7rem"
+        class="header-inner w-full px-6 h-16 md:h-28 flex items-center justify-between relative border-none outline-none"
       >
         <a
           href="index.html"
-          class="logo-link h-20 flex items-center gap-3 group border-none outline-none ml-8"
-          style="height: 5rem"
+          class="logo-link h-8 md:h-20 flex items-center gap-3 group border-none outline-none ml-0 md:ml-8"
         >
           <img
             src="logo-white.png?v=3"
@@ -70,7 +61,7 @@
             width="588"
             height="176"
             class="h-full w-auto object-contain transition-transform group-hover:scale-105 origin-top-left"
-            style="height: 5rem; width: auto; clip-path: inset(0 0 0 2px)"
+            style="clip-path: inset(0 0 0 2px)"
           />
         </a>
         <div
@@ -346,9 +337,21 @@
                 <h4 class="text-white font-bold mb-6 text-xl">Menu</h4>
                 <ul class="space-y-4 mb-8">
                     <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html">Produkty</a></li>
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="technicke-parametre.html">Výhody artstone</a></li>
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="montaz.html">Inštalácia a údržba</a></li>
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="realizacie.html">Inšpirácie</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="technicke-parametre.html">Naše výhody</a></li>
+                    <li>
+                        <details class="group">
+                            <summary class="text-white/40 hover:text-primary transition-colors text-base cursor-pointer flex items-center gap-2">
+                                <a href="proces-spoluprace.html" class="hover:text-primary">Proces spolupráce</a>
+                                <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </summary>
+                            <ul class="ml-6 mt-2 space-y-2">
+                                <li><a class="text-white/30 hover:text-primary transition-colors text-sm" href="montaz.html">Montáž</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="realizacie.html">Realizácie</a></li>
                     <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="katalog.html">Katalóg</a></li>
                     <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="kontakt.html">Kontakty</a></li>
                 </ul>
