@@ -44,6 +44,11 @@ const navItems = [
     link: "realizacie.html",
   },
   {
+    id: 9,
+    label: "Katalóg",
+    link: "katalog.html",
+  },
+  {
     id: 8,
     label: "Kontakt",
     link: "kontakt.html",

@@ -29,14 +29,14 @@
             window.location.replace('./dist/index.html');
         }
     </script>
-  <script type="module" crossorigin src="/ArtStone-Stranka/dist/assets/nav-mount-Cf6mAyPD.js"></script>
-  <link rel="stylesheet" crossorigin href="/ArtStone-Stranka/dist/assets/nav-mount-D9Bp5gHN.css">
+  <script type="module" crossorigin src="/ArtStone-Stranka/assets/nav-mount-BU9YhlLV.js"></script>
+  <link rel="stylesheet" crossorigin href="/ArtStone-Stranka/assets/nav-mount-BaSO4U01.css">
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased">
     <header class="sticky top-0 z-50 w-full border-b border-border-muted bg-background-dark/80 backdrop-blur-md">
         <div class="header-inner w-full px-6 h-28 flex items-center justify-between relative border-none outline-none" style="height: 7rem;">
             <a href="index.html" class="logo-link h-20 flex items-center gap-3 group border-none outline-none ml-8" style="height: 5rem;">
-                <img src="/ArtStone-Stranka/dist/assets/logo-white-B3RZLt7F.png?v=3" alt="Artstone Logo" width="588" height="176" class="h-full w-auto object-contain transition-transform group-hover:scale-105 origin-top-left" style="height: 5rem; width: auto; clip-path: inset(0 0 0 2px);">
+                <img src="/ArtStone-Stranka/assets/logo-white-B3RZLt7F.png?v=3" alt="Artstone Logo" width="588" height="176" class="h-full w-auto object-contain transition-transform group-hover:scale-105 origin-top-left" style="height: 5rem; width: auto; clip-path: inset(0 0 0 2px);">
             </a>
             <div id="nav-root" class="flex-1 flex justify-center items-center"></div>
         </div>
@@ -44,11 +44,36 @@
 
     <section class="relative min-h-[85vh] flex items-center overflow-hidden bg-background-dark">
         <div class="absolute inset-0 z-0 opacity-20" style="background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.1\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E');"></div>
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent z-10"></div>
-            <div class="w-full h-full bg-cover bg-top" data-alt="Dark moody interior with wood slat wall and warm orange lighting" style="background-image: url('Interier/acarkent-logo-7.jpg');"></div>
-
+        <div class="absolute inset-0 z-0" id="hero-slider">
+            <div class="absolute inset-0 bg-gradient-to-r from-background-dark/80 via-background-dark/40 to-transparent z-10"></div>
+            <!-- Slider Images -->
+            <div class="slider-image absolute inset-0 w-full h-full bg-cover bg-top transition-opacity duration-1000 ease-in-out opacity-100" style="background-image: url('Interier/abraaj-2.jpg');"></div>
+            <div class="slider-image absolute inset-0 w-full h-full bg-cover bg-top transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('Interier/acarkent-umutbulutevi-1.jpg');"></div>
+            <div class="slider-image absolute inset-0 w-full h-full bg-cover bg-top transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('Interier/kalekilit-3.jpg');"></div>
+            <div class="slider-image absolute inset-0 w-full h-full bg-cover bg-top transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('Interier/promoofis-2.jpg');"></div>
+            <div class="slider-image absolute inset-0 w-full h-full bg-cover bg-top transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('Exterier/merttas-4.jpg');"></div>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const slides = document.querySelectorAll('#hero-slider .slider-image');
+                let currentSlide = 0;
+                
+                if (slides.length > 0) {
+                    setInterval(() => {
+                        // Fade out current
+                        slides[currentSlide].classList.remove('opacity-100');
+                        slides[currentSlide].classList.add('opacity-0');
+                        
+                        // Increment
+                        currentSlide = (currentSlide + 1) % slides.length;
+                        
+                        // Fade in new
+                        slides[currentSlide].classList.remove('opacity-0');
+                        slides[currentSlide].classList.add('opacity-100');
+                    }, 5000); // 5 seconds interval
+                }
+            });
+        </script>
         <div class="relative z-20 max-w-7xl mx-auto px-6 py-24">
             <div class="max-w-2xl">
                 <span class="inline-block text-primary font-bold tracking-[0.2em] text-xs uppercase mb-4">Prémiová Architektúra</span>
@@ -238,94 +263,18 @@
         </div>
     </section>
 
-    <section class="bg-[#141414] border-y border-border-muted relative">
-        <div class="max-w-7xl mx-auto px-6 pb-16 pt-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-                <!-- 1. Kvalita -->
-                <div class="bg-surface p-5 rounded-xl border border-border-muted hover:border-primary/40 transition-all duration-300 group">
-                    <div class="bg-surface-highlight size-10 rounded-lg flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
-                        <span class="material-symbols-outlined text-primary text-xl">verified_user</span>
-                    </div>
-                    <h3 class="text-white font-bold mb-1 text-sm md:text-base">Kvalita</h3>
-                    <p class="text-white/40 text-[10px] uppercase tracking-wider">Certifikáty TÜV & ISO</p>
-                </div>
 
-                <!-- 2. Jedinečnosť -->
-                <div class="bg-surface p-5 rounded-xl border border-border-muted hover:border-primary/40 transition-all duration-300 group">
-                    <div class="bg-surface-highlight size-10 rounded-lg flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
-                        <span class="material-symbols-outlined text-primary text-xl">diamond</span>
-                    </div>
-                    <h3 class="text-white font-bold mb-1 text-sm md:text-base">Jedinečnosť</h3>
-                    <p class="text-white/40 text-[10px] uppercase tracking-wider">Unikátne modely</p>
-                </div>
-
-                <!-- 3. Inštalácia -->
-                <div class="bg-surface p-5 rounded-xl border border-border-muted hover:border-primary/40 transition-all duration-300 group">
-                    <div class="bg-surface-highlight size-10 rounded-lg flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
-                        <span class="material-symbols-outlined text-primary text-xl">build</span>
-                    </div>
-                    <h3 class="text-white font-bold mb-1 text-sm md:text-base">Jdn. Inštalácia</h3>
-                    <p class="text-white/40 text-[10px] uppercase tracking-wider">Rýchla a čistá</p>
-                </div>
-
-                <!-- 4. Údržba -->
-                <div class="bg-surface p-5 rounded-xl border border-border-muted hover:border-primary/40 transition-all duration-300 group">
-                    <div class="bg-surface-highlight size-10 rounded-lg flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
-                        <span class="material-symbols-outlined text-primary text-xl">cleaning_services</span>
-                    </div>
-                    <h3 class="text-white font-bold mb-1 text-sm md:text-base">Jdn. Údržba</h3>
-                    <p class="text-white/40 text-[10px] uppercase tracking-wider">Umývateľný povrch</p>
-                </div>
-
-                <!-- 5. Váha -->
-                <div class="bg-surface p-5 rounded-xl border border-border-muted hover:border-primary/40 transition-all duration-300 group">
-                    <div class="bg-surface-highlight size-10 rounded-lg flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
-                        <span class="material-symbols-outlined text-primary text-xl">scale</span>
-                    </div>
-                    <h3 class="text-white font-bold mb-1 text-sm md:text-base">Váha</h3>
-                    <p class="text-white/40 text-[10px] uppercase tracking-wider">10x ľahší ako kameň</p>
-                </div>
-
-                <!-- 6. Nehorľavosť -->
-                <div class="bg-surface p-5 rounded-xl border border-border-muted hover:border-primary/40 transition-all duration-300 group">
-                    <div class="bg-surface-highlight size-10 rounded-lg flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
-                        <span class="material-symbols-outlined text-primary text-xl">local_fire_department</span>
-                    </div>
-                    <h3 class="text-white font-bold mb-1 text-sm md:text-base">Nehorľavosť</h3>
-                    <p class="text-white/40 text-[10px] uppercase tracking-wider">Trieda A2</p>
-                </div>
-
-                <!-- 7. Garancia -->
-                <div class="bg-surface p-5 rounded-xl border border-border-muted hover:border-primary/40 transition-all duration-300 group">
-                    <div class="bg-surface-highlight size-10 rounded-lg flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
-                        <span class="material-symbols-outlined text-primary text-xl">workspace_premium</span>
-                    </div>
-                    <h3 class="text-white font-bold mb-1 text-sm md:text-base">Garancia</h3>
-                    <p class="text-white/40 text-[10px] uppercase tracking-wider">15 rokov</p>
-                </div>
-
-                <!-- 8. Referencie -->
-                <div class="bg-surface p-5 rounded-xl border border-border-muted hover:border-primary/40 transition-all duration-300 group">
-                    <div class="bg-surface-highlight size-10 rounded-lg flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
-                        <span class="material-symbols-outlined text-primary text-xl">public</span>
-                    </div>
-                    <h3 class="text-white font-bold mb-1 text-sm md:text-base">Referencie</h3>
-                    <p class="text-white/40 text-[10px] uppercase tracking-wider">Stovky projektov</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section class="py-24 bg-background-dark">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col lg:flex-row items-center gap-16">
-                <div class="lg:w-1/2">
-                    <div class="relative">
-                        <div class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-primary"></div>
-                        <img alt="Social Proof" class="rounded-lg shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 w-full object-cover h-[500px]" data-alt="Professional architectural office team working on luxury projects" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkrxGhHLkMTEIQhwQ6nenOmYzYXbXsJTnmbnWQobUfo8q2l7X-aOgg9tMz4D2eopxwXbxs7h6ijTjDBEKqlBTP1vfkCKmxbrPKhi3Wh-HU4fYSOXp30hVg4MJ2CfAywPUPyMzsDzaIPPPjkae1nZAz9yYurxMt2SqIhgHnhyQS0QI7mMIsL_rGRnpyV3Pm_S0gYAduxh55XBYaJeriA_wN0a_5C-A67Av_YM1Ebp7hMR77OUMPfw6k26uEFv6Zk6oQpsMMSz5sNbM"/>
+                <div class="lg:w-7/12">
+                    <div class="relative lg:-ml-16">
+                        <div class="absolute -top-12 -left-12 w-32 h-32 border-t-4 border-l-4 border-primary"></div>
+                        <img alt="Social Proof" class="rounded-lg shadow-2xl transition-all duration-700 w-full h-auto" data-alt="Professional architectural office team working on luxury projects" src="/ArtStone-Stranka/images/panely-ArtStone/FUJI/firat-izgi-2.jpg"/>
                     </div>
                 </div>
-                <div class="lg:w-1/2 space-y-8">
+                <div class="lg:w-5/12 space-y-8">
                     <h2 class="text-4xl md:text-5xl font-black text-white leading-tight">
                         ATMOSFÉRA <span class="text-primary italic">LUXUSU</span>
                     </h2>
@@ -382,7 +331,7 @@
                         </tr>
                         <tr class="group hover:bg-white/5 transition-colors">
                             <td class="p-6 border-b border-white/10 font-bold">Rýchlosť inštalácie (20m²)</td>
-                            <td class="p-6 border-b border-primary/10 bg-primary/5 font-bold text-primary">4-6 hodín</td>
+                            <td class="p-6 border-b border-primary/10 bg-primary/5 font-bold text-primary">1-2 dni</td>
                             <td class="p-6 border-b border-white/10 text-white/50">3-5 dní</td>
                         </tr>
                         <tr class="group hover:bg-white/5 transition-colors">
@@ -402,7 +351,7 @@
                         </tr>
                         <tr class="group hover:bg-white/5 transition-colors">
                             <td class="p-6 font-bold">Cena montáže</td>
-                            <td class="p-6 bg-primary/5 font-bold text-primary">Nízka (Svojpomocne / 1 majster)</td>
+                            <td class="p-6 bg-primary/5 font-bold text-primary">30 až 50% nižšia ako v bežnom kameni alebo obklade</td>
                             <td class="p-6 text-white/50">Vysoká (Špecializovaný tím)</td>
                         </tr>
                     </tbody>
@@ -433,7 +382,7 @@
                         <h3 class="text-2xl font-black text-white uppercase tracking-tighter">Personifikovaná<br>Aplikácia</h3>
                     </div>
                     <p class="text-white/60 leading-relaxed">
-                        Široká paleta farieb v partnerstve s <strong>JOTUN</strong>. Možnosť aplikovať "špeciálnu patinu" pre efekt starnúcej štruktúry. Vytvárame personifikované farby a rozdielne štruktúry presne podľa požiadaviek projektu.
+                        Široká paleta farieb v partnerstve s <strong>JOTUN</strong>. Možnosť aplikovať "špeciálnu patinu" pre efekt starnúcej štruktúry. Vytvárame personifikované farby a rozdielne štruktúry presne podľa požiadaviek projektu. Aplikácia pomocou skrutiek a nastreľovacích klincov a prémiových lepidiel.
                     </p>
                 </div>
 
@@ -444,7 +393,7 @@
                         <h3 class="text-2xl font-black text-white uppercase tracking-tighter">Doručovacia<br>Sieť</h3>
                     </div>
                     <p class="text-white/60 leading-relaxed">
-                        Viac ako <strong>50.000 m²</strong> panelov a 150 modelov ihneď k odberu. Náš skladový systém zabezpečuje rýchle a optimálne riešenie pre akýkoľvek projekt bez zbytočného čakania.
+                        Náš skladový systém zabezpečuje rýchle a optimálne riešenie pre akýkoľvek projekt bez zbytočného čakania.
                     </p>
                 </div>
             </div>
@@ -460,7 +409,7 @@
     </section>
 
     <!-- Differentiators & Guarantee Section -->
-    </section>
+
 
     <section class="py-24 bg-background-dark">
         <div class="max-w-7xl mx-auto px-6">
@@ -555,33 +504,35 @@
                     <span class="text-primary font-bold tracking-[0.2em] text-xs uppercase">Kolekcie</span>
                     <h2 class="text-4xl font-black text-white mt-2">Objavte Kategórie</h2>
                 </div>
-                <a class="text-white/70 hover:text-white font-bold flex items-center gap-2 group" href="#">
+                <a class="text-white/70 hover:text-white font-bold flex items-center gap-2 group" href="produkty.html">
                     Celá ponuka
                     <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
                 </a>
             </div>
             <div class="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <div class="group relative h-[500px] rounded-2xl overflow-hidden cursor-pointer shadow-2xl">
-                    <img alt="Interiérové panely" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Interier/levent-logo.jpg"/>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    <div class="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                        <h3 class="text-3xl font-black text-white mb-2 uppercase tracking-tighter">Interiérové</h3>
-                        <p class="text-white/70 mb-6 max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Luxusné drevené a kamenné dekory pre váš domov.</p>
-                        <button class="bg-primary hover:bg-white hover:text-primary text-white px-6 py-3 rounded font-bold uppercase text-sm tracking-wider transition-colors w-fit flex items-center gap-2">
-                            Pozrieť kolekciu <span class="material-symbols-outlined text-lg">arrow_forward</span>
-                        </button>
-                    </div>
+                <div>
+                     <span class="text-primary font-bold tracking-[0.2em] text-sm uppercase mb-4 block text-center">INTERIÉR</span>
+                    <a href="realizacie.html?filter=interier" class="group relative h-[500px] rounded-2xl overflow-hidden cursor-pointer shadow-2xl block border border-border-muted hover:border-primary/50 transition-colors">
+                        <img alt="Interiérové panely" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Interier/acunmedya-2.jpg"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                        <div class="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <div class="bg-primary hover:bg-white hover:text-primary text-white px-6 py-3 rounded font-bold uppercase text-sm tracking-wider transition-colors w-fit flex items-center gap-2">
+                                Pozrieť kolekciu <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="group relative h-[500px] rounded-2xl overflow-hidden cursor-pointer shadow-2xl">
-                    <img alt="Exteriérové panely" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Exterier/alkent-logo-1.jpg"/>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                    <div class="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                        <h3 class="text-3xl font-black text-white mb-2 uppercase tracking-tighter">Exteriérové</h3>
-                        <p class="text-white/70 mb-6 max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Odolné fasádne obklady s dlhou životnosťou.</p>
-                        <button class="bg-primary hover:bg-white hover:text-primary text-white px-6 py-3 rounded font-bold uppercase text-sm tracking-wider transition-colors w-fit flex items-center gap-2">
-                            Pozrieť kolekciu <span class="material-symbols-outlined text-lg">arrow_forward</span>
-                        </button>
-                    </div>
+                <div>
+                    <span class="text-primary font-bold tracking-[0.2em] text-sm uppercase mb-4 block text-center">EXTERIÉR</span>
+                    <a href="realizacie.html?filter=exterier" class="group relative h-[500px] rounded-2xl overflow-hidden cursor-pointer shadow-2xl block border border-border-muted hover:border-primary/50 transition-colors">
+                        <img alt="Exteriérové panely" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="Exterier/1217mimarlik-2.jpg"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                        <div class="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <div class="bg-primary hover:bg-white hover:text-primary text-white px-6 py-3 rounded font-bold uppercase text-sm tracking-wider transition-colors w-fit flex items-center gap-2">
+                                Pozrieť kolekciu <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -688,56 +639,49 @@
         </div>
     </section>
 
-    <section class="py-24 bg-primary relative overflow-hidden">
-        <div class="absolute inset-0 z-0 opacity-10">
-            <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
-                <path d="M0 100 L100 0 L100 100 Z" fill="white"></path>
-            </svg>
-        </div>
+
+
+    <!-- CATALOG SECTION (Orange Glow Version) -->
+    <section class="py-24 bg-surface relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent"></div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="flex flex-col lg:flex-row gap-16 items-center">
-                <div class="lg:w-1/2 text-white">
-                    <h2 class="text-5xl font-black mb-6 leading-tight">Získajte bezplatný návrh steny</h2>
-                    <p class="text-white/80 text-xl font-light leading-relaxed mb-8">
-                        Nechajte si ukázať, ako naše panely zmenia váš priestor ešte skôr, než objednáte. Naši dizajnéri vám pripravia návrh do 24 hodín.
-                    </p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3 font-bold text-lg"><span class="material-symbols-outlined bg-white text-primary rounded-full p-1 text-base">check</span> 3D vizualizácia vášho priestoru</li>
-                        <li class="flex items-center gap-3 font-bold text-lg"><span class="material-symbols-outlined bg-white text-primary rounded-full p-1 text-base">check</span> Presná kalkulácia materiálu</li>
-                        <li class="flex items-center gap-3 font-bold text-lg"><span class="material-symbols-outlined bg-white text-primary rounded-full p-1 text-base">check</span> Odborné poradenstvo a vzorky</li>
-                    </ul>
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Left: Image with Orange Glow -->
+                <div class="lg:w-1/2">
+                    <div class="relative group cursor-pointer">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-lg blur opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                        <div class="relative bg-black rounded-lg overflow-hidden border border-border-muted shadow-2xl rotate-1 group-hover:rotate-0 transition-transform duration-500">
+                            <img alt="Katalóg Preview" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity" src="catalog-preview-new.png"/>
+                            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-8">
+                                <p class="text-white/50 text-xs uppercase tracking-widest mb-2">Issue 2024 / Vol. 1</p>
+                                <h3 class="text-white font-serif text-3xl italic">Art &amp; Stone</h3>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-white text-black size-24 rounded-full flex flex-col items-center justify-center font-bold text-center text-xs leading-tight shadow-xl z-20 group-hover:scale-110 transition-transform">
+                            <span>PDF</span>
+                            <span class="text-lg">FREE</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="lg:w-1/2 w-full">
-                    <div class="bg-background-dark p-8 md:p-12 rounded-2xl shadow-2xl">
-                        <form class="space-y-6">
-                            <div class="grid md:grid-cols-2 gap-6">
-                                <div class="space-y-2">
-                                    <label class="text-white/50 text-xs uppercase tracking-widest font-bold">Meno</label>
-                                    <input class="w-full bg-surface border-border-muted rounded-lg text-white focus:ring-primary focus:border-primary px-4 py-3" placeholder="" type="text"/>
-                                </div>
-                                <div class="space-y-2">
-                                    <label class="text-white/50 text-xs uppercase tracking-widest font-bold">Email</label>
-                                    <input class="w-full bg-surface border-border-muted rounded-lg text-white focus:ring-primary focus:border-primary px-4 py-3" placeholder="" type="email"/>
-                                </div>
-                            </div>
-                            <div class="space-y-2">
-                                <label class="text-white/50 text-xs uppercase tracking-widest font-bold">Typ Projektu</label>
-                                <select class="w-full bg-surface border-border-muted rounded-lg text-white focus:ring-primary focus:border-primary px-4 py-3 appearance-none">
-                                    <option>Interiér domu / bytu</option>
-                                    <option>Kancelárske priestory</option>
-                                    <option>Exteriérová fasáda</option>
-                                    <option>Iné</option>
-                                </select>
-                            </div>
-                            <div class="space-y-2">
-                                <label class="text-white/50 text-xs uppercase tracking-widest font-bold">Správa</label>
-                                <textarea class="w-full bg-surface border-border-muted rounded-lg text-white focus:ring-primary focus:border-primary px-4 py-3" placeholder="Opíšte vašu predstavu..." rows="4"></textarea>
-                            </div>
-                            <button class="w-full bg-primary hover:bg-white hover:text-primary text-white h-16 rounded-xl text-lg font-black transition-all shadow-xl">
-                                ODOSLAŤ DOPYT
-                            </button>
-                            <p class="text-center text-white/30 text-[10px] uppercase tracking-widest">Odoslaním súhlasíte so spracovaním osobných údajov</p>
-                        </form>
+
+                <!-- Right: Content -->
+                <div class="lg:w-1/2 space-y-8">
+                    <span class="text-primary font-bold tracking-[0.2em] text-xs uppercase">Inšpirácia</span>
+                    <h2 class="text-5xl font-black text-white leading-tight">
+                        KATALÓG <br/>
+                        <span class="italic font-serif font-normal text-white/50">Trends 2024</span>
+                    </h2>
+                    <p class="text-white/60 text-lg leading-relaxed border-l-2 border-white/10 pl-6">
+                        Stiahnite si náš exkluzívny digitálny katalóg plný inšpirácií, technických detailov a prípadových štúdií. Viac ako 150 strán vizuálneho obsahu.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="Katalog-Artstone.pdf" download class="bg-white text-black hover:bg-primary hover:text-white px-8 py-4 rounded text-sm font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined">download</span>
+                            Stiahnuť PDF
+                        </a>
+                        <button onclick="openCatalogModal()" class="border border-white/20 text-white hover:border-white px-8 py-4 rounded text-sm font-bold uppercase tracking-wider transition-colors">
+                            Prelistovať online
+                        </button>
                     </div>
                 </div>
             </div>
@@ -756,7 +700,7 @@
                     </div>
                     <div class="flex items-start gap-4">
                         <span class="material-symbols-outlined mt-1">location_on</span>
-                        <p class="text-sm font-medium">Showroom: Rožňavská 19, 04501 Moldava nad Bodvou</p>
+                        <p class="text-sm font-medium">Showroom: Murgašova 3, 040 01 Košice</p>
                     </div>
                     <div class="flex items-start gap-4">
                         <span class="material-symbols-outlined mt-1">call</span>
@@ -773,8 +717,8 @@
                     <div class="text-sm space-y-2 opacity-80 leading-relaxed">
                         <p><strong>MAS 1 s.r.o.</strong></p>
                         <p>sídlo: Južná trieda 4B 040 01 Košice – mestská časť Juh</p>
-                        <p>Prevádzka: Rožňavská 19</p>
-                        <p>045 01 Moldava nad Bodvou</p>
+                        <p>Prevádzka: Murgašova 3</p>
+                        <p>040 01 Košice</p>
                         <p>IČO: 56332394</p>
                         <p>IČ DPH: SK2122279951</p>
                         <p>Zap. v OR SR Košice I., Vl.č.: 59871/V</p>
@@ -794,36 +738,38 @@
                 </div>
             </div>
 
-            <!-- Column 2: MENU -->
+            <!-- Column 2: Menu & Buttons -->
             <div>
-                <h3 class="font-bold text-sm uppercase tracking-widest mb-6">MENU</h3>
-                <ul class="space-y-4 text-sm mb-10 border-t border-white/10">
-                    <li class="border-b border-white/10 py-3"><a href="produkty.html" class="opacity-70 hover:opacity-100 flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">chevron_right</span> Produkty</a></li>
-                    <li class="border-b border-white/10 py-3"><a href="technicke-parametre.html" class="opacity-70 hover:opacity-100 flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">chevron_right</span> Výhody artstone</a></li>
-                    <li class="border-b border-white/10 py-3"><a href="montaz.html" class="opacity-70 hover:opacity-100 flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">chevron_right</span> Inštalácia a údržba</a></li>
-                    <li class="border-b border-white/10 py-3"><a href="realizacie.html" class="opacity-70 hover:opacity-100 flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">chevron_right</span> Inšpirácie</a></li>
-                    <li class="border-b border-white/10 py-3"><a href="kontakt.html" class="opacity-70 hover:opacity-100 flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">chevron_right</span> Kontakty</a></li>
+                <h4 class="text-white font-bold mb-6 text-xl">Menu</h4>
+                <ul class="space-y-4 mb-8">
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html">Produkty</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="technicke-parametre.html">Výhody artstone</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="montaz.html">Inštalácia a údržba</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="realizacie.html">Inšpirácie</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="katalog.html">Katalóg</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="kontakt.html">Kontakty</a></li>
                 </ul>
-                <div class="space-y-4">
-                    <button onclick="if(typeof openCatalogModal === 'function') openCatalogModal(); else window.location.href='produkty.html'" class="w-full bg-[#3d3d3d] hover:bg-[#4d4d4d] text-white py-4 px-6 font-bold uppercase tracking-wider text-sm transition-colors text-center border-l-4 border-white/20">
+                
+                <div class="flex flex-col gap-4">
+                    <button onclick="if(typeof openCatalogModal === 'function') openCatalogModal(); else window.location.href='produkty.html'" class="block w-full text-center bg-white text-background-dark hover:bg-primary hover:text-white px-6 py-3 rounded-lg text-sm font-bold uppercase tracking-wide transition-all">
                         ONLINE KATALOG
                     </button>
-                    <a href="Katalog-Artstone.pdf" download class="block w-full bg-[#1a1a1a] hover:bg-[#2a2a2a] text-white py-4 px-6 font-bold uppercase tracking-wider text-sm transition-colors text-center border-l-4 border-white/20">
+                    <a href="Katalog-Artstone.pdf" download class="block w-full text-center border border-white/20 text-white hover:border-primary hover:text-primary px-6 py-3 rounded-lg text-sm font-bold uppercase tracking-wide transition-all">
                         KATALÓG NA STIAHNUTIE
                     </a>
                 </div>
             </div>
 
-             <!-- Column 3: KATEGÓRIE -->
-             <div>
-                <h3 class="font-bold text-sm uppercase tracking-widest mb-6">KATEGÓRIE</h3>
-                <ul class="space-y-4 text-sm border-t border-white/10">
-                    <li class="border-b border-white/10 py-3"><a href="produkty.html" class="opacity-70 hover:opacity-100 flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">chevron_right</span> Brick</a></li>
-                    <li class="border-b border-white/10 py-3"><a href="produkty.html" class="opacity-70 hover:opacity-100 flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">chevron_right</span> Concrete</a></li>
-                    <li class="border-b border-white/10 py-3"><a href="produkty.html" class="opacity-70 hover:opacity-100 flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">chevron_right</span> Innovative art</a></li>
-                    <li class="border-b border-white/10 py-3"><a href="produkty.html" class="opacity-70 hover:opacity-100 flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">chevron_right</span> Karoart series</a></li>
-                    <li class="border-b border-white/10 py-3"><a href="produkty.html" class="opacity-70 hover:opacity-100 flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">chevron_right</span> Steel</a></li>
-                    <li class="border-b border-white/10 py-3"><a href="produkty.html" class="opacity-70 hover:opacity-100 flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">chevron_right</span> Stone</a></li>
+            <!-- Column 3: Categories -->
+            <div>
+                <h4 class="text-white font-bold mb-6 text-xl">Kategórie</h4>
+                <ul class="space-y-4">
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html?category=brick">Brick</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html?category=concrete">Concrete</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html?category=innovative">Innovative art</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html?category=karoart">Karoart series</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html?category=steel">Steel</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html?category=stone">Stone</a></li>
                 </ul>
             </div>
         </div>
@@ -834,76 +780,7 @@
     </div>
 </footer>
 
-<!-- Catalog Modal Section -->
-<div id="catalog-modal" class="fixed inset-0 bg-black/90 backdrop-blur-sm z-[100] flex items-center justify-center p-6 hidden">
-    <div class="max-w-6xl w-full bg-background-dark rounded-2xl overflow-hidden shadow-2xl">
-        <!-- Header with Close Button -->
-        <div class="flex items-center justify-between p-6 border-b border-border-muted">
-            <div>
-                <span class="text-primary font-bold tracking-[0.2em] text-xs uppercase">Inšpirácia</span>
-                <h2 class="text-3xl font-black text-white mt-1">KATALÓG</h2>
-                <p class="text-white/60 text-sm mt-1">Trends 2024</p>
-            </div>
-            <button onclick="closeCatalogModal()" class="bg-surface hover:bg-surface-highlight text-white size-12 rounded-full flex items-center justify-center transition-colors">
-                <span class="material-symbols-outlined">close</span>
-            </button>
-        </div>
 
-        <!-- Content -->
-        <div class="p-8">
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <!-- Catalog Preview Image with Page Curl Effect -->
-                <div class="relative rounded-xl overflow-hidden shadow-2xl border-4 border-primary/20 group cursor-pointer">
-                    <img src="images/catalog-preview.jpg" alt="Katalóg Artstone 2024" class="w-full h-auto object-cover" />
-                    
-                    <!-- Page Curl Effect -->
-                    <div class="absolute bottom-0 right-0 w-24 h-24 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <svg viewBox="0 0 100 100" class="w-full h-full">
-                            <defs>
-                                <linearGradient id="curl-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:0.3" />
-                                    <stop offset="50%" style="stop-color:#2a2a2a;stop-opacity:0.5" />
-                                    <stop offset="100%" style="stop-color:#3a3a3a;stop-opacity:0.7" />
-                                </linearGradient>
-                            </defs>
-                            <path d="M 100 100 L 100 50 Q 90 60, 80 70 Q 70 80, 50 100 Z" fill="url(#curl-gradient)" />
-                            <path d="M 100 100 L 100 50 Q 95 55, 90 60 L 100 100 Z" fill="#000" opacity="0.2" />
-                        </svg>
-                    </div>
-                    
-                    <div class="absolute bottom-4 right-4 bg-white rounded-full size-16 flex items-center justify-center shadow-lg">
-                        <div class="text-center">
-                            <span class="text-xs font-bold text-gray-800 block leading-none">PDF</span>
-                            <span class="text-[10px] text-primary font-bold">FREE</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Description and Buttons -->
-                <div class="space-y-6">
-                    <p class="text-white/70 text-base leading-relaxed">
-                        Stiahnite si náš exkluzívny digitálny katalóg plný inšpirácií, technických detailov a prípadových štúdií. Viac ako 150 strán vizuálneho obsahu.
-                    </p>
-                    
-                    <div class="space-y-3">
-                        <a href="Katalog-Artstone.pdf" download class="flex items-center justify-center gap-3 w-full bg-primary hover:bg-primary/90 text-white py-4 px-6 rounded-lg font-bold uppercase tracking-wider text-sm transition-all shadow-lg shadow-primary/20 hover:scale-105">
-                            <span class="material-symbols-outlined">download</span>
-                            STIAHNUŤ PDF
-                        </a>
-                        <a href="produkty.html" class="flex items-center justify-center gap-3 w-full bg-surface hover:bg-surface-highlight border border-border-muted text-white py-4 px-6 rounded-lg font-bold uppercase tracking-wider text-sm transition-all">
-                            <span class="material-symbols-outlined">visibility</span>
-                            PRELISTOVAŤ ONLINE
-                        </a>
-                        <button onclick="closeCatalogModal()" class="flex items-center justify-center gap-3 w-full bg-transparent hover:bg-white/5 border border-white/20 text-white/70 hover:text-white py-3 px-6 rounded-lg font-bold uppercase tracking-wider text-sm transition-all">
-                            <span class="material-symbols-outlined">expand_less</span>
-                            SCHOVAŤ
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <script>
     function openCatalogModal() {
@@ -934,5 +811,6 @@
 <script>
     document.getElementById('copyright-year').textContent = new Date().getFullYear();
 </script>
+<script src="catalog-modal.js"></script>
 </body>
 </html>
