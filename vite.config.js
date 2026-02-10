@@ -3,7 +3,7 @@ import { resolve } from "path";
 
 export default defineConfig(({ command }) => {
   return {
-    base: command === 'build' ? "/ArtStone-Stranka/" : "/",
+    base: './',
     server: {
       port: 8080,
       host: true
