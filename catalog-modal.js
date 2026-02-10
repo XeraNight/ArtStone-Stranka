@@ -19,6 +19,32 @@
 
     // --- 2. HTML STRUCTURE ---
     const MODAL_HTML = `
+    <style>
+        /* Prevent visual "tearing" during page flips */
+        .stf__wrapper,
+        .stf__block,
+        .stf__item {
+            overflow: hidden !important;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+        
+        .page {
+            overflow: hidden !important;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            transform: translateZ(0);
+            -webkit-transform: translateZ(0);
+        }
+        
+        .page img,
+        .page canvas {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+    </style>
     <div id="catalog-modal" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-sm flex items-center justify-center">
         <button onclick="closeCatalogModal()" class="absolute top-6 right-6 z-50 text-white hover:text-primary transition-colors bg-black/50 rounded-full p-2">
             <span class="material-symbols-outlined text-3xl">close</span>
