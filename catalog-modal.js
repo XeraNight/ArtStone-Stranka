@@ -200,7 +200,7 @@
             // 0 - Dummy (Left) - Only for Desktop
             if (!isMobile) {
                 const dummyDiv = document.createElement('div');
-                dummyDiv.className = "page p-0 bg-black flex items-center justify-center overflow-hidden";
+                dummyDiv.className = "page p-0 bg-transparent flex items-center justify-center overflow-hidden";
                 dummyDiv.dataset.density = "hard";
                 dummyDiv.dataset.type = "dummy-start"; // Mark type
                 bookEl.appendChild(dummyDiv);
