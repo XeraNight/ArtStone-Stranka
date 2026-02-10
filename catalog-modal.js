@@ -11,7 +11,7 @@
 (function() {
     // --- 1. CONFIGURATION ---
     const PDF_PATH = 'Katalog-Artstone.pdf';
-    const COVER_IMAGE = '/images/catalog-preview.jpg';
+    const COVER_IMAGE = 'images/catalog-preview.jpg';
     const JS_DEPENDENCIES = [
         'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js',
         'https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.js'
