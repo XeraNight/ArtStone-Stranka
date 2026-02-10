@@ -2,7 +2,7 @@
 <html class="dark" lang="sk">
 <head>
     <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -14,8 +14,11 @@
 
     <style>
         /* CRITICAL CSS TO PREVENT FOUC/FLICKER */
-        header .header-inner { height: 7rem; } /* h-28 = 7rem = 112px */
-        header .logo-link { height: 5rem; display: flex; align-items: center; } /* h-24 = 6rem = 96px */
+        @media (min-width: 768px) {
+            header .header-inner { height: 7rem; } /* h-28 */
+            header .logo-link { height: 5rem; } /* h-20 */
+        }
+        header .logo-link { display: flex; align-items: center; }
         header img { height: 100% !important; width: auto !important; max-width: none !important; }
     </style>
 
@@ -29,14 +32,14 @@
             window.location.replace('./dist/index.html');
         }
     </script>
-  <script type="module" crossorigin src="/ArtStone-Stranka/assets/nav-mount-BU9YhlLV.js"></script>
-  <link rel="stylesheet" crossorigin href="/ArtStone-Stranka/assets/nav-mount-BaSO4U01.css">
+  <script type="module" crossorigin src="/ArtStone-Stranka/assets/nav-mount-BmiNv1Qp.js"></script>
+  <link rel="stylesheet" crossorigin href="/ArtStone-Stranka/assets/nav-mount-03R2nLby.css">
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased">
     <header class="sticky top-0 z-50 w-full border-b border-border-muted bg-background-dark/80 backdrop-blur-md">
-        <div class="header-inner w-full px-6 h-28 flex items-center justify-between relative border-none outline-none" style="height: 7rem;">
-            <a href="index.html" class="logo-link h-20 flex items-center gap-3 group border-none outline-none ml-8" style="height: 5rem;">
-                <img src="/ArtStone-Stranka/assets/logo-white-B3RZLt7F.png?v=3" alt="Artstone Logo" width="588" height="176" class="h-full w-auto object-contain transition-transform group-hover:scale-105 origin-top-left" style="height: 5rem; width: auto; clip-path: inset(0 0 0 2px);">
+        <div class="header-inner w-full px-6 h-16 md:h-28 flex items-center justify-between relative border-none outline-none">
+            <a href="index.html" class="logo-link h-8 md:h-20 flex items-center gap-3 group border-none outline-none ml-0 md:ml-8">
+                <img src="/ArtStone-Stranka/assets/logo-white-B3RZLt7F.png?v=3" alt="Artstone Logo" width="588" height="176" class="h-full w-auto object-contain transition-transform group-hover:scale-105 origin-top-left" style="clip-path: inset(0 0 0 2px);">
             </a>
             <div id="nav-root" class="flex-1 flex justify-center items-center"></div>
         </div>
@@ -45,13 +48,13 @@
     <section class="relative min-h-[85vh] flex items-center overflow-hidden bg-background-dark">
         <div class="absolute inset-0 z-0 opacity-20" style="background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.1\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E');"></div>
         <div class="absolute inset-0 z-0" id="hero-slider">
-            <div class="absolute inset-0 bg-gradient-to-r from-background-dark/80 via-background-dark/40 to-transparent z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-background-dark/90 via-background-dark/60 to-background-dark/20 z-10"></div>
             <!-- Slider Images -->
-            <div class="slider-image absolute inset-0 w-full h-full bg-cover bg-top transition-opacity duration-1000 ease-in-out opacity-100" style="background-image: url('Interier/abraaj-2.jpg');"></div>
-            <div class="slider-image absolute inset-0 w-full h-full bg-cover bg-top transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('Interier/acarkent-umutbulutevi-1.jpg');"></div>
-            <div class="slider-image absolute inset-0 w-full h-full bg-cover bg-top transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('Interier/kalekilit-3.jpg');"></div>
-            <div class="slider-image absolute inset-0 w-full h-full bg-cover bg-top transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('Interier/promoofis-2.jpg');"></div>
-            <div class="slider-image absolute inset-0 w-full h-full bg-cover bg-top transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('Exterier/merttas-4.jpg');"></div>
+            <div class="slider-image absolute inset-0 w-full h-full bg-cover bg-center md:bg-top transition-opacity duration-1000 ease-in-out opacity-100" style="background-image: url('Interier/abraaj-2.jpg');"></div>
+            <div class="slider-image absolute inset-0 w-full h-full bg-cover bg-center md:bg-top transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('Interier/acarkent-umutbulutevi-1.jpg');"></div>
+            <div class="slider-image absolute inset-0 w-full h-full bg-cover bg-center md:bg-top transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('Interier/kalekilit-3.jpg');"></div>
+            <div class="slider-image absolute inset-0 w-full h-full bg-cover bg-center md:bg-top transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('Interier/promoofis-2.jpg');"></div>
+            <div class="slider-image absolute inset-0 w-full h-full bg-cover bg-center md:bg-top transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('Exterier/merttas-4.jpg');"></div>
         </div>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
@@ -74,35 +77,35 @@
                 }
             });
         </script>
-        <div class="relative z-20 max-w-7xl mx-auto px-6 py-24">
+        <div class="relative z-20 max-w-7xl mx-auto px-6 py-16 md:py-24">
             <div class="max-w-2xl">
                 <span class="inline-block text-primary font-bold tracking-[0.2em] text-xs uppercase mb-4">Prémiová Architektúra</span>
-                <h1 class="text-white text-6xl md:text-8xl font-black leading-[0.95] tracking-tight mb-8">
+                <h1 class="text-white text-5xl sm:text-6xl md:text-8xl font-black leading-[0.95] tracking-tight mb-6 md:mb-8">
                     REDEFINUJTE<br/><span class="text-primary">SVOJ</span> PRIESTOR
                 </h1>
-                <p class="text-white/70 text-lg md:text-xl max-w-lg mb-10 leading-relaxed font-light">
+                <p class="text-white/70 text-base sm:text-lg md:text-xl max-w-lg mb-8 md:mb-10 leading-relaxed font-light">
                     Prémiové dekoratívne panely pre modernú architektúru. Spájame luxusný dizajn s nekompromisnou funkčnosťou.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 mb-12">
-                    <button class="bg-primary text-white h-14 px-10 rounded-lg text-base font-bold tracking-wide hover:scale-105 transition-transform shadow-lg shadow-primary/25">
+                <div class="flex flex-col sm:flex-row gap-4 mb-10 md:mb-12">
+                    <button class="bg-primary text-white h-12 md:h-14 px-8 md:px-10 rounded-lg text-sm md:text-base font-bold tracking-wide hover:scale-105 transition-transform shadow-lg shadow-primary/25">
                         ZÍSKAŤ CENOVÚ PONUKU
                     </button>
-                    <button class="border-2 border-white/20 text-white hover:bg-white/10 h-14 px-10 rounded-lg text-base font-bold transition-all">
+                    <a href="realizacie.html" class="border-2 border-white/20 text-white hover:bg-white/10 h-12 md:h-14 px-8 md:px-10 rounded-lg text-sm md:text-base font-bold transition-all flex items-center justify-center">
                         POZRIEŤ REALIZÁCIE
-                    </button>
+                    </a>
                 </div>
-                <div class="pt-8 border-t border-white/10">
-                    <div class="flex flex-wrap gap-x-8 gap-y-4 text-white/90 text-sm font-bold tracking-wide">
+                <div class="pt-6 md:pt-8 border-t border-white/10">
+                    <div class="flex flex-wrap gap-x-6 gap-y-3 text-white/90 text-xs sm:text-sm font-bold tracking-wide">
                         <div class="flex items-center gap-2">
-                            <span class="material-symbols-outlined text-primary">gpp_good</span>
+                            <span class="material-symbols-outlined text-primary text-lg">gpp_good</span>
                             Nehorľavosť A2
                         </div>
                         <div class="flex items-center gap-2">
-                            <span class="material-symbols-outlined text-primary">flight</span>
+                            <span class="material-symbols-outlined text-primary text-lg">flight</span>
                             10× ľahšie
                         </div>
                         <div class="flex items-center gap-2">
-                            <span class="material-symbols-outlined text-primary">timer</span>
+                            <span class="material-symbols-outlined text-primary text-lg">timer</span>
                             Montáž za pár hodín
                         </div>
                     </div>
@@ -140,9 +143,9 @@
                     <h3 class="text-3xl md:text-4xl font-black text-white leading-tight font-display uppercase tracking-tight">Prečo práve Artstone?</h3>
                     
                     <div class="space-y-2">
-                        <p class="text-xl text-white font-bold">Ľahký na pohľad.</p>
-                        <p class="text-xl text-white font-bold">Ľahký na montáž.</p>
-                        <p class="text-xl text-white font-bold">Ľahký pre statiku budovy.</p>
+                        <p class="text-lg md:text-xl text-white font-bold">Ľahký na pohľad.</p>
+                        <p class="text-lg md:text-xl text-white font-bold">Ľahký na montáž.</p>
+                        <p class="text-lg md:text-xl text-white font-bold">Ľahký pre statiku budovy.</p>
                     </div>
 
                     <p class="text-primary font-medium text-lg">A pritom pevný tam, kde na tom záleží.</p>
@@ -177,27 +180,27 @@
             </div>
 
             <!-- Block 2: Right Image, Left Text -->
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                 <div class="order-2 lg:order-1 space-y-8">
+            <div class="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
+                 <div class="order-2 lg:order-1 space-y-6 md:space-y-8">
                     <h3 class="text-3xl md:text-4xl font-black text-white leading-tight font-display uppercase tracking-tight">V súlade s prírodou</h3>
                     
-                    <p class="text-white/80 text-lg leading-relaxed">Artstone nezaťažuje životné prostredie. Neobsahuje karcinogénne ani zdraviu škodlivé látky. Ticho robí svoju prácu a vydrží roky.</p>
+                    <p class="text-white/80 text-base md:text-lg leading-relaxed">Artstone nezaťažuje životné prostredie. Neobsahuje karcinogénne ani zdraviu škodlivé látky. Ticho robí svoju prácu a vydrží roky.</p>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div class="bg-surface p-6 rounded-xl border border-white/5">
-                            <span class="material-symbols-outlined text-primary text-3xl mb-4">health_and_safety</span>
-                            <h4 class="text-white font-bold mb-2">Bezpečný pre ľudí</h4>
-                            <p class="text-white/60 text-sm">Zdravotne nezávadný materiál vhodný do interiéru.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+                        <div class="bg-surface p-5 md:p-6 rounded-xl border border-white/5">
+                            <span class="material-symbols-outlined text-primary text-3xl mb-3 md:mb-4">health_and_safety</span>
+                            <h4 class="text-white font-bold mb-1 md:mb-2">Bezpečný pre ľudí</h4>
+                            <p class="text-white/60 text-xs md:text-sm">Zdravotne nezávadný materiál vhodný do interiéru.</p>
                         </div>
-                        <div class="bg-surface p-6 rounded-xl border border-white/5">
-                            <span class="material-symbols-outlined text-primary text-3xl mb-4">eco</span>
-                            <h4 class="text-white font-bold mb-2">Šetrný k prírode</h4>
-                            <p class="text-white/60 text-sm">Ekologická výroba a dlhá životnosť.</p>
+                        <div class="bg-surface p-5 md:p-6 rounded-xl border border-white/5">
+                            <span class="material-symbols-outlined text-primary text-3xl mb-3 md:mb-4">eco</span>
+                            <h4 class="text-white font-bold mb-1 md:mb-2">Šetrný k prírode</h4>
+                            <p class="text-white/60 text-xs md:text-sm">Ekologická výroba a dlhá životnosť.</p>
                         </div>
                     </div>
 
-                    <div class="bg-primary/5 border border-primary/20 p-6 rounded-xl">
-                         <p class="text-white/90">Je vhodný pre moderné bývanie, kde záleží na zdraví aj kvalite priestoru.</p>
+                    <div class="bg-primary/5 border border-primary/20 p-5 md:p-6 rounded-xl">
+                         <p class="text-white/90 text-sm md:text-base">Je vhodný pre moderné bývanie, kde záleží na zdraví aj kvalite priestoru.</p>
                     </div>
                 </div>
                 <div class="order-1 lg:order-2 relative group">
@@ -209,49 +212,49 @@
             </div>
 
             <!-- Block 3: Left Image, Right Text -->
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
                  <div class="relative group">
                      <div class="absolute -inset-4 bg-primary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                     <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
                         <img src="hero%20photo%203.jpg" alt="Rýchla inštalácia" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
                     </div>
                 </div>
-                <div class="space-y-8">
+                <div class="space-y-6 md:space-y-8">
                     <h3 class="text-3xl md:text-4xl font-black text-white leading-tight font-display uppercase tracking-tight">Jednoduchá a rýchla inštalácia</h3>
                     
                     <div class="space-y-2">
-                        <p class="text-xl text-white font-bold">Žiadne zdĺhavé stavebné práce.</p>
-                        <p class="text-xl text-white font-bold">Žiadny chaos.</p>
-                        <p class="text-xl text-white font-bold">Žiadne zbytočné prestoje.</p>
+                        <p class="text-lg md:text-xl text-white font-bold">Žiadne zdĺhavé stavebné práce.</p>
+                        <p class="text-lg md:text-xl text-white font-bold">Žiadny chaos.</p>
+                        <p class="text-lg md:text-xl text-white font-bold">Žiadne zbytočné prestoje.</p>
                     </div>
 
-                    <p class="text-white/80 leading-relaxed">Inštalácia pomocou skrutiek a hmoždiniek je rýchla, presná a zvládnuteľná. Flexibilný materiál, ktorý sa prispôsobí.</p>
+                    <p class="text-white/80 text-base md:text-lg leading-relaxed">Inštalácia pomocou skrutiek a hmoždiniek je rýchla, presná a zvládnuteľná. Flexibilný materiál, ktorý sa prispôsobí.</p>
 
-                    <ul class="space-y-4 text-white/70">
+                    <ul class="space-y-3 md:space-y-4 text-white/70 text-sm md:text-base">
                          <li class="flex items-start gap-4">
-                            <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+                            <span class="material-symbols-outlined text-primary mt-1 text-xl md:text-2xl">check_circle</span>
                             <span>Aplikácia po dokončení omietky na takmer akýkoľvek povrch</span>
                         </li>
                         <li class="flex items-start gap-4">
-                            <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+                            <span class="material-symbols-outlined text-primary mt-1 text-xl md:text-2xl">check_circle</span>
                             <span>Vhodné aj na poškodené alebo nerovné steny</span>
                         </li>
                         <li class="flex items-start gap-4">
-                            <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+                            <span class="material-symbols-outlined text-primary mt-1 text-xl md:text-2xl">check_circle</span>
                             <span>Minimálne náklady pri demontáži</span>
                         </li>
                          <li class="flex items-start gap-4">
-                            <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+                            <span class="material-symbols-outlined text-primary mt-1 text-xl md:text-2xl">check_circle</span>
                             <span>Možnosť vytvárať rôzne tvary a riešenia</span>
                         </li>
                     </ul>
 
-                     <div class="pt-6 border-t border-white/10 flex items-center gap-6">
+                     <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center gap-6">
                         <div>
                              <span class="text-primary font-bold uppercase tracking-wider text-sm block mb-1">Výsledok?</span>
                              <p class="text-white text-lg font-bold">Vidíš ho okamžite.</p>
                         </div>
-                         <div class="h-10 w-px bg-white/20"></div>
+                         <div class="hidden sm:block h-10 w-px bg-white/20"></div>
                         <div>
                              <span class="text-primary font-bold uppercase tracking-wider text-sm block mb-1">Efekt?</span>
                              <p class="text-white text-lg font-bold">Je dlhodobý.</p>
@@ -267,18 +270,18 @@
 
     <section class="py-24 bg-background-dark">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col lg:flex-row items-center gap-16">
-                <div class="lg:w-7/12">
+            <div class="flex flex-col lg:flex-row items-center gap-8 md:gap-16">
+                <div class="lg:w-7/12 order-2 lg:order-1">
                     <div class="relative lg:-ml-16">
-                        <div class="absolute -top-12 -left-12 w-32 h-32 border-t-4 border-l-4 border-primary"></div>
-                        <img alt="Social Proof" class="rounded-lg shadow-2xl transition-all duration-700 w-full h-auto" data-alt="Professional architectural office team working on luxury projects" src="/ArtStone-Stranka/images/panely-ArtStone/FUJI/firat-izgi-2.jpg"/>
+                        <div class="absolute -top-8 -left-8 md:-top-12 md:-left-12 w-20 h-20 md:w-32 md:h-32 border-t-4 border-l-4 border-primary"></div>
+                        <img alt="Social Proof" class="rounded-lg shadow-2xl transition-all duration-700 w-full h-auto" data-alt="Professional architectural office team working on luxury projects" src="images/panely-ArtStone/FUJI/firat-izgi-2.jpg"/>
                     </div>
                 </div>
-                <div class="lg:w-5/12 space-y-8">
-                    <h2 class="text-4xl md:text-5xl font-black text-white leading-tight">
+                <div class="lg:w-5/12 space-y-6 md:space-y-8 order-1 lg:order-2">
+                    <h2 class="text-3xl md:text-5xl font-black text-white leading-tight">
                         ATMOSFÉRA <span class="text-primary italic">LUXUSU</span>
                     </h2>
-                    <div class="space-y-6 text-lg text-white/80 font-light leading-relaxed">
+                    <div class="space-y-4 md:space-y-6 text-base md:text-lg text-white/80 font-light leading-relaxed">
                         <p>
                             Spoločnosť <strong>Artstone Inc.</strong> začala svoju činnosť v roku 2005 ako priekopník a inovatívna značka dekoratívnych stenových panelov. Prináša porozumenie a víziu dekorácie do inej oblasti a umožňuje tvorivé riešenia inšpirované prírodou vo všetkých priestoroch.
                         </p>
@@ -290,16 +293,17 @@
                         </p>
                     </div>
 
-                    <div class="grid grid-cols-2 gap-8 pt-8 border-t border-white/10">
+                    <div class="grid grid-cols-2 gap-6 md:gap-8 pt-6 md:pt-8 border-t border-white/10">
                         <div>
-                            <p class="text-4xl font-black text-white">7500+</p>
-                            <p class="text-white/40 text-sm uppercase tracking-wider mt-1">Realizovaných projektov</p>
+                            <p class="text-3xl md:text-4xl font-black text-white">7500+</p>
+                            <p class="text-white/40 text-xs md:text-sm uppercase tracking-wider mt-1">Realizovaných projektov</p>
                         </div>
                         <div>
-                            <p class="text-4xl font-black text-white">50k</p>
-                            <p class="text-white/40 text-sm uppercase tracking-wider mt-1">m² panelov skladom</p>
+                            <p class="text-3xl md:text-4xl font-black text-white">50k</p>
+                            <p class="text-white/40 text-xs md:text-sm uppercase tracking-wider mt-1">m² panelov skladom</p>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     </section>
@@ -414,85 +418,153 @@
     <section class="py-24 bg-background-dark">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-center text-4xl font-black text-white mb-16 uppercase tracking-tighter">Transformácie priestorov</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Transition Images kept from snippet -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- TRANSFORMATION 1: Salt Iletisim -->
                 <div class="group relative overflow-hidden rounded-2xl bg-surface border border-border-muted hover:border-primary/50 transition-all duration-300">
-                    <div class="grid grid-cols-2 h-64">
-                        <div class="relative h-full border-r border-black/50">
-                            <img alt="Pred" class="w-full h-full object-cover grayscale opacity-70 object-left" src="images/Gemini_Generated_Image_n05ncnn05ncnn05n.png"/>
+                    <div class="relative w-full h-64 group select-none overflow-hidden" id="compare-1">
+                        <img src="transformacia 1/saltiletisim-logo.jpg" class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute top-3 right-3 bg-primary px-2 py-1 text-[10px] font-bold text-white uppercase tracking-widest rounded z-10">Po</div>
+                        <div class="absolute inset-0 w-[50%] overflow-hidden border-r-2 border-white" id="overlay-1">
+                            <img src="transformacia 1/Take_a_picture_2k_202602091309.jpeg" class="absolute top-0 left-0 max-w-none h-full object-cover object-center" style="width: 100%;" id="img-before-1">
                             <div class="absolute top-3 left-3 bg-black/80 px-2 py-1 text-[10px] font-bold text-white uppercase tracking-widest rounded">Pred</div>
                         </div>
-                        <div class="relative h-full">
-                            <img alt="Po" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf8j_Y5hsnFJr--FJECPFpNli9R8u_FLCLGG-jWQVBS6w6eFONoISudeVmq6_ouv_5Jk4PGA6XzWny7QQ-YxaaFF_d3rU_pQ6P2FJvSUqIg2K2R3UWueZmus8VzwAZzdiB42kvleKJwurrzjYVRIZ6PxFB2h6br6ieMnxBOvUTRCW3CjlJOise9k8Zec1LGjZsdfw_wyRyoB4y5q_k7F-8i5i467masBQdBJdUrlNiHtFgVRrPBldRyX6Qc0mA3x7kOJegxc6P5UA"/>
-                            <div class="absolute top-3 right-3 bg-primary px-2 py-1 text-[10px] font-bold text-white uppercase tracking-widest rounded">Po</div>
+                        <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20 m-0 p-0" oninput="updateCompare(1, this.value)">
+                        <div class="absolute top-0 bottom-0 pointer-events-none z-30 flex items-center justify-center w-0" id="handle-1" style="left: 50%">
+                            <div class="size-8 bg-primary rounded-full border-2 border-white flex items-center justify-center shadow-xl"><span class="material-symbols-outlined text-white text-[16px] rotate-90">unfold_more</span></div>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h4 class="text-white font-bold text-xl">Obývačka Modern</h4>
-                            <span class="text-primary font-bold text-sm bg-primary/10 px-3 py-1 rounded-full border border-primary/20">Montáž: 4h</span>
-                        </div>
-                        <p class="text-white/40 text-sm">Kompletná zmena atmosféry pomocou panelov Artstone Walnut.</p>
-                    </div>
+                    <div class="p-6"><h4 class="text-white font-bold text-xl">Hormigon Vintage</h4></div>
                 </div>
-                <!-- ... other items ... -->
-                 <div class="group relative overflow-hidden rounded-2xl bg-surface border border-border-muted hover:border-primary/50 transition-all duration-300">
-                    <div class="grid grid-cols-2 h-64">
-                        <div class="relative h-full border-r border-black/50">
-                            <img alt="Pred" class="w-full h-full object-cover grayscale opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJKyybTGX3lz-KcKAHAdyi_f4hs49Q5ExFGucdaO23_boPe29_pgge_SSUjXLT8axFAyAGj6TMLHY-XGUOZpqzRLkn8_RSbRL2p8mPHE7U85jNvo6N4-xEgdDS5ZmfsWE_Uoz8DEmTGOTOCYj1E5mLaHA_sPBhLVeGKMRprTDIzhWEh4jQHEre2tae1B8u0kAVphEt49hl5maKB93p4dL07XHUK5CuxmCyIlEOgYk975bndzyOsuWaHsNCt3xdxnVRMA11UZBjFXc"/>
+
+                <!-- TRANSFORMATION 2: Cengelkoy -->
+                <div class="group relative overflow-hidden rounded-2xl bg-surface border border-border-muted hover:border-primary/50 transition-all duration-300">
+                    <div class="relative w-full h-64 group select-none overflow-hidden" id="compare-2">
+                        <img src="transformacia 2/cengelkoy-logo-6.jpg" class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute top-3 right-3 bg-primary px-2 py-1 text-[10px] font-bold text-white uppercase tracking-widest rounded z-10">Po</div>
+                        <div class="absolute inset-0 w-[50%] overflow-hidden border-r-2 border-white" id="overlay-2">
+                            <img src="transformacia 2/216461dc-feda-4e8d-a4bc-2cabe4028889.png" class="absolute top-0 left-0 max-w-none h-full object-cover object-center" style="width: 100%;" id="img-before-2">
                             <div class="absolute top-3 left-3 bg-black/80 px-2 py-1 text-[10px] font-bold text-white uppercase tracking-widest rounded">Pred</div>
                         </div>
-                        <div class="relative h-full">
-                            <img alt="Po" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX2SprPaEBlR7bdoy65eH03ZuPcD9vgQCm6Aq4m5goHKamiuNRd-8epL6uxvniksbB2UnpzxdgfSKDtKe6zkXAelvMkC4i8HQE5A_K2nao123WD_j_wpdGu3ifxbIUDF0-mwEDehfDtmWHtC7YO_zGuIrRdwXjq02bpCFuLolDLwV1emRY8xHZVOsI2vHilWQr-JrCRV768ZRs0ECdeHjMIqXLfyGOf4qnOjko4LPcyRaUfx5iXe_WOptxzr2W4r98PJOntZzXZzU"/>
-                            <div class="absolute top-3 right-3 bg-primary px-2 py-1 text-[10px] font-bold text-white uppercase tracking-widest rounded">Po</div>
+                        <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20 m-0 p-0" oninput="updateCompare(2, this.value)">
+                        <div class="absolute top-0 bottom-0 pointer-events-none z-30 flex items-center justify-center w-0" id="handle-2" style="left: 50%">
+                            <div class="size-8 bg-primary rounded-full border-2 border-white flex items-center justify-center shadow-xl"><span class="material-symbols-outlined text-white text-[16px] rotate-90">unfold_more</span></div>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h4 class="text-white font-bold text-xl">Office Lobby</h4>
-                            <span class="text-primary font-bold text-sm bg-primary/10 px-3 py-1 rounded-full border border-primary/20">Montáž: 12h</span>
-                        </div>
-                        <p class="text-white/40 text-sm">Reprezentatívny vstup s vertikálnym členením.</p>
-                    </div>
+                    <div class="p-6"><h4 class="text-white font-bold text-xl">Hormigon Oxido</h4></div>
                 </div>
-                 <div class="group relative overflow-hidden rounded-2xl bg-surface border border-border-muted hover:border-primary/50 transition-all duration-300">
-                    <div class="grid grid-cols-2 h-64">
-                        <div class="relative h-full border-r border-black/50">
-                            <img alt="Pred" class="w-full h-full object-cover grayscale opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaAPHVgzw6SdR_mn-yQWtUjRWFFij7u2RN7YF7Ht0aTUVFsiy07gaYdteE6aehN1eN79hRU6HPROVnEPNJ0r5bdD4IinT7uxPjWx52-bkwlzlkgGVpNlgNSq-5XmU7z9eAoSXIby44BM9Ifonfs0EDdiNGAd6XFs5BBjQTFSNPelMONVbEI9b83Dp_Sn6nWGB8mE7EpaRksDCjUslafU1IwFvpgPoH90KxZqSImF1s67ruavlxUQMDPu9zD6Z0-W5eJIrEA1K3UQ8"/>
+
+                <!-- TRANSFORMATION 3: Acarkenta -->
+                <div class="group relative overflow-hidden rounded-2xl bg-surface border border-border-muted hover:border-primary/50 transition-all duration-300">
+                    <div class="relative w-full h-64 group select-none overflow-hidden" id="compare-3">
+                        <img src="transformacia 3/acarkenta1.jpg" class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute top-3 right-3 bg-primary px-2 py-1 text-[10px] font-bold text-white uppercase tracking-widest rounded z-10">Po</div>
+                        <div class="absolute inset-0 w-[50%] overflow-hidden border-r-2 border-white" id="overlay-3">
+                            <img src="transformacia 3/poolrusttowhite.jpeg" class="absolute top-0 left-0 max-w-none h-full object-cover object-center" style="width: 100%;" id="img-before-3">
                             <div class="absolute top-3 left-3 bg-black/80 px-2 py-1 text-[10px] font-bold text-white uppercase tracking-widest rounded">Pred</div>
                         </div>
-                        <div class="relative h-full">
-                            <img alt="Po" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDky0YKehgftYfeaRX5MIy0GxYH3ffW-atNMuQ7DIjAYFTxbmMceXbo7hFleN3lSYsPLouEnJGKMQBeS55aUBM4H-qo1OA-uUYW0ntb1S13aiNS_yhSA41IVCf54HR9xLJMeBbm3RYjzJdD-MNoyV99Q41gF9qvwmOhtBwhTDhyxZaVk-lonpEkQ5fMmOxAnOlH_A6F9rvekNsx6dqeq24D1_uTjoIwivL8PRWUUTuYb1nhXNYvcNr_v0mJtiQHAe1M8lEP-BXlR6I"/>
-                            <div class="absolute top-3 right-3 bg-primary px-2 py-1 text-[10px] font-bold text-white uppercase tracking-widest rounded">Po</div>
+                        <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20 m-0 p-0" oninput="updateCompare(3, this.value)">
+                        <div class="absolute top-0 bottom-0 pointer-events-none z-30 flex items-center justify-center w-0" id="handle-3" style="left: 50%">
+                            <div class="size-8 bg-primary rounded-full border-2 border-white flex items-center justify-center shadow-xl"><span class="material-symbols-outlined text-white text-[16px] rotate-90">unfold_more</span></div>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h4 class="text-white font-bold text-xl">Fasáda Villa</h4>
-                            <span class="text-primary font-bold text-sm bg-primary/10 px-3 py-1 rounded-full border border-primary/20">Montáž: 2 dni</span>
-                        </div>
-                        <p class="text-white/40 text-sm">Exteriérový obklad s vysokou odolnosťou.</p>
-                    </div>
+                    <div class="p-6"><h4 class="text-white font-bold text-xl">Tornillo Oxido</h4></div>
                 </div>
-                 <div class="group relative overflow-hidden rounded-2xl bg-surface border border-border-muted hover:border-primary/50 transition-all duration-300">
-                    <div class="grid grid-cols-2 h-64">
-                        <div class="relative h-full border-r border-black/50">
-                            <img alt="Pred" class="w-full h-full object-cover grayscale opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNCz1CBChR5_c1SKGrreKWp1Qu1tqHqvR9rGyRsZYnkH-tKjCQG0d0IWR70l0cwW-KP-fUliv8p6iQvknX73O_FSQ79Mwz4KDzTsuSb4wNVSQ7dQgX0SZxjS0ijto9Ksea2R8GWHNnMmLuhIdKU8iJq0jZPcYZOh-FbHv1ggeUQtwnwk3VPU1IU_32tmaohJ3hKbveq_S3KgA6ySF3zMooggZNrvwiL2yRdgxw7frY9UE3jYfWgXth1haVKntnovtBWvUqBB6PfE"/>
+
+                <!-- TRANSFORMATION 4: Bebe Plus -->
+                <div class="group relative overflow-hidden rounded-2xl bg-surface border border-border-muted hover:border-primary/50 transition-all duration-300">
+                    <div class="relative w-full h-64 group select-none overflow-hidden" id="compare-4">
+                        <img src="transformacia 4/bebe-plus-logo-1.jpg" class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute top-3 right-3 bg-primary px-2 py-1 text-[10px] font-bold text-white uppercase tracking-widest rounded z-10">Po</div>
+                        <div class="absolute inset-0 w-[50%] overflow-hidden border-r-2 border-white" id="overlay-4">
+                            <img src="transformacia 4/Replace_stone_wall_2k_202602091335.jpeg" class="absolute top-0 left-0 max-w-none h-full object-cover object-center" style="width: 100%;" id="img-before-4">
                             <div class="absolute top-3 left-3 bg-black/80 px-2 py-1 text-[10px] font-bold text-white uppercase tracking-widest rounded">Pred</div>
                         </div>
-                        <div class="relative h-full">
-                            <img alt="Po" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNCz1CBChR5_c1SKGrreKWp1Qu1tqHqvR9rGyRsZYnkH-tKjCQG0d0IWR70l0cwW-KP-fUliv8p6iQvknX73O_FSQ79Mwz4KDzTsuSb4wNVSQ7dQgX0SZxjS0ijto9Ksea2R8GWHNnMmLuhIdKU8iJq0jZPcYZOh-FbHv1ggeUQtwnwk3VPU1IU_32tmaohJ3hKbveq_S3KgA6ySF3zMooggZNrvwiL2yRdgxw7frY9UE3jYfWgXth1haVKntnovtBWvUqBB6PfE"/>
-                            <div class="absolute top-3 right-3 bg-primary px-2 py-1 text-[10px] font-bold text-white uppercase tracking-widest rounded">Po</div>
+                        <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20 m-0 p-0" oninput="updateCompare(4, this.value)">
+                        <div class="absolute top-0 bottom-0 pointer-events-none z-30 flex items-center justify-center w-0" id="handle-4" style="left: 50%">
+                            <div class="size-8 bg-primary rounded-full border-2 border-white flex items-center justify-center shadow-xl"><span class="material-symbols-outlined text-white text-[16px] rotate-90">unfold_more</span></div>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h4 class="text-white font-bold text-xl">Kino Akustika</h4>
-                            <span class="text-primary font-bold text-sm bg-primary/10 px-3 py-1 rounded-full border border-primary/20">Montáž: 6h</span>
-                        </div>
-                        <p class="text-white/40 text-sm">Zlepšenie akustiky o 40% v domácom kine.</p>
-                    </div>
+                    <div class="p-6"><h4 class="text-white font-bold text-xl">Roca Natura</h4></div>
                 </div>
+
+                <!-- TRANSFORMATION 5: Firat Izgi -->
+                <div class="group relative overflow-hidden rounded-2xl bg-surface border border-border-muted hover:border-primary/50 transition-all duration-300">
+                    <div class="relative w-full h-64 group select-none overflow-hidden" id="compare-5">
+                        <img src="transformacia 5/firat-izgi-2.jpg" class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute top-3 right-3 bg-primary px-2 py-1 text-[10px] font-bold text-white uppercase tracking-widest rounded z-10">Po</div>
+                        <div class="absolute inset-0 w-[50%] overflow-hidden border-r-2 border-white" id="overlay-5">
+                            <img src="transformacia 5/Replace_stone_wall_2k_202602091341.jpeg" class="absolute top-0 left-0 max-w-none h-full object-cover object-center" style="width: 100%;" id="img-before-5">
+                            <div class="absolute top-3 left-3 bg-black/80 px-2 py-1 text-[10px] font-bold text-white uppercase tracking-widest rounded">Pred</div>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20 m-0 p-0" oninput="updateCompare(5, this.value)">
+                        <div class="absolute top-0 bottom-0 pointer-events-none z-30 flex items-center justify-center w-0" id="handle-5" style="left: 50%">
+                            <div class="size-8 bg-primary rounded-full border-2 border-white flex items-center justify-center shadow-xl"><span class="material-symbols-outlined text-white text-[16px] rotate-90">unfold_more</span></div>
+                        </div>
+                    </div>
+                    <div class="p-6"><h4 class="text-white font-bold text-xl">Pizzara intenso</h4></div>
+                </div>
+
+                <!-- TRANSFORMATION 6: Cicek Izgara -->
+                <div class="group relative overflow-hidden rounded-2xl bg-surface border border-border-muted hover:border-primary/50 transition-all duration-300">
+                    <div class="relative w-full h-64 group select-none overflow-hidden" id="compare-6">
+                        <img src="transformacia 6/cicekizgara-logo-2.jpg" class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute top-3 right-3 bg-primary px-2 py-1 text-[10px] font-bold text-white uppercase tracking-widest rounded z-10">Po</div>
+                        <div class="absolute inset-0 w-[50%] overflow-hidden border-r-2 border-white" id="overlay-6">
+                            <img src="transformacia 6/Replace_brick_walls_2k_202602091343.jpeg" class="absolute top-0 left-0 max-w-none h-full object-cover object-center" style="width: 100%;" id="img-before-6">
+                            <div class="absolute top-3 left-3 bg-black/80 px-2 py-1 text-[10px] font-bold text-white uppercase tracking-widest rounded">Pred</div>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20 m-0 p-0" oninput="updateCompare(6, this.value)">
+                        <div class="absolute top-0 bottom-0 pointer-events-none z-30 flex items-center justify-center w-0" id="handle-6" style="left: 50%">
+                            <div class="size-8 bg-primary rounded-full border-2 border-white flex items-center justify-center shadow-xl"><span class="material-symbols-outlined text-white text-[16px] rotate-90">unfold_more</span></div>
+                        </div>
+                    </div>
+                    <div class="p-6"><h4 class="text-white font-bold text-xl">Picada</h4></div>
+                </div>
+
+                <!-- TRANSFORMATION 7: Abraaj -->
+                <div class="group relative overflow-hidden rounded-2xl bg-surface border border-border-muted hover:border-primary/50 transition-all duration-300 md:col-span-2 lg:col-span-1 lg:col-start-2">
+                    <div class="relative w-full h-64 group select-none overflow-hidden" id="compare-7">
+                        <img src="transformacia 7/abraaj-2.jpg" class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute top-3 right-3 bg-primary px-2 py-1 text-[10px] font-bold text-white uppercase tracking-widest rounded z-10">Po</div>
+                        <div class="absolute inset-0 w-[50%] overflow-hidden border-r-2 border-white" id="overlay-7">
+                            <img src="transformacia 7/Replace_brick_wall_2k_202602091355.jpeg" class="absolute top-0 left-0 max-w-none h-full object-cover object-center" style="width: 100%;" id="img-before-7">
+                            <div class="absolute top-3 left-3 bg-black/80 px-2 py-1 text-[10px] font-bold text-white uppercase tracking-widest rounded">Pred</div>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20 m-0 p-0" oninput="updateCompare(7, this.value)">
+                        <div class="absolute top-0 bottom-0 pointer-events-none z-30 flex items-center justify-center w-0" id="handle-7" style="left: 50%">
+                            <div class="size-8 bg-primary rounded-full border-2 border-white flex items-center justify-center shadow-xl"><span class="material-symbols-outlined text-white text-[16px] rotate-90">unfold_more</span></div>
+                        </div>
+                    </div>
+                    <div class="p-6"><h4 class="text-white font-bold text-xl">Ladrillo Loft</h4></div>
+                </div>
+
+                <script>
+                    function updateCompare(id, val) {
+                        const overlay = document.getElementById('overlay-' + id);
+                        const handle = document.getElementById('handle-' + id);
+                        const beforeImg = document.getElementById('img-before-' + id);
+                        const container = document.getElementById('compare-' + id);
+                        
+                        if(overlay && handle && container && beforeImg) {
+                            overlay.style.width = val + '%';
+                            handle.style.left = val + '%';
+                            beforeImg.style.width = container.offsetWidth + 'px'; 
+                        }
+                    }
+
+                    // Init all sliders
+                    function initSliders() {
+                        for(let i=1; i<=7; i++) {
+                            const container = document.getElementById('compare-' + i);
+                            const beforeImg = document.getElementById('img-before-' + i);
+                            if(container && beforeImg) beforeImg.style.width = container.offsetWidth + 'px';
+                        }
+                    }
+
+                    window.addEventListener('resize', initSliders);
+                    window.addEventListener('load', initSliders);
+                    setTimeout(initSliders, 100);
+                </script>
             </div>
         </div>
     </section>
@@ -599,8 +671,8 @@
         <div class="max-w-3xl mx-auto px-6">
             <h2 class="text-3xl font-black text-white uppercase tracking-tighter text-center mb-12">Časté otázky</h2>
             <div class="space-y-4">
-                <details class="group bg-background-dark border border-border-muted rounded-lg overflow-hidden transition-all duration-300 open:border-primary/50">
-                    <summary class="flex justify-between items-center p-6 cursor-pointer text-white font-bold select-none hover:text-primary transition-colors">
+                <details class="group bg-gradient-to-br from-background-dark to-primary/5 border border-primary/20 rounded-xl overflow-hidden transition-all duration-300 open:border-primary open:bg-background-dark open:shadow-2xl open:shadow-primary/10">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer text-white font-bold select-none hover:text-primary transition-colors font-display">
                         Ako prebieha montáž?
                         <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
                     </summary>
@@ -608,8 +680,8 @@
                         Montáž je navrhnutá tak, aby bola čo najjednoduchšia. Panely môžete lepiť priamo na stenu montážnym lepidlom alebo kotviť do pripraveného roštu. Ku každej objednávke prikladáme podrobný videonávod.
                     </div>
                 </details>
-                <details class="group bg-background-dark border border-border-muted rounded-lg overflow-hidden transition-all duration-300 open:border-primary/50">
-                    <summary class="flex justify-between items-center p-6 cursor-pointer text-white font-bold select-none hover:text-primary transition-colors">
+                <details class="group bg-gradient-to-br from-background-dark to-primary/5 border border-primary/20 rounded-xl overflow-hidden transition-all duration-300 open:border-primary open:bg-background-dark open:shadow-2xl open:shadow-primary/10">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer text-white font-bold select-none hover:text-primary transition-colors font-display">
                         Aká je dodacia lehota?
                         <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
                     </summary>
@@ -617,8 +689,8 @@
                         Produkty označené ako "Skladom" expedujeme do 24-48 hodín. Pri produktoch na objednávku alebo atypických rozmeroch je dodacia lehota zvyčajne 2-4 týždne.
                     </div>
                 </details>
-                <details class="group bg-background-dark border border-border-muted rounded-lg overflow-hidden transition-all duration-300 open:border-primary/50">
-                    <summary class="flex justify-between items-center p-6 cursor-pointer text-white font-bold select-none hover:text-primary transition-colors">
+                <details class="group bg-gradient-to-br from-background-dark to-primary/5 border border-primary/20 rounded-xl overflow-hidden transition-all duration-300 open:border-primary open:bg-background-dark open:shadow-2xl open:shadow-primary/10">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer text-white font-bold select-none hover:text-primary transition-colors font-display">
                         Sú panely vhodné do kúpeľne?
                         <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
                     </summary>
@@ -626,8 +698,8 @@
                         Áno, naša exteriérová rada a špeciálne impregnované interiérové panely sú odolné voči vlhkosti a sú vhodné aj do kúpeľní a wellness priestorov (mimo priameho kontaktu so sprchou).
                     </div>
                 </details>
-                <details class="group bg-background-dark border border-border-muted rounded-lg overflow-hidden transition-all duration-300 open:border-primary/50">
-                    <summary class="flex justify-between items-center p-6 cursor-pointer text-white font-bold select-none hover:text-primary transition-colors">
+                <details class="group bg-gradient-to-br from-background-dark to-primary/5 border border-primary/20 rounded-xl overflow-hidden transition-all duration-300 open:border-primary open:bg-background-dark open:shadow-2xl open:shadow-primary/10">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer text-white font-bold select-none hover:text-primary transition-colors font-display">
                         Kde si môžem panely pozrieť naživo?
                         <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
                     </summary>
@@ -651,7 +723,7 @@
                     <div class="relative group cursor-pointer">
                         <div class="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-lg blur opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
                         <div class="relative bg-black rounded-lg overflow-hidden border border-border-muted shadow-2xl rotate-1 group-hover:rotate-0 transition-transform duration-500">
-                            <img alt="Katalóg Preview" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity" src="catalog-preview-new.png"/>
+                            <img alt="Katalóg Preview" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity" src="images/catalog-preview.jpg"/>
                             <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-8">
                                 <p class="text-white/50 text-xs uppercase tracking-widest mb-2">Issue 2024 / Vol. 1</p>
                                 <h3 class="text-white font-serif text-3xl italic">Art &amp; Stone</h3>
@@ -740,36 +812,48 @@
 
             <!-- Column 2: Menu & Buttons -->
             <div>
-                <h4 class="text-white font-bold mb-6 text-xl">Menu</h4>
-                <ul class="space-y-4 mb-8">
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html">Produkty</a></li>
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="technicke-parametre.html">Výhody artstone</a></li>
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="montaz.html">Inštalácia a údržba</a></li>
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="realizacie.html">Inšpirácie</a></li>
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="katalog.html">Katalóg</a></li>
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="kontakt.html">Kontakty</a></li>
+                <h4 class="text-white font-bold mb-4 md:mb-6 text-lg md:text-xl">Menu</h4>
+                <ul class="space-y-3 md:space-y-4 mb-6 md:mb-8">
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-sm md:text-base" href="produkty.html">Produkty</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-sm md:text-base" href="technicke-parametre.html">Naše výhody</a></li>
+                    <li>
+                        <details class="group">
+                            <summary class="text-white/40 hover:text-primary transition-colors text-sm md:text-base cursor-pointer flex items-center gap-2">
+                                <a href="proces-spoluprace.html" class="hover:text-primary">Proces spolupráce</a>
+                                <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </summary>
+                            <ul class="ml-6 mt-2 space-y-2">
+                                <li><a class="text-white/30 hover:text-primary transition-colors text-xs md:text-sm" href="montaz.html">Montáž</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-sm md:text-base" href="realizacie.html">Realizácie</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-sm md:text-base" href="katalog.html">Katalóg</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-sm md:text-base" href="kontakt.html">Kontakty</a></li>
                 </ul>
                 
-                <div class="flex flex-col gap-4">
-                    <button onclick="if(typeof openCatalogModal === 'function') openCatalogModal(); else window.location.href='produkty.html'" class="block w-full text-center bg-white text-background-dark hover:bg-primary hover:text-white px-6 py-3 rounded-lg text-sm font-bold uppercase tracking-wide transition-all">
+                <div class="flex flex-col gap-3 md:gap-4">
+                    <button onclick="if(typeof openCatalogModal === 'function') openCatalogModal(); else window.location.href='produkty.html'" class="block w-full text-center bg-white text-background-dark hover:bg-primary hover:text-white px-6 py-3 rounded-lg text-xs md:text-sm font-bold uppercase tracking-wide transition-all">
                         ONLINE KATALOG
                     </button>
-                    <a href="Katalog-Artstone.pdf" download class="block w-full text-center border border-white/20 text-white hover:border-primary hover:text-primary px-6 py-3 rounded-lg text-sm font-bold uppercase tracking-wide transition-all">
-                        KATALÓG NA STIAHNUTIE
+                    <a href="realizacie.html" class="border-2 border-white/20 text-white hover:bg-transparent hover:text-primary hover:border-primary h-12 md:h-14 px-8 rounded text-xs md:text-sm font-bold uppercase tracking-wider transition-all flex items-center gap-2 group justify-center">
+                        <span>Pozrieť realizácie</span>
                     </a>
                 </div>
             </div>
 
             <!-- Column 3: Categories -->
             <div>
-                <h4 class="text-white font-bold mb-6 text-xl">Kategórie</h4>
-                <ul class="space-y-4">
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html?category=brick">Brick</a></li>
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html?category=concrete">Concrete</a></li>
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html?category=innovative">Innovative art</a></li>
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html?category=karoart">Karoart series</a></li>
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html?category=steel">Steel</a></li>
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html?category=stone">Stone</a></li>
+                <h4 class="text-white font-bold mb-4 md:mb-6 text-lg md:text-xl">Kategórie</h4>
+                <ul class="space-y-3 md:space-y-4">
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-sm md:text-base" href="produkty.html?category=brick">Brick</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-sm md:text-base" href="produkty.html?category=concrete">Concrete</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-sm md:text-base" href="produkty.html?category=innovative">Innovative art</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-sm md:text-base" href="produkty.html?category=karoart">Karoart series</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-sm md:text-base" href="produkty.html?category=steel">Steel</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-sm md:text-base" href="produkty.html?category=stone">Stone</a></li>
                 </ul>
             </div>
         </div>

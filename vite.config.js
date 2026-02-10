@@ -19,6 +19,7 @@ export default defineConfig(({ command }) => {
           realizacie: resolve(__dirname, "realizacie.html"),
           technicke: resolve(__dirname, "technicke-parametre.html"),
           kontakt: resolve(__dirname, "kontakt.html"),
+          katalog: resolve(__dirname, "katalog.html"),
         },
       },
     },

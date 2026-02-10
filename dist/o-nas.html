@@ -2,7 +2,7 @@
 <html class="dark" lang="sk">
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
     <link
       href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;700;900&amp;display=swap"
       rel="stylesheet"
@@ -27,23 +27,16 @@
       rel="stylesheet"
     />
     <style>
-      /* CRITICAL CSS TO PREVENT FOUC/FLICKER */
-      header .header-inner {
-        height: 7rem;
-      } /* h-28 = 7rem = 112px */
-      header .logo-link {
-        height: 5rem;
-        display: flex;
-        align-items: center;
-      } /* h-24 = 6rem = 96px */
-      header img {
-        height: 100% !important;
-        width: auto !important;
-        max-width: none !important;
-      }
+        /* CRITICAL CSS TO PREVENT FOUC/FLICKER */
+        @media (min-width: 768px) {
+            header .header-inner { height: 7rem; } /* h-28 */
+            header .logo-link { height: 5rem; } /* h-20 */
+        }
+        header .logo-link { display: flex; align-items: center; }
+        header img { height: 100% !important; width: auto !important; max-width: none !important; }
     </style>
-    <script type="module" crossorigin src="/ArtStone-Stranka/assets/nav-mount-BU9YhlLV.js"></script>
-    <link rel="stylesheet" crossorigin href="/ArtStone-Stranka/assets/nav-mount-BaSO4U01.css">
+    <script type="module" crossorigin src="/ArtStone-Stranka/assets/nav-mount-BmiNv1Qp.js"></script>
+    <link rel="stylesheet" crossorigin href="/ArtStone-Stranka/assets/nav-mount-03R2nLby.css">
   </head>
   <body
     class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased"
@@ -52,13 +45,11 @@
       class="sticky top-0 z-50 w-full border-b border-border-muted bg-background-dark/80 backdrop-blur-md"
     >
       <div
-        class="header-inner w-full px-6 h-28 flex items-center justify-between relative border-none outline-none"
-        style="height: 7rem"
+        class="header-inner w-full px-6 h-16 md:h-28 flex items-center justify-between relative border-none outline-none"
       >
         <a
           href="index.html"
-          class="logo-link h-20 flex items-center gap-3 group border-none outline-none ml-8"
-          style="height: 5rem"
+          class="logo-link h-8 md:h-20 flex items-center gap-3 group border-none outline-none ml-0 md:ml-8"
         >
           <img
             src="/ArtStone-Stranka/assets/logo-white-B3RZLt7F.png?v=3"
@@ -66,7 +57,7 @@
             width="588"
             height="176"
             class="h-full w-auto object-contain transition-transform group-hover:scale-105 origin-top-left"
-            style="height: 5rem; width: auto; clip-path: inset(0 0 0 2px)"
+            style="clip-path: inset(0 0 0 2px)"
           />
         </a>
         <div
