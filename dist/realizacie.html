@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="dark" lang="sk"><head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&amp;family=Open+Sans:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -17,19 +17,22 @@
 
     <style>
         /* CRITICAL CSS TO PREVENT FOUC/FLICKER */
-        header .header-inner { height: 7rem; } /* h-28 = 7rem = 112px */
-        header .logo-link { height: 5rem; display: flex; align-items: center; } /* h-24 = 6rem = 96px */
+        @media (min-width: 768px) {
+            header .header-inner { height: 7rem; } /* h-28 */
+            header .logo-link { height: 5rem; } /* h-20 */
+        }
+        header .logo-link { display: flex; align-items: center; }
         header img { height: 100% !important; width: auto !important; max-width: none !important; }
     </style>
 
-  <script type="module" crossorigin src="/ArtStone-Stranka/assets/nav-mount-BU9YhlLV.js"></script>
-  <link rel="stylesheet" crossorigin href="/ArtStone-Stranka/assets/nav-mount-BaSO4U01.css">
+  <script type="module" crossorigin src="/ArtStone-Stranka/assets/nav-mount-BmiNv1Qp.js"></script>
+  <link rel="stylesheet" crossorigin href="/ArtStone-Stranka/assets/nav-mount-03R2nLby.css">
 </head>
 <body class="bg-background-dark text-white antialiased">
 <header class="sticky top-0 z-50 w-full border-b border-border-muted bg-background-dark/95 backdrop-blur-sm">
-<div class="header-inner w-full px-6 h-28 flex items-center justify-between relative border-none outline-none" style="height: 7rem;">
-<a href="index.html" class="logo-link h-20 flex items-center gap-3 group border-none outline-none ml-8" style="height: 5rem;">
-    <img src="/ArtStone-Stranka/assets/logo-white-B3RZLt7F.png?v=3" alt="Artstone Logo" width="588" height="176" class="h-full w-auto object-contain transition-transform group-hover:scale-105 origin-top-left" style="height: 5rem; width: auto; clip-path: inset(0 0 0 2px);">
+<div class="header-inner w-full px-6 h-16 md:h-28 flex items-center justify-between relative border-none outline-none">
+<a href="index.html" class="logo-link h-8 md:h-20 flex items-center gap-3 group border-none outline-none ml-0 md:ml-8">
+    <img src="/ArtStone-Stranka/assets/logo-white-B3RZLt7F.png?v=3" alt="Artstone Logo" width="588" height="176" class="h-full w-auto object-contain transition-transform group-hover:scale-105 origin-top-left" style="clip-path: inset(0 0 0 2px);">
 </a> <div id="nav-root" class="flex-1 flex justify-center items-center"></div>
 </div>
 </header>
@@ -42,10 +45,10 @@
 <div class="max-w-[1600px] mx-auto px-6 relative z-20">
 <div class="max-w-4xl relative z-10">
 <div class="w-16 h-1 bg-primary mb-8"></div>
-<h1 class="text-white text-6xl md:text-8xl font-thin tracking-tighter mb-6 font-display uppercase">
+<h1 class="text-white text-5xl sm:text-6xl md:text-8xl font-thin tracking-tighter mb-6 font-display uppercase">
                     Reálne<br/><span class="font-black">Realizácie</span>
 </h1>
-<p class="text-white text-lg font-light max-w-xl leading-relaxed">
+<p class="text-white text-base md:text-lg font-light max-w-xl leading-relaxed">
                     Preskúmajte galériu našich najnovších projektov. Minimalistické riešenia pre moderné interiéry, ktoré definujú priestor.
                 </p>
 </div>
@@ -84,7 +87,7 @@
                     <div class="relative group cursor-pointer">
                         <div class="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-lg blur opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
                         <div class="relative bg-black rounded-lg overflow-hidden border border-border-muted shadow-2xl rotate-1 group-hover:rotate-0 transition-transform duration-500">
-                            <img alt="Katalóg Preview" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity" src="catalog-preview-new.png"/>
+                            <img alt="Katalóg Preview" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity" src="images/catalog-preview.jpg"/>
                             <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-8">
                                 <p class="text-white/50 text-xs uppercase tracking-widest mb-2">Issue 2024 / Vol. 1</p>
                                 <h3 class="text-white font-serif text-3xl italic">Art &amp; Stone</h3>
@@ -273,9 +276,21 @@
                 <h4 class="text-white font-bold mb-6 text-xl">Menu</h4>
                 <ul class="space-y-4 mb-8">
                     <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html">Produkty</a></li>
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="technicke-parametre.html">Výhody artstone</a></li>
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="montaz.html">Inštalácia a údržba</a></li>
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="realizacie.html">Inšpirácie</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="technicke-parametre.html">Naše výhody</a></li>
+                    <li>
+                        <details class="group">
+                            <summary class="text-white/40 hover:text-primary transition-colors text-base cursor-pointer flex items-center gap-2">
+                                <a href="proces-spoluprace.html" class="hover:text-primary">Proces spolupráce</a>
+                                <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </summary>
+                            <ul class="ml-6 mt-2 space-y-2">
+                                <li><a class="text-white/30 hover:text-primary transition-colors text-sm" href="montaz.html">Montáž</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="realizacie.html">Realizácie</a></li>
                     <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="katalog.html">Katalóg</a></li>
                     <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="kontakt.html">Kontakty</a></li>
                 </ul>

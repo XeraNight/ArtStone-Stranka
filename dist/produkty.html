@@ -1,18 +1,21 @@
-<!DOCTYPE html> <html class="dark" lang="sk"><head> <meta charset="utf-8"/> <meta content="width=device-width, initial-scale=1.0" name="viewport"/>  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/> <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>  <style>body {     font-family: "Anton", sans-serif     } details > summary {     list-style: none     } details > summary::-webkit-details-marker {     display: none     } .texture-overlay {     background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAXbJnE9Q1sLIfzKt8npvgv3sBYfATxSglMYmu8gR_rX8QCrH0Tg7jicecV9vyN_4kPUn5MB9Sd4hu8ktqFmPT16c4dn6R-SBlyrjGqgHK1o3bdIl8yYKLKVA1UmJbS_J5S0j92pR51uIochx7oq1lFq01-DTaxgGSqZzVb5T-96zv3OQ5R-Kjih7AmXT8MoPwf0U-u5WMbASIYXIT6_wgdFoNzFaL0AuE4nZdX8NvyViZfqOVyzrWWqwdiCm8ObnaO_fJuO6AcirA)     }</style>  
+<!DOCTYPE html> <html class="dark" lang="sk"><head> <meta charset="utf-8"/> <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/> <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>  <style>body {     font-family: "Anton", sans-serif     } details > summary {     list-style: none     } details > summary::-webkit-details-marker {     display: none     } .texture-overlay {     background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAXbJnE9Q1sLIfzKt8npvgv3sBYfATxSglMYmu8gR_rX8QCrH0Tg7jicecV9vyN_4kPUn5MB9Sd4hu8ktqFmPT16c4dn6R-SBlyrjGqgHK1o3bdIl8yYKLKVA1UmJbS_J5S0j92pR51uIochx7oq1lFq01-DTaxgGSqZzVb5T-96zv3OQ5R-Kjih7AmXT8MoPwf0U-u5WMbASIYXIT6_wgdFoNzFaL0AuE4nZdX8NvyViZfqOVyzrWWqwdiCm8ObnaO_fJuO6AcirA)     }</style>  
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
     <style>
         /* CRITICAL CSS TO PREVENT FOUC/FLICKER */
-        header .header-inner { height: 7rem; } /* h-28 = 7rem = 112px */
-        header .logo-link { height: 5rem; display: flex; align-items: center; } /* h-24 = 6rem = 96px */
+        @media (min-width: 768px) {
+            header .header-inner { height: 7rem; } /* h-28 */
+            header .logo-link { height: 5rem; } /* h-20 */
+        }
+        header .logo-link { display: flex; align-items: center; }
         header img { height: 100% !important; width: auto !important; max-width: none !important; }
     </style>
 
-  <script type="module" crossorigin src="/ArtStone-Stranka/assets/nav-mount-BU9YhlLV.js"></script>
-  <link rel="stylesheet" crossorigin href="/ArtStone-Stranka/assets/nav-mount-BaSO4U01.css">
-</head> <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased"> <header class="sticky top-0 z-50 w-full border-b border-border-muted bg-background-dark/80 backdrop-blur-md"> <div class="header-inner w-full px-6 h-28 flex items-center justify-between relative border-none outline-none" style="height: 7rem;">
-<a href="index.html" class="logo-link h-20 flex items-center gap-3 group border-none outline-none ml-8" style="height: 5rem;">
-    <img src="/ArtStone-Stranka/assets/logo-white-B3RZLt7F.png?v=3" alt="Artstone Logo" width="588" height="176" class="h-full w-auto object-contain transition-transform group-hover:scale-105 origin-top-left" style="height: 5rem; width: auto; clip-path: inset(0 0 0 2px);">
-</a> <div id="nav-root" class="flex-1 flex justify-center items-center"></div> </div> </header> <section class="relative min-h-[90vh] flex items-end pb-32 overflow-hidden"> <div class="absolute inset-0 z-0"> <div class="absolute inset-0 bg-gradient-to-r from-background-dark/80 via-background-dark/40 to-transparent z-10"></div> <div class="absolute inset-0 texture-overlay z-10 opacity-50 mix-blend-overlay"></div> <div class="w-full h-full bg-cover bg-center" data-alt="Dark moody interior with wood slat wall and warm orange lighting" style="background-image: url('Interier/abraaj-2.jpg');"></div> </div> <div class="relative z-20 max-w-7xl mx-auto px-6 w-full"> <div class="max-w-3xl"> <span class="inline-block bg-primary/20 backdrop-blur-sm border border-primary/30 px-4 py-1.5 rounded-full text-primary font-bold tracking-[0.2em] text-[10px] uppercase mb-6">                     Showroom Kolekcia 2024                 </span> <h1 class="text-white text-7xl md:text-9xl font-black leading-[0.9] tracking-tighter mb-8">                     ATMOSFÉRA<br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">LUXUSU</span> </h1> <p class="text-white/70 text-xl max-w-xl mb-12 font-light border-l-2 border-primary pl-6">                     Objavte hmatateľnú dokonalosť. Vzorky dekoratívnych panelov Artstone® teraz dostupné pre architektov a dizajnérov.                 </p> <button onclick="document.getElementById('catalog-filter').scrollIntoView({behavior: 'smooth'})" class="bg-white text-background-dark hover:bg-primary hover:text-white px-10 py-5 rounded-lg text-lg font-bold tracking-wide transition-colors duration-300">                     PREHĽADÁVAŤ KOLEKCIU ↓                 </button> </div> </div> </section> <div id="catalog-filter" class="sticky top-28 z-40 bg-background-dark/95 backdrop-blur-md border-b border-border-muted py-4 shadow-2xl"> <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4"> <div class="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 no-scrollbar"> <button class="bg-primary text-white px-5 py-2 rounded-full text-sm font-bold whitespace-nowrap shadow-lg shadow-primary/20 transition-all filter-btn" data-category="all">All</button>
+  <script type="module" crossorigin src="/ArtStone-Stranka/assets/nav-mount-BmiNv1Qp.js"></script>
+  <link rel="stylesheet" crossorigin href="/ArtStone-Stranka/assets/nav-mount-03R2nLby.css">
+</head> <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased"> <header class="sticky top-0 z-50 w-full border-b border-border-muted bg-background-dark/80 backdrop-blur-md"><div class="header-inner w-full px-6 h-16 md:h-28 flex items-center justify-between relative border-none outline-none">
+<a href="index.html" class="logo-link h-8 md:h-20 flex items-center gap-3 group border-none outline-none ml-0 md:ml-8">
+    <img src="/ArtStone-Stranka/assets/logo-white-B3RZLt7F.png?v=3" alt="Artstone Logo" width="588" height="176" class="h-full w-auto object-contain transition-transform group-hover:scale-105 origin-top-left" style="clip-path: inset(0 0 0 2px);">
+</a> <div id="nav-root" class="flex-1 flex justify-center items-center"></div> </div> </header> <section class="relative min-h-[80vh] md:min-h-[90vh] flex items-end pb-24 md:pb-32 overflow-hidden"> <div class="absolute inset-0 z-0"> <div class="absolute inset-0 bg-gradient-to-r from-background-dark/90 via-background-dark/50 to-transparent z-10"></div> <div class="absolute inset-0 texture-overlay z-10 opacity-50 mix-blend-overlay"></div> <div class="w-full h-full bg-cover bg-center" data-alt="Dark moody interior with wood slat wall and warm orange lighting" style="background-image: url('Interier/abraaj-2.jpg');"></div> </div> <div class="relative z-20 max-w-7xl mx-auto px-6 w-full"> <div class="max-w-3xl"> <span class="inline-block bg-primary/20 backdrop-blur-sm border border-primary/30 px-3 py-1 md:px-4 md:py-1.5 rounded-full text-primary font-bold tracking-[0.2em] text-[8px] md:text-[10px] uppercase mb-4 md:mb-6">                     Showroom Kolekcia 2024                 </span> <h1 class="text-white text-5xl sm:text-7xl md:text-9xl font-black leading-[0.9] tracking-tighter mb-6 md:mb-8">                     ATMOSFÉRA<br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">LUXUSU</span> </h1> <p class="text-white/70 text-base md:text-xl max-w-xl mb-8 md:mb-12 font-light border-l-2 border-primary pl-4 md:pl-6">                     Objavte hmatateľnú dokonalosť. Vzorky dekoratívnych panelov Artstone® teraz dostupné pre architektov a dizajnérov.                 </p> <button onclick="document.getElementById('catalog-filter').scrollIntoView({behavior: 'smooth'})" class="bg-white text-background-dark hover:bg-primary hover:text-white px-8 py-4 md:px-10 md:py-5 rounded-lg text-base md:text-lg font-bold tracking-wide transition-colors duration-300 shadow-lg shadow-white/5">                     PREHĽADÁVAŤ KOLEKCIU ↓                 </button> </div> </div> </section> <div id="catalog-filter" class="sticky top-[4.5rem] md:top-28 z-40 bg-background-dark/95 backdrop-blur-md border-b border-border-muted py-3 md:py-4 shadow-2xl transition-all"> <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4"> <div class="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 no-scrollbar touch-pan-x"> <button class="bg-primary text-white px-4 md:px-5 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-bold whitespace-nowrap shadow-lg shadow-primary/20 transition-all filter-btn hover:scale-105 active:scale-95" data-category="all">All</button>
 <button class="bg-surface border border-border-muted text-white/70 hover:text-primary hover:border-primary px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all filter-btn" data-category="brick">Brick</button>
 <button class="bg-surface border border-border-muted text-white/70 hover:text-primary hover:border-primary px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all filter-btn" data-category="concrete">Concrete</button>
 <button class="bg-surface border border-border-muted text-white/70 hover:text-primary hover:border-primary px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all filter-btn" data-category="innovative">Innovative art</button>
@@ -40,7 +43,8 @@
           <!-- Items will be injected here -->
       </ul>
     </div>
- </div> </div> <section class="py-12 bg-background-dark relative"> <div class="max-w-7xl mx-auto px-6"> <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-16 border-b border-border-muted pb-12"> <div class="lg:col-span-1"> <h3 class="text-2xl font-black text-white uppercase tracking-tight mb-2">Ako získať<br/><span class="text-primary">vzorku?</span></h3> <p class="text-white/50 text-sm">Jednoduchý proces pre vaše rozhodovanie.</p> </div> <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6"> <div class="flex items-start gap-4"> <div class="size-10 rounded bg-surface-highlight flex items-center justify-center shrink-0 border border-border-muted text-primary font-bold">1</div> <div> <h4 class="text-white font-bold mb-1">Vyberte dekor</h4> <p class="text-white/50 text-xs leading-relaxed">Prezrite si našu ponuku a zvoľte povrch, ktorý vás zaujíma.</p> </div> </div> <div class="flex items-start gap-4"> <div class="size-10 rounded bg-surface-highlight flex items-center justify-center shrink-0 border border-border-muted text-primary font-bold">2</div> <div> <h4 class="text-white font-bold mb-1">Objednajte vzorku</h4> <p class="text-white/50 text-xs leading-relaxed">Pridajte vzorku do košíka. Odosielame do 24 hodín.</p> </div> </div> <div class="flex items-start gap-4"> <div class="size-10 rounded bg-surface-highlight flex items-center justify-center shrink-0 border border-border-muted text-primary font-bold">3</div> <div> <h4 class="text-white font-bold mb-1">Otestujte doma</h4> <p class="text-white/50 text-xs leading-relaxed">Priložte vzorku k stene a sledujte hru svetla.</p> </div> </div> </div> </div> <div id="product-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
+ </div> </div> <section class="py-12 bg-background-dark relative"> <div class="max-w-7xl mx-auto px-6"><div class="max-w-7xl mx-auto px-6">
+    <div id="product-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
 
     
     <div data-product-key="1-plafont-bonamy" class="product-card group relative w-full h-56 md:h-[380px]" style="--theme-color: 21 100% 59%;">
@@ -674,7 +678,7 @@
     </div>
     </div>
 </div>
-<div class="mt-16 text-center"> <button id="load-more-btn" class="border border-white/20 hover:border-primary hover:text-primary text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest transition-all hidden">                     Všetky produkty                 </button> </div> </div> </section> <section class="py-24 bg-surface relative overflow-hidden"> <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent"></div> <div class="max-w-7xl mx-auto px-6 relative z-10"> <div class="flex flex-col lg:flex-row items-center gap-16"> <div class="lg:w-1/2"> <div class="relative group cursor-pointer"> <div class="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-lg blur opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div> <div class="relative bg-black rounded-lg overflow-hidden border border-border-muted shadow-2xl rotate-1 group-hover:rotate-0 transition-transform duration-500">                            <img alt="Katalóg Preview" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity" src="catalog-preview-new.png"/>
+<div class="mt-16 text-center"> <button id="load-more-btn" class="border border-white/20 hover:border-primary hover:text-primary text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest transition-all hidden">                     Všetky produkty                 </button> </div> </div> </section> <section class="py-24 bg-surface relative overflow-hidden"> <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent"></div> <div class="max-w-7xl mx-auto px-6 relative z-10"> <div class="flex flex-col lg:flex-row items-center gap-16"> <div class="lg:w-1/2"> <div class="relative group cursor-pointer"> <div class="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-lg blur opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div> <div class="relative bg-black rounded-lg overflow-hidden border border-border-muted shadow-2xl rotate-1 group-hover:rotate-0 transition-transform duration-500">                            <img alt="Katalóg Preview" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity" src="images/catalog-preview.jpg"/>
                             <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-8">
                                 <p class="text-white/50 text-xs uppercase tracking-widest mb-2">Issue 2024 / Vol. 1</p>
                                 <h3 class="text-white font-serif text-3xl italic">Art &amp; Stone</h3>
@@ -762,11 +766,23 @@
                 <h4 class="text-white font-bold mb-6 text-xl">Menu</h4>
                 <ul class="space-y-4 mb-8">
                     <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html">Produkty</a></li>
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="technicke-parametre.html">Výhody artstone</a></li>
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="montaz.html">Inštalácia a údržba</a></li>
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="realizacie.html">Inšpirácie</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="technicke-parametre.html">Naše výhody</a></li>
+                    <li>
+                        <details class="group">
+                            <summary class="text-white/40 hover:text-primary transition-colors text-base cursor-pointer flex items-center gap-2">
+                                <a href="proces-spoluprace.html" class="hover:text-primary">Proces spolupráce</a>
+                                <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </summary>
+                            <ul class="ml-6 mt-2 space-y-2">
+                                <li><a class="text-white/30 hover:text-primary transition-colors text-sm" href="montaz.html">Montáž</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="realizacie.html">Realizácie</a></li>
                     <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="katalog.html">Katalóg</a></li>
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="kontakt.html">Kontakty</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="kontakt.html">Kontakt</a></li>
                 </ul>
                 
                 <div class="flex flex-col gap-4">
@@ -814,42 +830,42 @@
     <div class="absolute inset-0 bg-black/90 backdrop-blur-md transition-opacity" onclick="closeModal()"></div>
 
     <!-- Modal Content -->
-    <div class="absolute inset-0 flex items-center justify-center p-4 sm:p-6 pointer-events-none">
-        <div class="bg-surface border border-border-muted rounded-2xl w-full max-w-7xl h-[85vh] md:h-[90vh] flex flex-col md:flex-row overflow-hidden relative shadow-2xl transform scale-95 opacity-0 transition-all duration-300 pointer-events-auto" id="modal-panel">
+    <div class="absolute inset-0 flex items-center justify-center p-0 md:p-6 pointer-events-none">
+        <div class="bg-surface border-0 md:border border-border-muted md:rounded-2xl w-full max-w-7xl h-[100dvh] md:h-[90vh] flex flex-col md:flex-row overflow-y-auto md:overflow-hidden relative shadow-2xl transform scale-100 md:scale-95 opacity-0 transition-all duration-300 pointer-events-auto" id="modal-panel">
             
             <!-- Close Button -->
-            <button onclick="closeModal()" class="absolute top-4 right-4 z-20 p-2 bg-black/50 text-white/70 hover:text-white rounded-full hover:bg-primary transition-all backdrop-blur-sm">
+            <button onclick="closeModal()" class="absolute top-4 right-4 z-[30] p-2 bg-black/50 text-white/70 hover:text-white rounded-full hover:bg-primary transition-all backdrop-blur-sm">
                 <span class="material-symbols-outlined text-2xl">close</span>
             </button>
 
             <!-- Left: Gallery -->
-            <div class="w-full md:w-2/3 relative flex items-center justify-center group select-none overflow-hidden">
+            <div class="w-full md:w-2/3 h-[40vh] md:h-full flex-shrink-0 relative flex items-center justify-center group select-none overflow-hidden bg-black/20">
                 <!-- Background Image with Zoom -->
-                <div class="absolute inset-0 bg-cover bg-left z-0 origin-left scale-125 transition-transform duration-700" style="background-image: url('images/Gemini_Generated_Image_n05ncnn05ncnn05n.png');"></div>
+                <div class="absolute inset-0 bg-cover bg-left z-0 origin-left scale-125 transition-transform duration-700 blur-sm opacity-50" style="background-image: url('images/Gemini_Generated_Image_n05ncnn05ncnn05n.png');"></div>
                 <!-- Overlay -->
-                <div class="absolute inset-0 bg-black/70 z-0"></div>
+                <div class="absolute inset-0 bg-black/40 z-0"></div>
                 <!-- Main Image -->
-                <div class="w-full h-full flex items-center justify-center p-1 md:p-2 relative overflow-hidden z-10">
+                <div class="w-full h-full flex items-center justify-center p-4 md:p-2 relative overflow-hidden z-10">
                     <img id="modal-image" src="" alt="Detail produktu" class="max-w-full max-h-full object-contain shadow-2xl transition-transform duration-500" />
                 </div>
                 
-                <!-- Navigation Arrows -->
-                <button id="prev-btn" onclick="prevImage()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-primary/90 text-white p-3 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0 translate-x-4 group-hover:translate-x-0 z-10">
+                <!-- Navigation Arrows (Visible on Mobile) -->
+                <button id="prev-btn" onclick="prevImage()" class="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-primary/90 text-white p-3 rounded-full backdrop-blur-sm transition-all opacity-100 md:opacity-0 md:group-hover:opacity-100 disabled:opacity-0 translate-x-0 md:translate-x-4 md:group-hover:translate-x-0 z-20">
                     <span class="material-symbols-outlined">arrow_back</span>
                 </button>
-                <button id="next-btn" onclick="nextImage()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-primary/90 text-white p-3 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0 -translate-x-4 group-hover:translate-x-0 z-10">
+                <button id="next-btn" onclick="nextImage()" class="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-primary/90 text-white p-3 rounded-full backdrop-blur-sm transition-all opacity-100 md:opacity-0 md:group-hover:opacity-100 disabled:opacity-0 translate-x-0 md:-translate-x-4 md:group-hover:translate-x-0 z-20">
                     <span class="material-symbols-outlined">arrow_forward</span>
                 </button>
 
                 <!-- Thumbnails Overlay -->
-                <div id="modal-thumbnails" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 p-2 bg-black/80 backdrop-blur-md rounded-xl border border-primary max-w-[95%] overflow-x-auto no-scrollbar opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                <div id="modal-thumbnails" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 p-2 bg-black/80 backdrop-blur-md rounded-xl border border-primary max-w-[95%] overflow-x-auto no-scrollbar opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 z-20">
                     <!-- Thumbnails injected via JS -->
                 </div>
             </div>
 
             <!-- Right: Info -->
             <div class="w-full md:w-1/3 bg-[#111] border-l border-white/10 flex flex-col">
-                <div class="p-8 md:p-10 overflow-y-auto flex-1 custom-scrollbar">
+                <div class="p-6 md:p-8 pl-6 md:pl-10 md:overflow-y-auto md:flex-1 md:custom-scrollbar">
                     <!-- Header -->
                     <span class="text-primary font-bold tracking-[0.2em] text-[10px] uppercase mb-6 block flex items-center gap-2">
                         <span class="w-6 h-[2px] bg-primary"></span>
@@ -860,10 +876,23 @@
                     <h2 id="modal-title" class="text-4xl md:text-5xl font-normal text-white mb-3 leading-[0.9] tracking-tight font-display"></h2>
                     
                     <!-- Subtitle -->
-                    <p id="modal-desc" class="text-white/50 text-sm font-light mb-10 leading-relaxed"></p>
+                    <p id="modal-desc" class="text-white/50 text-sm font-light mb-6 leading-relaxed"></p>
+
+                    <!-- Product Details Section -->
+                    <div id="details-container" class="mb-10 hidden">
+                        <div id="details-price" class="text-xl md:text-2xl mb-6 flex flex-wrap gap-2 items-baseline border-b border-white/10 pb-4">
+                            <!-- Price injected here -->
+                        </div>
+                        
+                        <h4 class="text-lg font-bold text-white mb-4 uppercase tracking-wider">Detaily produktu</h4>
+                        
+                        <div id="details-grid" class="grid grid-cols-1 gap-y-4 gap-x-8">
+                            <!-- Dynamic Details -->
+                        </div>
+                    </div>
 
                     <!-- Specs Grid -->
-                    <div class="grid grid-cols-2 gap-3 mb-10">
+                    <div class="grid grid-cols-2 gap-3 mb-6">
                         <div class="bg-white/5 rounded-2xl p-4 border border-white/5 flex flex-col justify-between h-24 hover:border-white/20 transition-colors group/card">
                             <div class="flex justify-between items-start">
                                 <span class="text-white/30 text-[10px] uppercase tracking-widest font-bold">Dostupnosť</span>
@@ -880,8 +909,10 @@
                         </div>
                     </div>
 
+                    </div>
+
                     <!-- Price Section -->
-                    <div class="mb-10">
+                    <div class="mb-6 pl-4">
                          <span class="text-white/40 text-[10px] uppercase tracking-widest font-bold block mb-2">Orientačná cena</span>
                          <p class="text-3xl font-bold text-[#ff9e5e] mb-3 tracking-tight">Na vyžiadanie</p>
                          <p class="text-white/40 text-xs leading-relaxed max-w-sm">
@@ -891,8 +922,8 @@
                     
                     <!-- Realization Section -->
                     <div id="realization-section" class="mb-10 hidden">
-                         <span class="text-white/40 text-[10px] uppercase tracking-widest font-bold block mb-4">Realizácie & Inšpirácie</span>
-                         <div id="realization-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-h-[400px] overflow-y-auto custom-scrollbar">
+                         <span class="text-white/40 text-[10px] uppercase tracking-widest font-bold block mb-4 pl-4">Realizácie & Inšpirácie</span>
+                         <div id="realization-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 p-4 max-h-[400px] overflow-y-auto custom-scrollbar">
                              <!-- Javascript will inject images here -->
                          </div>
                     </div>
@@ -915,8 +946,77 @@
 </div>
 
 <script src="realizationImages.js"></script>
+<script src="productDetails.js"></script>
 <script>
-    // Injected Product Data
+    // Helper to find product details by fuzzy matching key
+    function findProductDetails(key) {
+        if (!key) return null;
+        console.log("Finding details for:", key);
+        const lowerKey = key.toLowerCase();
+        
+        // Direct match
+        if (productDetailsData[lowerKey]) return productDetailsData[lowerKey];
+        
+        // Keyword mapping
+        const mapping = [
+            { k: 'amazon', v: 'amazon' },
+            { k: 'baobab', v: 'baobab' },
+            { k: 'boabab', v: 'baobab' },
+            { k: 'boltz', v: 'boltz' },
+            { k: 'bolts', v: 'boltz' },
+            { k: 'broderie', v: 'broderie' },
+            { k: 'epicure', v: 'epicure' },
+            { k: 'forg', v: 'forg' },
+            { k: 'g-qube', v: 'g-qube' },
+            { k: 'g-cube', v: 'g-qube' },
+            { k: 'g cube', v: 'g-qube' },
+            { k: 'grenier', v: 'grenier' },
+            { k: 'heritage', v: 'heritage' },
+            { k: 'hormigon loft', v: 'hormigon loft' },
+            { k: 'hormigon vintage', v: 'hormigon vintage' },
+            { k: 'hormigon oxido', v: 'hormigon plus oxido' },
+            { k: 'hormigon plus', v: 'horming plus' }, // map to horming plus key I used
+            { k: 'horming plus', v: 'horming plus' },
+            { k: 'hormigon', v: 'hormigon' }, // fallback for plain hormigon
+            { k: 'jakarta', v: 'jakarta' },
+            { k: 'kors', v: 'kors' },
+            { k: 'ladrillo loft', v: 'ladrillo loft' },
+            { k: 'ladrillo vintage', v: 'ladrillo vintage' },
+            { k: 'ladrillo preforado', v: 'ladrillo preforado' },
+            { k: 'ladrillo perforado', v: 'ladrillo preforado' },
+            { k: 'ladrillo', v: 'ladrillo' },
+            { k: 'lajas', v: 'lajas' },
+            { k: 'lastra', v: 'lastra' },
+            { k: 'magma', v: 'magma' },
+            { k: 'mayon', v: 'mayon cobriza' },
+            { k: 'picada', v: 'picada' },
+            { k: 'pizarra', v: 'pizzara' }, // user wrote pizzara key
+            { k: 'pizzara', v: 'pizzara' },
+            { k: 'plafont', v: 'plafont' },
+            { k: 'roca', v: 'roca' },
+            { k: 'rootz', v: 'rootz' },
+            { k: 'ruina', v: 'ruina' },
+            { k: 'rustica', v: 'rustica' },
+            { k: 'sillarejo', v: 'sillarejo' },
+            { k: 'timber', v: 'timber' },
+            { k: 'tocho', v: 'tocho' },
+            { k: 'vermont', v: 'vermont' },
+            { k: 'versailes', v: 'versailles' },
+            { k: 'versailles', v: 'versailles' },
+            { k: 'victorian', v: 'victorian' },
+            { k: 'wood barbados', v: 'wood barbados' },
+            { k: 'woxx', v: 'woxx' },
+            { k: 'zanzibar', v: 'zanzibar' }
+        ];
+
+        for (const m of mapping) {
+            if (lowerKey.includes(m.k)) {
+                return productDetailsData[m.v];
+            }
+        }
+        return null;
+    }
+
     const productData = {
       "1-plafont-bonamy": [
         "images/1-plafont-bonamy/1-PLAFONT-BONAMY.jpg",
@@ -1214,6 +1314,38 @@
             });
         }
 
+        // --- SEARCH ICON & ENTER KEY LOGIC ---
+        const searchIcon = document.getElementById('search-icon');
+        const filterIcon = document.getElementById('filter-icon');
+
+        if (searchIcon) {
+            searchIcon.style.cursor = 'pointer';
+            searchIcon.addEventListener('click', () => {
+                filterProducts();
+                if(productGrid) productGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        }
+
+        if (filterIcon) {
+            filterIcon.style.cursor = 'pointer';
+            filterIcon.addEventListener('click', () => {
+                filterProducts();
+                if(productGrid) productGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        }
+
+        if (searchInput) {
+            searchInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault(); // Prevent form submission if in form
+                    filterProducts();
+                    if(productGrid) productGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    if(autocompleteList) autocompleteList.classList.add('hidden');
+                    searchInput.blur(); // Remove focus
+                }
+            });
+        }
+
         // Add Click Listeners to Buttons
         filterButtons.forEach(btn => {
             btn.addEventListener('click', () => {
@@ -1393,10 +1525,130 @@
         });
     });
 
+    // Helper to find product details by fuzzy matching key
+    function findProductDetails(key) {
+        if (!key) return null;
+        console.log("Finding details for:", key);
+        const lowerKey = key.toLowerCase();
+        
+        // Direct match
+        if (productDetailsData[lowerKey]) return productDetailsData[lowerKey];
+        
+        // Keyword mapping
+        const mapping = [
+            { k: 'amazon', v: 'amazon' },
+            { k: 'baobab', v: 'baobab' },
+            { k: 'boabab', v: 'baobab' },
+            { k: 'boltz', v: 'boltz' },
+            { k: 'bolts', v: 'boltz' },
+            { k: 'broderie', v: 'broderie' },
+            { k: 'epicure', v: 'epicure' },
+            { k: 'forg', v: 'forg' },
+            { k: 'g-qube', v: 'g-qube' },
+            { k: 'grenier', v: 'grenier' },
+            { k: 'heritage', v: 'heritage' },
+            { k: 'hormigon loft', v: 'hormigon loft' },
+            { k: 'hormigon vintage', v: 'hormigon vintage' },
+            { k: 'hormigon oxido', v: 'hormigon plus oxido' },
+            { k: 'hormigon plus', v: 'horming plus' }, 
+            { k: 'horming plus', v: 'horming plus' },
+            { k: 'hormigon', v: 'hormigon' },
+            { k: 'jakarta', v: 'jakarta' },
+            { k: 'kors', v: 'kors' },
+            { k: 'ladrillo loft', v: 'ladrillo loft' },
+            { k: 'ladrillo vintage', v: 'ladrillo vintage' },
+            { k: 'ladrillo preforado', v: 'ladrillo preforado' },
+            { k: 'ladrillo perforado', v: 'ladrillo preforado' },
+            { k: 'ladrillo', v: 'ladrillo' },
+            { k: 'lajas', v: 'lajas' },
+            { k: 'lastra', v: 'lastra' },
+            { k: 'magma', v: 'magma' },
+            { k: 'mayon', v: 'mayon cobriza' },
+            { k: 'picada', v: 'picada' },
+            { k: 'pizarra', v: 'pizzara' },
+            { k: 'pizzara', v: 'pizzara' },
+            { k: 'plafont', v: 'plafont' },
+            { k: 'roca', v: 'roca' },
+            { k: 'rootz', v: 'rootz' },
+            { k: 'ruina', v: 'ruina' },
+            { k: 'rustica', v: 'rustica' },
+            { k: 'sillarejo', v: 'sillarejo' },
+            { k: 'timber', v: 'timber' },
+            { k: 'tocho', v: 'tocho' },
+            { k: 'vermont', v: 'vermont' },
+            { k: 'versailes', v: 'versailles' },
+            { k: 'versailles', v: 'versailles' },
+            { k: 'victorian', v: 'victorian' },
+            { k: 'wood barbados', v: 'wood barbados' },
+            { k: 'woxx', v: 'woxx' },
+            { k: 'zanzibar', v: 'zanzibar' }
+        ];
+
+        for (const m of mapping) {
+            if (lowerKey.includes(m.k)) {
+                return productDetailsData[m.v];
+            }
+        }
+        
+        return null;
+    }
+
+    // ... (Event Listeners code remains same) ...
+
     function openModal(title, desc, index, key) {
         modalTitle.textContent = title;
         modalDesc.textContent = desc;
         currentImageIndex = index;
+        
+        // --- 1. POPULATE DETAILED SPECS ---
+        const detailsContainer = document.getElementById('details-container');
+        const detailsGrid = document.getElementById('details-grid');
+        const detailsPrice = document.getElementById('details-price');
+        
+        const details = findProductDetails(key);
+        
+        if (details) {
+            detailsContainer.classList.remove('hidden');
+            detailsGrid.innerHTML = '';
+            
+            // Price
+            if (details.cena) {
+                 detailsPrice.innerHTML = `
+                    <span class="text-white/40 text-xs uppercase tracking-widest font-bold">Cena od:</span>
+                    <span class="text-primary font-bold">${details.cena}</span>
+                    <span class="text-white/30 text-xs font-normal ml-1">/ m² (bez DPH)</span>
+                 `;
+            } else {
+                detailsPrice.innerHTML = '';
+            }
+
+            // Specs
+            const specs = [
+                { label: 'Veľkosť panelu', val: details.velkost },
+                { label: 'Hrúbka', val: details.hrubka },
+                { label: 'Hĺbka vzoru', val: details.hlbka },
+                { label: 'Hmotnosť', val: details.hmotnost },
+                { label: 'Materiál / Hustota', val: details.hustota },
+                { label: 'Nehorľavosť', val: details.nehorlavost },
+                { label: 'Odolnosť (Teplota)', val: details.teplota },
+                { label: 'Záruka', val: details.zaruka }
+            ];
+
+            specs.forEach(spec => {
+                if (spec.val) {
+                    const row = document.createElement('div');
+                    row.className = "flex flex-col sm:flex-row sm:items-baseline justify-between border-b border-white/5 pb-2 last:border-0";
+                    row.innerHTML = `
+                        <span class="text-white/40 text-xs uppercase tracking-widest font-bold mb-1 sm:mb-0">${spec.label}</span>
+                        <span class="text-white font-medium text-sm text-right">${spec.val}</span>
+                    `;
+                    detailsGrid.appendChild(row);
+                }
+            });
+
+        } else {
+            detailsContainer.classList.add('hidden');
+        }
         
         // Realization Images Logic
         const realizationSection = document.getElementById('realization-section');
@@ -1436,7 +1688,7 @@
                              
                              const img = document.createElement('img');
                              img.src = imgSrc;
-                             img.className = 'w-full h-full object-cover transform hover:scale-110 transition-transform duration-500';
+                             img.className = 'w-full h-full object-cover';
                              imgDiv.appendChild(img);
                              realizationGrid.appendChild(imgDiv);
                           });

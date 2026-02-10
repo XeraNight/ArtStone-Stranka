@@ -2,7 +2,7 @@
 <html class="dark" lang="sk">
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&amp;family=Open+Sans:wght@300;400;600;700&amp;display=swap"
@@ -40,23 +40,16 @@
     </style>
 
     <style>
-      /* CRITICAL CSS TO PREVENT FOUC/FLICKER */
-      header .header-inner {
-        height: 7rem;
-      } /* h-28 = 7rem = 112px */
-      header .logo-link {
-        height: 5rem;
-        display: flex;
-        align-items: center;
-      } /* h-24 = 6rem = 96px */
-      header img {
-        height: 100% !important;
-        width: auto !important;
-        max-width: none !important;
-      }
+        /* CRITICAL CSS TO PREVENT FOUC/FLICKER */
+        @media (min-width: 768px) {
+            header .header-inner { height: 7rem; } /* h-28 */
+            header .logo-link { height: 5rem; } /* h-20 */
+        }
+        header .logo-link { display: flex; align-items: center; }
+        header img { height: 100% !important; width: auto !important; max-width: none !important; }
     </style>
-    <script type="module" crossorigin src="/ArtStone-Stranka/assets/nav-mount-BU9YhlLV.js"></script>
-    <link rel="stylesheet" crossorigin href="/ArtStone-Stranka/assets/nav-mount-BaSO4U01.css">
+    <script type="module" crossorigin src="/ArtStone-Stranka/assets/nav-mount-BmiNv1Qp.js"></script>
+    <link rel="stylesheet" crossorigin href="/ArtStone-Stranka/assets/nav-mount-03R2nLby.css">
   </head>
   <body
     class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased"
@@ -65,13 +58,11 @@
       class="sticky top-0 z-50 w-full border-b border-border-muted bg-background-dark/80 backdrop-blur-md"
     >
       <div
-        class="header-inner w-full px-6 h-28 flex items-center justify-between relative border-none outline-none"
-        style="height: 7rem"
+        class="header-inner w-full px-6 h-16 md:h-28 flex items-center justify-between relative border-none outline-none"
       >
         <a
           href="index.html"
-          class="logo-link h-20 flex items-center gap-3 group border-none outline-none ml-8"
-          style="height: 5rem"
+          class="logo-link h-8 md:h-20 flex items-center gap-3 group border-none outline-none ml-0 md:ml-8"
         >
           <img
             src="/ArtStone-Stranka/assets/logo-white-B3RZLt7F.png?v=3"
@@ -79,7 +70,7 @@
             width="588"
             height="176"
             class="h-full w-auto object-contain transition-transform group-hover:scale-105 origin-top-left"
-            style="height: 5rem; width: auto; clip-path: inset(0 0 0 2px)"
+            style="clip-path: inset(0 0 0 2px)"
           />
         </a>
         <div
@@ -141,11 +132,21 @@
                 >arrow_forward</span
               >
             </button>
-            <button
-              class="border-2 border-white/20 text-white hover:border-white hover:bg-white/5 h-14 px-8 rounded text-base font-bold tracking-wider transition-all uppercase flex items-center justify-center"
+            <a
+              href="produkty.html"
+              class="group relative px-8 py-4 bg-primary text-white font-bold tracking-widest uppercase text-sm overflow-hidden rounded-lg transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/25"
             >
-              Pozrieť produkty
-            </button>
+              <span class="relative z-10 flex items-center gap-2">
+                Pozrieť produkty
+                <span
+                  class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
+                  >arrow_forward</span
+                >
+              </span>
+              <div
+                class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"
+              ></div>
+            </a>
           </div>
           <div
             class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 border-t border-white/10"
@@ -590,7 +591,7 @@
     </section>
     <section class="bg-charcoal py-24 border-y border-white/5" id="vyhody">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
           <!-- Left Column: Text -->
           <div>
             <span
@@ -632,227 +633,7 @@
               <!-- Placeholder for certificates logos if available, using one from 'o-nas' for now or just generic layout -->
             </div>
 
-            <!-- Product Benefits Section -->
-            <div class="mt-12 pt-12 border-t border-white/10">
-              <h3
-                class="text-2xl md:text-3xl font-black text-white mb-8 uppercase tracking-tighter font-display"
-              >
-                Výhody produktu
-              </h3>
-              <div
-                class="space-y-4 text-white/70 leading-relaxed text-sm md:text-base"
-              >
-                <div class="flex items-start gap-3">
-                  <span
-                    class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
-                    >check_circle</span
-                  >
-                  <p>
-                    Artstone sa svojím vzhľadom a štruktúrou podobá prírodnému
-                    kameňu. Poskytuje presne rovnaký účinok, aký sa požaduje.
-                  </p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span
-                    class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
-                    >check_circle</span
-                  >
-                  <p>
-                    Po dokončení omietky sa dá ľahko aplikovať na akýkoľvek
-                    povrch. Eliminuje ďalšie náklady, ako sú maľovanie a
-                    izolácia.
-                  </p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span
-                    class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
-                    >check_circle</span
-                  >
-                  <p>
-                    V porovnaní s prírodným kameňom je inštalácia praktickejšia,
-                    čas na ňu vynaložený je výrazne skrátený.
-                  </p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span
-                    class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
-                    >check_circle</span
-                  >
-                  <p>Nie je ovplyvnená vodou a vlhkosťou.</p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span
-                    class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
-                    >check_circle</span
-                  >
-                  <p>
-                    Panely sa môžu ľahko aplikovať aj na poškodené povrchy,
-                    odstránia sa tým estetické problémy a vady.
-                  </p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span
-                    class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
-                    >check_circle</span
-                  >
-                  <p>
-                    Eliminuje nepriaznivé faktory, ako sú regionálne zlomy a
-                    fragmentácia a spoločné medzery, ktoré sa často vyskytujú v
-                    prírodnom kameni.
-                  </p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span
-                    class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
-                    >check_circle</span
-                  >
-                  <p>
-                    Môže sa namontovať na akýkoľvek povrch. Neovplyvňuje statiku
-                    a na aplikačný povrch neprináša prakticky žiadnu dodatočnú
-                    váhu.
-                  </p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span
-                    class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
-                    >check_circle</span
-                  >
-                  <p>
-                    Okrem toho sú náklady na demontáž minimalizované, pretože
-                    dajú sa ľahko demontovať. Dajú sa vŕtať a rezať.
-                  </p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span
-                    class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
-                    >check_circle</span
-                  >
-                  <p>Môžme na neho zavesiť akýkoľvek dekoratívny materiál.</p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span
-                    class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
-                    >check_circle</span
-                  >
-                  <p>
-                    Vytváraním stĺpikov a oblúkov z profilov môžete na
-                    ľubovoľných povrchoch vytvárať deliace steny, krby, klenby
-                    atď.
-                  </p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span
-                    class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
-                    >check_circle</span
-                  >
-                  <p>
-                    Nepoškodzuje povrchy, na ktoré sa nanáša, s výnimkou otvorov
-                    pre skrutky.
-                  </p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span
-                    class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
-                    >check_circle</span
-                  >
-                  <p>
-                    Inštalácia pomocou skrutiek a hmoždiniek je veľmi
-                    jednoduchá. Je to praktické a pôsobivé riešenie, ktoré často
-                    potrebujú dekoratívne úpravy – využiteľné najmä pre hotely,
-                    kúpeľné centrá, kaviarne, reštaurácie a obchody, ktoré často
-                    potrebujú ozdobné úpravy.
-                  </p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span
-                    class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
-                    >check_circle</span
-                  >
-                  <p>
-                    Nezaťažuje svoje prostredie stavebnými nečistotami (piesok,
-                    cementy atď.) A nepoškodzuje životné prostredie.
-                  </p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span
-                    class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
-                    >check_circle</span
-                  >
-                  <p>Nevyžaduje konštrukčné a stavebné povolenie.</p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span
-                    class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
-                    >check_circle</span
-                  >
-                  <p>
-                    Vďaka svojej flexibilnej štruktúre je možné vytvárať rôzne
-                    tvary.
-                  </p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span
-                    class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
-                    >check_circle</span
-                  >
-                  <p>
-                    V pomere hmosnosti ku m² prírodného kameňa je panel
-                    desaťkrát ľahší.
-                  </p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span
-                    class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
-                    >check_circle</span
-                  >
-                  <p>
-                    V porovnaní s prírodným kameňom sa na ňom nenachádzajú
-                    baktérie.
-                  </p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span
-                    class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
-                    >check_circle</span
-                  >
-                  <p>Ľahko sa čistí, dá sa umyť a utrieť.</p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span
-                    class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
-                    >check_circle</span
-                  >
-                  <p>
-                    Priestory a vlastné vzory, ktoré sa dajú len veľmi ťažko
-                    obložiť prírodným kameňom, môžu vďaka Artstone skutočne
-                    vyzerať a byť vnímané ako prírodný kameň drevo alebo betón.
-                  </p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span
-                    class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
-                    >check_circle</span
-                  >
-                  <p>
-                    Na povrchoch, kde je kamenná dlažba riskantná a nákladná,
-                    napríklad strop, v závislosti od štruktúry stropu; môže byť
-                    namontovaný priamo na strop alebo inštalovaný na kostru
-                    postavenú na klenutom strope.
-                  </p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <span
-                    class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
-                    >check_circle</span
-                  >
-                  <p>
-                    Môžete použiť vlastné farby a procesy patiny na produkty
-                    Artstone podľa vášho výberu alebo firemné identity z
-                    vlastného, neštandardného katalógu RAL.
-                  </p>
-                </div>
-              </div>
-            </div>
+
           </div>
 
           <!-- Right Column: Benefits Grid (Enhanced) -->
@@ -1012,6 +793,225 @@
                   Stovky projektov
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Benefits Section (Moved to Full Width) -->
+        <div class="mt-24 pt-12 border-t border-white/10">
+          <h3
+            class="text-2xl md:text-3xl font-black text-white mb-8 uppercase tracking-tighter font-display text-center"
+          >
+            Výhody produktu
+          </h3>
+          <div
+            class="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-8 text-white/70 leading-relaxed text-sm"
+          >
+            <div class="flex items-start gap-3">
+              <span
+                class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                >check_circle</span
+              >
+              <p>
+                Artstone sa svojim vzhľadom a štruktúrou podobá prírodnému kameňu.
+                Poskytuje presne rovnaký účinok, aký sa požaduje.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                >check_circle</span
+              >
+              <p>
+                Po dokončení omietky sa dá ľahko aplikovať na akýkoľvek povrch.
+                Eliminuje ďalšie náklady, ako sú maľovanie a izolácia.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                >check_circle</span
+              >
+              <p>
+                V porovnaní s prírodným kameňom je inštalácia praktickejšia, čas
+                na ňu vynaložený je výrazne skrátený.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                >check_circle</span
+              >
+              <p>Nie je ovplyvnená vodou a vlhkosťou.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                >check_circle</span
+              >
+              <p>
+                Panely sa môžu ľahko aplikovať aj na poškodené povrchy,
+                odstránia sa tým estetické problémy a vady.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                >check_circle</span
+              >
+              <p>
+                Eliminuje nepriaznivé faktory, ako sú regionálne zlomy a
+                fragmentácia a spoločné medzery, ktoré sa často vyskytujú v
+                prírodnom kameni.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                >check_circle</span
+              >
+              <p>
+                Môže sa namontovať na akýkoľvek povrch. Neovplyvňuje statiku a
+                na aplikačný povrch neprináša prakticky žiadnu dodatočnú váhu.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                >check_circle</span
+              >
+              <p>
+                Okrem toho sú náklady na demontáž minimalizované, pretože dajú
+                sa ľahko demontovať. Dajú sa vŕtať a rezať.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                >check_circle</span
+              >
+              <p>Môžme na neho zavesiť akýkoľvek dekoratívny materiál.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                >check_circle</span
+              >
+              <p>
+                Vytváraním stĺpikov a oblúkov z profilov môžete na ľubovoľných
+                povrchoch vytvárať deliace steny, krby, klenby atď.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                >check_circle</span
+              >
+              <p>
+                Nepoškodzuje povrchy, na ktoré sa nanáša, s výnimkou otvorov pre
+                skrutky.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                >check_circle</span
+              >
+              <p>
+                Inštalácia pomocou skrutiek a hmoždiniek je veľmi jednoduchá. Je
+                to praktické a pôsobivé riešenie, ktoré často potrebujú
+                dekoratívne úpravy – využiteľné najmä pre hotely, kúpeľné
+                centrá, kaviarne, reštaurácie a obchody, ktoré často potrebujú
+                ozdobné úpravy.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                >check_circle</span
+              >
+              <p>
+                Nezaťažuje svoje prostredie stavebnými nečistotami (piesok,
+                cementy atď.) A nepoškodzuje životné prostredie.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                >check_circle</span
+              >
+              <p>Nevyžaduje konštrukčné a stavebné povolenie.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                >check_circle</span
+              >
+              <p>
+                Vďaka svojej flexibilnej štruktúre je možné vytvárať rôzne
+                tvary.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                >check_circle</span
+              >
+              <p>
+                V pomere hmotnosti ku m² prírodného kameňa je panel desaťkrát
+                ľahší.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                >check_circle</span
+              >
+              <p>
+                V porovnaní s prírodným kameňom sa na ňom nenachádzajú
+                baktérie.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                >check_circle</span
+              >
+              <p>Ľahko sa čistí, dá sa umyť a utrieť.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                >check_circle</span
+              >
+              <p>
+                Priestory a vlastné vzory, ktoré sa dajú len veľmi ťažko
+                obložiť prírodným kameňom, môžu vďaka Artstone skutočne
+                vyzerať a byť vnímané ako prírodný kameň drevo alebo betón.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                >check_circle</span
+              >
+              <p>
+                Na povrchoch, kde je kamenná dlažba riskantná a nákladná,
+                napríklad strop, v závislosti od štruktúry stropu; môže byť
+                namontovaný priamo na strop alebo inštalovaný na kostru
+                postavenú na klenutom strope.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="material-symbols-outlined text-primary mt-1 flex-shrink-0"
+                >check_circle</span
+              >
+              <p>
+                Môžete použiť vlastné farby a procesy patiny na produkty
+                Artstone podľa vášho výberu alebo firemné identity z
+                vlastného, neštandardného katalógu RAL.
+              </p>
             </div>
           </div>
         </div>
@@ -1765,7 +1765,7 @@
         </h2>
         <div class="space-y-4">
           <details
-            class="group bg-background-dark border border-border-muted rounded-lg overflow-hidden transition-all duration-300 open:border-primary/50"
+            class="group bg-gradient-to-br from-background-dark to-primary/5 border border-primary/20 rounded-xl overflow-hidden transition-all duration-300 open:border-primary open:bg-background-dark open:shadow-2xl open:shadow-primary/10"
           >
             <summary
               class="flex justify-between items-center p-6 cursor-pointer text-white font-bold select-none hover:text-primary transition-colors font-display"
@@ -1783,7 +1783,7 @@
             </div>
           </details>
           <details
-            class="group bg-background-dark border border-border-muted rounded-lg overflow-hidden transition-all duration-300 open:border-primary/50"
+            class="group bg-gradient-to-br from-background-dark to-primary/5 border border-primary/20 rounded-xl overflow-hidden transition-all duration-300 open:border-primary open:bg-background-dark open:shadow-2xl open:shadow-primary/10"
           >
             <summary
               class="flex justify-between items-center p-6 cursor-pointer text-white font-bold select-none hover:text-primary transition-colors font-display"
@@ -1801,7 +1801,7 @@
             </div>
           </details>
           <details
-            class="group bg-background-dark border border-border-muted rounded-lg overflow-hidden transition-all duration-300 open:border-primary/50"
+            class="group bg-gradient-to-br from-background-dark to-primary/5 border border-primary/20 rounded-xl overflow-hidden transition-all duration-300 open:border-primary open:bg-background-dark open:shadow-2xl open:shadow-primary/10"
           >
             <summary
               class="flex justify-between items-center p-6 cursor-pointer text-white font-bold select-none hover:text-primary transition-colors font-display"
@@ -1818,7 +1818,7 @@
             </div>
           </details>
           <details
-            class="group bg-background-dark border border-border-muted rounded-lg overflow-hidden transition-all duration-300 open:border-primary/50"
+            class="group bg-gradient-to-br from-background-dark to-primary/5 border border-primary/20 rounded-xl overflow-hidden transition-all duration-300 open:border-primary open:bg-background-dark open:shadow-2xl open:shadow-primary/10"
           >
             <summary
               class="flex justify-between items-center p-6 cursor-pointer text-white font-bold select-none hover:text-primary transition-colors font-display"
@@ -1959,7 +1959,7 @@
                     <div class="relative group cursor-pointer">
                         <div class="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-lg blur opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
                         <div class="relative bg-black rounded-lg overflow-hidden border border-border-muted shadow-2xl rotate-1 group-hover:rotate-0 transition-transform duration-500">
-                            <img alt="Katalóg Preview" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity" src="catalog-preview-new.png"/>
+                            <img alt="Katalóg Preview" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity" src="images/catalog-preview.jpg"/>
                             <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-8">
                                 <p class="text-white/50 text-xs uppercase tracking-widest mb-2">Issue 2024 / Vol. 1</p>
                                 <h3 class="text-white font-serif text-3xl italic">Art &amp; Stone</h3>
@@ -2050,9 +2050,21 @@
                 <h4 class="text-white font-bold mb-6 text-xl">Menu</h4>
                 <ul class="space-y-4 mb-8">
                     <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="produkty.html">Produkty</a></li>
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="technicke-parametre.html">Výhody artstone</a></li>
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="montaz.html">Inštalácia a údržba</a></li>
-                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="realizacie.html">Inšpirácie</a></li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="technicke-parametre.html">Naše výhody</a></li>
+                    <li>
+                        <details class="group">
+                            <summary class="text-white/40 hover:text-primary transition-colors text-base cursor-pointer flex items-center gap-2">
+                                <a href="proces-spoluprace.html" class="hover:text-primary">Proces spolupráce</a>
+                                <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </summary>
+                            <ul class="ml-6 mt-2 space-y-2">
+                                <li><a class="text-white/30 hover:text-primary transition-colors text-sm" href="montaz.html">Montáž</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="realizacie.html">Realizácie</a></li>
                     <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="katalog.html">Katalóg</a></li>
                     <li><a class="text-white/40 hover:text-primary transition-colors text-base" href="kontakt.html">Kontakty</a></li>
                 </ul>
