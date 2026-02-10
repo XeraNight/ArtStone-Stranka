@@ -42,7 +42,6 @@
             display: block;
             max-width: 100%;
             max-height: 100%;
-            object-fit: contain;
         }
     </style>
     <div id="catalog-modal" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-sm flex items-center justify-center">
@@ -79,9 +78,7 @@
     function injectModalHTML() {
         if (!document.getElementById('catalog-modal')) {
             console.log("Injecting Catalog Modal HTML...");
-            const div = document.createElement('div');
-            div.innerHTML = MODAL_HTML.trim();
-            document.body.appendChild(div.firstChild);
+            document.body.insertAdjacentHTML('beforeend', MODAL_HTML.trim());
         }
     }
 
@@ -275,7 +272,8 @@
                 height: pageHeight,
                 size: 'fixed',
                 showCover: false, 
-                mobileScrollSupport: false 
+                mobileScrollSupport: false,
+                drawShadow: false 
             });
 
             pageFlip.loadFromHTML(document.querySelectorAll('.page'));
