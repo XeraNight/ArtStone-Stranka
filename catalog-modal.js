@@ -40,9 +40,8 @@
         .page img,
         .page canvas {
             display: block;
-            max-width: 100%;
-            max-height: 100%;
-            transform: scale(1.005); /* Slight bleed to hide edge artifacts */
+            width: 100%;
+            height: 100%;
         }
     </style>
     <div id="catalog-modal" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-sm flex items-center justify-center">
@@ -53,7 +52,7 @@
         <!-- Flipbook Container -->
         <div class="relative w-full h-full flex items-center justify-center">
             <!-- The Book -->
-            <div id="book" class="relative shadow-2xl transition-transform duration-500 ease-in-out"></div>
+            <div id="book" class="relative bg-black transition-transform duration-500 ease-in-out"></div>
             
             <!-- Loading Indicator -->
             <div id="loading-indicator" class="absolute inset-0 flex items-center justify-center text-white flex-col gap-4 pointer-events-none">
@@ -198,7 +197,6 @@
             // 4. Create Pages (Manual Cover Strategy)
             const isMobile = window.innerWidth < 768;
 
-            // 0 - Dummy (Left) - Only for Desktop
             if (!isMobile) {
                 const dummyDiv = document.createElement('div');
                 dummyDiv.className = "page p-0 bg-black flex items-center justify-center overflow-hidden";
