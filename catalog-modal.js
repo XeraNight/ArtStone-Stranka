@@ -19,6 +19,31 @@
 
     // --- 2. HTML STRUCTURE ---
     const MODAL_HTML = `
+    <style>
+        /* Prevent visual "tearing" during page flips */
+        .stf__wrapper,
+        .stf__block,
+        .stf__item {
+            overflow: hidden !important;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+        
+        .page {
+            overflow: hidden !important;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            transform: translateZ(0);
+            -webkit-transform: translateZ(0);
+        }
+        
+        .page img,
+        .page canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
     <div id="catalog-modal" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-sm flex items-center justify-center">
         <button onclick="closeCatalogModal()" class="absolute top-6 right-6 z-50 text-white hover:text-primary transition-colors bg-black/50 rounded-full p-2">
             <span class="material-symbols-outlined text-3xl">close</span>
@@ -53,9 +78,7 @@
     function injectModalHTML() {
         if (!document.getElementById('catalog-modal')) {
             console.log("Injecting Catalog Modal HTML...");
-            const div = document.createElement('div');
-            div.innerHTML = MODAL_HTML.trim();
-            document.body.appendChild(div.firstChild);
+            document.body.insertAdjacentHTML('beforeend', MODAL_HTML.trim());
         }
     }
 
@@ -174,11 +197,10 @@
             // 4. Create Pages (Manual Cover Strategy)
             const isMobile = window.innerWidth < 768;
 
-            // 0 - Dummy (Left) - Only for Desktop
             if (!isMobile) {
                 const dummyDiv = document.createElement('div');
                 dummyDiv.className = "page p-0 bg-black flex items-center justify-center overflow-hidden";
-                dummyDiv.dataset.density = "hard";
+                dummyDiv.dataset.density = "soft";
                 dummyDiv.dataset.type = "dummy-start"; // Mark type
                 bookEl.appendChild(dummyDiv);
             }
@@ -249,7 +271,8 @@
                 height: pageHeight,
                 size: 'fixed',
                 showCover: false, 
-                mobileScrollSupport: false 
+                mobileScrollSupport: false,
+                drawShadow: false 
             });
 
             pageFlip.loadFromHTML(document.querySelectorAll('.page'));

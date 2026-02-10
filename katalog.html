@@ -388,31 +388,7 @@
 
 <!-- Catalog Modal Section -->
 
-<script>
-    function openCatalogModal() {
-        document.getElementById('catalog-modal').classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-    }
-    
-    function closeCatalogModal() {
-        document.getElementById('catalog-modal').classList.add('hidden');
-        document.body.style.overflow = 'auto';
-    }
-    
-    // Close on outside click
-    document.getElementById('catalog-modal')?.addEventListener('click', function(e) {
-        if (e.target === this) {
-            closeCatalogModal();
-        }
-    });
-    
-    // Close on Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            closeCatalogModal();
-        }
-    });
-</script>
+
 
 <script>
     document.getElementById('copyright-year').textContent = new Date().getFullYear();
