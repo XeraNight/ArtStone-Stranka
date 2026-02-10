@@ -42,6 +42,7 @@
             display: block;
             max-width: 100%;
             max-height: 100%;
+            transform: scale(1.005); /* Slight bleed to hide edge artifacts */
         }
     </style>
     <div id="catalog-modal" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-sm flex items-center justify-center">
