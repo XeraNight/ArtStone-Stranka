@@ -52,7 +52,7 @@
         <!-- Flipbook Container -->
         <div class="relative w-full h-full flex items-center justify-center">
             <!-- The Book -->
-            <div id="book" class="relative bg-black transition-transform duration-500 ease-in-out"></div>
+            <div id="book" class="relative shadow-2xl transition-transform duration-500 ease-in-out"></div>
             
             <!-- Loading Indicator -->
             <div id="loading-indicator" class="absolute inset-0 flex items-center justify-center text-white flex-col gap-4 pointer-events-none">
