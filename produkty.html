@@ -10,8 +10,8 @@
         header img { height: 100% !important; width: auto !important; max-width: none !important; }
     </style>
 
-  <script type="module" crossorigin src="/ArtStone-Stranka/assets/nav-mount-C0tdJz0d.js"></script>
-  <link rel="stylesheet" crossorigin href="/ArtStone-Stranka/assets/nav-mount-D_P8A21a.css">
+  <script type="module" crossorigin src="/ArtStone-Stranka/assets/nav-mount-tN2iKVIP.js"></script>
+  <link rel="stylesheet" crossorigin href="/ArtStone-Stranka/assets/nav-mount-XvRJyaFl.css">
 </head> <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased"> <header class="sticky top-0 z-50 w-full border-b border-border-muted bg-background-dark/80 backdrop-blur-md"><div class="header-inner w-full px-6 h-16 md:h-28 flex items-center justify-between relative border-none outline-none">
 <a href="index.html" class="logo-link h-8 md:h-20 flex items-center gap-3 group border-none outline-none ml-0 md:ml-8">
     <img src="/ArtStone-Stranka/assets/logo-white-B3RZLt7F.png?v=3" alt="Artstone Logo" width="588" height="176" class="h-full w-auto object-contain transition-transform group-hover:scale-105 origin-top-left" style="clip-path: inset(0 0 0 2px);">
@@ -864,8 +864,8 @@
             </div>
 
             <!-- Right: Info -->
-            <div class="w-full md:w-1/3 bg-[#111] border-l border-white/10 flex flex-col">
-                <div class="p-6 md:p-8 pl-6 md:pl-10 md:overflow-y-auto md:flex-1 md:custom-scrollbar">
+            <div class="w-full md:w-1/3 bg-[#111] border-l border-white/10 flex flex-col h-full overflow-hidden">
+                <div class="p-6 md:p-8 overflow-y-auto custom-scrollbar h-full">
                     <!-- Header -->
                     <span class="text-primary font-bold tracking-[0.2em] text-[10px] uppercase mb-6 block flex items-center gap-2">
                         <span class="w-6 h-[2px] bg-primary"></span>
@@ -879,7 +879,7 @@
                     <p id="modal-desc" class="text-white/50 text-sm font-light mb-6 leading-relaxed"></p>
 
                     <!-- Product Details Section -->
-                    <div id="details-container" class="mb-10 hidden">
+                    <div id="details-container" class="mb-8 hidden">
                         <div id="details-price" class="text-xl md:text-2xl mb-6 flex flex-wrap gap-2 items-baseline border-b border-white/10 pb-4">
                             <!-- Price injected here -->
                         </div>
@@ -892,7 +892,7 @@
                     </div>
 
                     <!-- Specs Grid -->
-                    <div class="grid grid-cols-2 gap-3 mb-6">
+                    <div class="grid grid-cols-2 gap-3 mb-8">
                         <div class="bg-white/5 rounded-2xl p-4 border border-white/5 flex flex-col justify-between h-24 hover:border-white/20 transition-colors group/card">
                             <div class="flex justify-between items-start">
                                 <span class="text-white/30 text-[10px] uppercase tracking-widest font-bold">Dostupnosť</span>
@@ -909,10 +909,8 @@
                         </div>
                     </div>
 
-                    </div>
-
                     <!-- Price Section -->
-                    <div class="mb-6 pl-4">
+                    <div class="mb-8">
                          <span class="text-white/40 text-[10px] uppercase tracking-widest font-bold block mb-2">Orientačná cena</span>
                          <p class="text-3xl font-bold text-[#ff9e5e] mb-3 tracking-tight">Na vyžiadanie</p>
                          <p class="text-white/40 text-xs leading-relaxed max-w-sm mb-6">
@@ -920,7 +918,7 @@
                          </p>
 
                          <!-- Action Buttons -->
-                         <div class="space-y-3">
+                         <div class="space-y-3 pr-6">
                             <button onclick="window.location.href='kontakt.html'" class="w-full bg-[#ff702e] hover:bg-[#ff854e] text-white py-4 rounded-xl font-bold uppercase tracking-wide transition-all shadow-lg shadow-orange-900/20 flex items-center justify-center gap-2 group/btn">
                                 <span>Mám záujem o vzorku</span>
                                 <span class="material-symbols-outlined text-lg group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
@@ -934,12 +932,13 @@
                     
                     <!-- Realization Section -->
                     <div id="realization-section" class="mb-10 hidden">
-                         <span class="text-white/40 text-[10px] uppercase tracking-widest font-bold block mb-4 pl-4">Realizácie & Inšpirácie</span>
-                         <div id="realization-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 p-4 max-h-[400px] overflow-y-auto custom-scrollbar">
+                         <span class="text-white/40 text-[10px] uppercase tracking-widest font-bold block mb-4 border-t border-white/10 pt-6">Realizácie & Inšpirácie</span>
+                         <div id="realization-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-4">
                              <!-- Javascript will inject images here -->
                          </div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     </div>
